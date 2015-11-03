@@ -1,0 +1,77 @@
+.line{background:url(../images/line.gif) repeat-x;height:2px;width:80%;margin-bottom:3px;display:block;margin-left:5px}
+.bigClass{ margin:0 auto; padding:0px; width:150px; height:31px; font-size:13px; color:#FFFFFF; text-align:center; line-height:31px; }
+.bigClass_l,.bigclass_tu{ margin:0 auto;  width:30px; padding-left:0px; float:left; padding-top:2px !important; padding-top:1px;}
+.bigClass_r{ margin:0 auto;  float:left; height:30px; line-height:31px; margin-left:3px}
+.bigClass_r p{ font-size:13px; color:#000; font-weight:bold; cursor:pointer;}
+.subClass {
+    width: 125px;   /*更改..............*/
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px; 
+	border:1px solid #999e9a;/*更改边框色.............*/.
+   /* border-top:none; 
+	background:#FFFFFF;*/
+	padding-top:15px; 
+	padding-bottom:1px;
+	margin-left:12px;
+}
+.subClass ul {
+    list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	
+}
+.subClass a{
+	background:none	
+}
+.subClass li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 26px;
+	color: #333333;
+	list-style-type: none;
+	display: block;
+	overflow:hidden;
+	text-decoration: none;
+	height: 26px;
+	width: 110px;     /*更改..............*/
+	padding-left: 23px;
+	
+}
+.subClass a:link,.subClass a:visited,.subClass a:active{
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #0e5887;
+	height: 26px;
+	line-height: 26px;
+    padding-left:0px;
+	width:100px;
+	display: block;
+	border:none;
+	outline:none;
+	text-decoration: none; text-align:left;
+
+}
+.subClass a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #0e5887;
+	background:none;
+	text-align:left;
+	display: block;
+	margin: 0px;
+	padding:0px;
+	height: 26px;
+    padding-left:0px;
+	width:100px;
+	text-decoration: none;
+}
+

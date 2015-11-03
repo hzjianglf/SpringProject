@@ -1,0 +1,37 @@
+.prevMonth, .nextMonth
+{
+    color: Gray;
+}
+#calendar{width:1000px;  overflow:hidden;margin:10px 0 0 10px;}
+.calendar td
+{
+    
+    text-align: center;
+	font-weight:bold;
+	height:60px;
+	background:#f1f1f1;
+}
+.calendar td a{display: block;height: 60px;width: 85px;margin:2px 24px;line-height: 60px;font-size:25px;}
+.prev_calender{ float:left;font-size:14px; font-weight:bold;width:15%;cursor:pointer;}
+.next_calender{float:right;font-size:14px; font-weight:bold;width:15%;cursor:pointer;}
+.now_calender{float:left;font-size:14px; font-weight:bold;width:40%;}
+.green{background-image: url(../images/greencrtile.png); background-repeat:no-repeat;background-position:center 0px;}
+.red{background-image: url(../images/redcritle.png); background-repeat:no-repeat; background-position:center 0px;}
+.organe{background-image: url(../images/orangecritle.png);background-repeat:no-repeat; background-position:center 0px;}
+.calendar th
+{
+    background-color:#858383;
+    font-weight: normal;
+	color:#fff;
+	padding:5px 0;
+}
+.calendar .cbj th{background-color:#696868;}
+.calendar td a:visited
+{
+    color: blue;
+}
+.curDay
+{
+    background-color:#bebebe;color:#000
+}
+A {text-decoration: NONE} 

@@ -1,0 +1,64 @@
+.icon-blank{
+	background:url('../../images/jquery-easyui-1.3.4/icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('../../images/jquery-easyui-1.3.4/icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('../../images/jquery-easyui-1.3.4/icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('../../images/jquery-easyui-1.3.4/icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('../../images/jquery-easyui-1.3.4/icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('../../images/jquery-easyui-1.3.4/icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('../../images/jquery-easyui-1.3.4/icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('../../images/jquery-easyui-1.3.4/icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('../../images/jquery-easyui-1.3.4/icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('../../images/jquery-easyui-1.3.4/icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('../../images/jquery-easyui-1.3.4/icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('../../images/jquery-easyui-1.3.4/icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('../../images/jquery-easyui-1.3.4/icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('../../images/jquery-easyui-1.3.4/icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('../../images/jquery-easyui-1.3.4/icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('../../images/jquery-easyui-1.3.4/icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('../../images/jquery-easyui-1.3.4/icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('../../images/jquery-easyui-1.3.4/icons/tip.png') no-repeat center center;
+}
+
+.icon-mini-add{
+	background:url('../../images/jquery-easyui-1.3.4/icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('../../images/jquery-easyui-1.3.4/icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('../../images/jquery-easyui-1.3.4/icons/mini_refresh.png') no-repeat center center;
+}

@@ -1,0 +1,89 @@
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip{
+	margin-left:8px;
+	line-height:20px;
+	height:20px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
+/*==========Validform必须CSS结束===========*/
+
+body{
+	position: relative;
+}
+
+/**层开始**/
+.tc_white_content {
+ display:none;
+ position: absolute;
+ top: 15%;
+ left: 20%;
+ z-index:1002;
+ width:700px;
+
+}  
+.tc_tm{ margin:0 auto; padding:0px; height:34px; background:url(../images/s_top.gif) no-repeat; width:700px;font-size:13px;}
+.tc_biaoti{ margin:0 auto; padding:0px; height:25px; padding-top:7px; line-height:25px; font-size:13px; color:#3a648c; font-weight:bold; text-align:left; padding-left:10px; float:left; width:120px;}
+.tc_close{ margin:0 auto; padding:0px; width:30px; height:20px; float:right; padding-top:12px;}
+.tc_close a:visited,.tc_close a:link{margin:0 auto; padding:0px; width:15px; height:15px; display:block;}
+.black_overlay {
+ display: none;
+ position: absolute;
+ top: 0%;
+ left: 0%;
+ width: 100%;
+ height: 100%;
+ background-color:#000000;
+ z-index:1001;
+ -moz-opacity: 0.3;
+ opacity:.30;
+ filter: alpha(opacity=30);
+}
+.tc_con { margin:0 auto; padding:0px;line-height:21px;background:url(../images/s_center.gif) repeat-y; font-size:13px;text-align:left; padding-left:7px; padding-right:7px; width:686px;  height:350px; 
+}
+.tc_con_con { margin:0 auto; padding:0px;font-size:13px;text-align:left;width:670px; padding-top:10px; height:309px; padding:0px 8px;
+scrollbar-face-color:#d6e8f6;
+scrollbar-highlight-color:#9ab4d2;
+scrollbar-3dlight-color:#fff;
+scrollbar-shadow-color:#9ab4d2;
+scrollbar-darkshadow-color:#f7f0de;
+scrollbar-track-color:#e6f4f6;
+scrollbar-arrow-color:#0669a4;
+overflow: auto;
+}
+.tc_tm1{ margin:0 auto; padding:0px; line-height:20px; padding-top:15px; border-bottom:1px solid #CCCCCC; width:350px; font-weight:bold; font-size:12px; text-align:left; padding-left:10px;}
+.tc_s_sty1{ text-align:right;}
+.tc_input1{ width:170px;color:#999999;}
+.tc_but5{ margin:0 auto; padding:0px;float:left; padding-left:15px; background:url(../images/nav1.gif) no-repeat right center; border:none; width:25px; height:25px; cursor:pointer; }
+.tc_con_bottom{ margin:0 auto; padding:0px; height:25px; width:694px; background:url(../images/s_bottom.gif) no-repeat; height:32px; padding-top:6px; padding-right:6px;}
+.tc_cb_0{ margin:0 auto; padding:0px; padding-left:5px; padding-right:5px; width:68px; float:right;} 
+.tc_but6{ margin:0 auto; padding:0px; width:68px; height:24px; background:url(../images/queding.jpg) no-repeat center; border:none;cursor:pointer;}
+.tc_but7{ margin:0 auto; padding:0px; width:68px; height:24px; background:url(../images/quxiao.jpg) no-repeat center; border:none; cursor:pointer;}
+.butSet2{margin:0; padding:0px; height:25px; text-align:right; padding:8px;}
+/**层结束**/
+

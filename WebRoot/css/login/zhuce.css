@@ -1,0 +1,231 @@
+@charset "utf-8";
+.liucheng {
+	clear: both;
+	width: 1251px;
+	height: 79px;
+	background: url(../../images/liucheng1.gif) no-repeat center;
+	margin: auto
+}
+.zhuce {
+	width: 1251px;
+	height: 425px;
+	margin: auto;
+	position: relative;
+	background: url(../../images/zhece-bg2.1.gif) no-repeat center
+}
+.top {
+	width: 100%;
+	height: 17px;
+	padding-top: 12px;
+}
+.top p {
+	float: left;
+	font-size: 14px;
+	margin-left: 346px
+}
+.zhuece-left {
+	width: 477px;
+	height: 393px;
+	padding-left:312px
+}
+.zhuce-left table ul li {
+	float: left;
+}
+.ruo {
+	width: 99px;
+	height: 14px;
+	background: url(images/ruo.gif) no-repeat right;
+	font-size: 11px;
+	color: #fff;
+	padding-right: 40px
+}
+.text {
+	width: 301px;
+	height: 22px;
+	color:#a0a0a0
+}
+.btn {
+	width: 143px;
+	height: 24px;
+	background: url(../../images/button-huoqu1.gif) no-repeat center;
+	text-align:center;
+	color:#5c5c78;
+	outline:none;
+	padding-top:2px;
+	font-weight:bold;
+	border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.btn-zhuce {
+	width: 151px;
+	height: 35px;
+	background: url(../../images/btn-zhuce.gif) no-repeat center;
+	color:#fff;
+	font-weight:bold;
+	outline:none;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.zhuce-right {
+	width: 157px;
+	height: 374px;
+	float: right;
+	text-align: left;
+	position: absolute;
+	top: 44px;
+	line-height: 20px;
+	right: 273px
+}
+.kz {
+	width: 1251px;
+	height: 12px;
+	margin: auto;
+	background: url(../../images/kz2.1.gif) repeat-y center;
+}
+.zhuce-banquan {
+	width: 1251px;
+	height: 70px;
+	background: url(../../images/zhuce-banquan4.gif) no-repeat center;
+	margin: auto;
+}
+.banquan-line {
+	width: 955px;
+	height: 3px;
+	background: #0068b7;
+	margin: auto;
+}
+.banquan-word {
+	padding-top: 5px
+}
+.zhuce2 {
+	clear: both;
+	width: 1251px;
+	height: 110px;
+	background: url(../../images/zhuce2.1.gif) no-repeat center;
+	margin: auto
+}
+.zhuce2-content {
+	width: 1251px;
+	height: 345px;
+	position: relative;
+	background: url(../../images/zhuce2-content1.gif) no-repeat center;
+	margin: auto
+}
+.zhuce2-left {
+	width: 555px;
+	float: left;
+	margin-left: 239px
+}
+.tishi {
+	width: 425px;
+	height: 59px;
+	margin-left: 60px;
+	margin-top: 20px;
+	text-align: left
+}
+.tishi img {
+	float: left;
+	margin-right: 5px
+}
+.zhuece-btn{
+	margin-left:15px;	
+}
+.chashou {
+	width: 136px;
+	height: 35px;
+	float: left;
+	margin-left: 60px;
+	background: url(../../images/chashou.gif) no-repeat center;
+	color:#fff;
+	outline:none;
+	font-weight:bold;
+	border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.message {
+	clear: both;
+	margin-top: 70px;
+	width: 439px;
+	padding-left: 90px;
+	height: 162px
+}
+.message p{
+	display:block;
+	float:left;
+	margin-top:4px	
+}
+.rp-btn{
+	border:1px solid #dedede;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+	background:url(../../images/btn-rp1.gif) no-repeat;
+	/*text-align:left;*/
+	outline:none;
+	width:97px;
+	height:24px;
+	color:#0068b6
+}
+.message ul li {
+	height: 20px;
+	line-height: 20px;
+	padding-top: 5px;
+	text-align: left;
+}
+.message ul li a {
+	color: #0068b7
+}
+.btn-rp {
+	width: 8px;
+	height: 22px;
+	background: url(../../images/btn-rp.gif) no-repeat
+}
+.zhuce2-kz {
+	width: 1251px;
+	height: 12px;
+	margin: auto;
+	background: url(../../images/zhuce2-kz1.gif) repeat-y center
+}
+.zcbq {
+	background: url(../../images/zhuce2-banquan1.gif) center no-repeat;
+	width: 1251px;
+	height: 116px;
+	margin: auto
+}
+.zc2{
+	height:150px padding-top:110px;width:1251px;margin:auto;margin-top:15%	
+}
+.zhuce2-line {
+	background:#0068b7;width:955px;height:3px;margin:auto
+}
+.hq{
+	width:143px;
+	height:24px;
+	display:block;
+	outline:none;	
+}
+.ty{
+	width:151px;
+	height:35px;
+	display:block;
+	outline:none;
+}
+.s{
+	width:136px;
+	height:35px;
+	float: left;
+	margin-left: 60px;
+	display:block;
+	outline:none;
+}
+.fs{
+	width:97px;
+	height:24px;
+	display:block;
+	float:left;
+	margin-left:5px;
+	margin-top:2px;
+	outline:none;
+}

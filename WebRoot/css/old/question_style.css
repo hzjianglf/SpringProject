@@ -1,0 +1,470 @@
+/********************页面整体样式说明********************/
+/*从整体上定义页面无外边距、内边距、以及列表样式*/
+*{ margin:0; padding:0; list-style:none;font-size:12px;}
+/*整体定义body中所有的文字字号为12像素,颜色值为#1c508f的"宋体",Verdana, Arial, Helvetica, sans-serif;
+常规字体，背景色为白色，整体页面在浏览器中居中显示*/
+body{font:12px "宋体",Verdana, Arial, Helvetica, sans-serif; color: #00000; background:#fff;width:100%;height:100%;overflow:hidden;overflow-x:hidden;overflow-y:auto}
+/*内部嵌套入一个DIV，整体控制DIV中的内容，上下距离10个像素，左右距离自适应，占浏览器的98%宽度，内容在此层中居中显示*/
+/*整体定义页面中所有的图片都无边框*/
+img{border: 0;} 
+/*整体定义页面中所有的链接当前显示为无下划线，鼠标划过为有下划线显示*/
+a:link,a:visited{color:#000;text-decoration:none;}
+a:hover,a:active{color:#ff5900;text-decoration:none;}
+/*该属性在td中没有内容时，可以保证显示边框*/
+table{border-collapse:collapse;}
+/************************数据表格样式说明******************/
+/*定义"当前位置"外边距,上边距为10个像素，下边距为5个像素*/
+.Locat{margin: 10px 0 5px;} 
+/*定义列表背景为横向平铺、高度为29像素的图片背景，文字的前景色为白色*/
+.titleBg{background: url(../images/default/titleBg.gif) repeat-x; height: 25px; color: #fff;font-weight: bold;}
+/*定义左边框，下边框为一个像素，颜色值为#b0c4db的实线，高度为25个像素*/
+.borderBlue{border-left: 1px solid #b0c4db; border-bottom: 1px solid #5d7c95; height: 25px;}  
+/*定义文字为粗体显示*/
+.bold{font-weight: bold;}
+/*定义背景色为白色,边框为一个像素颜色值为#5d7c95的实线*/
+.page{background: #fff; border: 1px solid #5d7c95;}
+/*定义背景色的值为#fbfcff的淡蓝色，外边距为上、左各一个像素的距离*/
+.pageNei{background: #fbfcff; margin: 1px 1px 0 0;}
+/*定义背景色的值为#eef5fc的浅蓝色*/
+.colorTwo{background: #eef5fc;}
+
+.welcomeFont{
+    font-family:"微软雅黑","黑体","宋体";
+	font-weight:bold;
+	font-size:20px;
+	letter-spacing: 1px;
+	color:#044FC1;
+}
+.helpFont{
+    font-family:"微软雅黑","黑体","宋体";
+	font-size:16px;
+	letter-spacing: 1px;
+	color:#044FC1;
+}
+
+/*定义表单输入部分的整体，边框为一个像素，颜色值为#5d7c95的蓝色实线，
+背景色为#eef5fc的淡蓝色，上下外边距都为13个像素，左右边距为0*/
+.name{border: 1px solid #5d7c95; background:#FBFCFF; margin:0px 0px 0px 0px ;}
+.name td{
+	border-left: 1px solid #b0c4db; 
+	border-top: 1px solid #5d7c95; 
+	height : 25px;
+	padding: 2px;
+	word-break:break-all;
+}
+.name_notd{border: 1px solid #5d7c95; background:#eef5fc; margin:0px 0px 0px 0px ;}
+.name_td{
+	border-left: 1px solid #b0c4db; 
+	border-top: 1px solid #5d7c95; 
+	height : 25px;
+	padding: 3px;
+	word-break:break-all;
+}
+.even{
+	background-color: #FBFCFF;
+}
+.inputTable{border: 1px solid #5d7c95; background:#eef5fc; margin:0px 0px 0px 0px ;}
+.inputTable td{
+	border-left: 1px solid #b0c4db; 
+	border-top: 1px solid #5d7c95;
+	padding: 0px 1px 0 3px;
+	word-break:break-all;
+}
+/*定义翻页部分的高度为30像边框为一个像素的颜色值为 #5d7c95的实线，背景色是颜色值为 #eef5fc;浅蓝色，
+外边距上下为5像素，内边距中定义距离右边15像素，位置显示为粗体*/
+.number{ height: 30px; border: 1px solid #5d7c95; background: #eef5fc; padding-right: 15px;  margin: 5px 0; font-weight: bold;}  
+
+/********************表单样式说明********************/
+/*定义内边距，距离上边0个像素、右边距离1个像素、下边距离为0个像素、左边距离3个像素*/
+.pLeft{padding: 0px 1px 0 3px;}
+.paLeft{padding: 0 10px;}
+/*输入框显示为1个像素的蓝色实线，背景色为值#fbfcff的淡蓝色，输入文字为值#4890e7的蓝色*/
+input{border: 1px solid #b0c4db; background: #fbfcff; color: #4890e7;}
+/*输入错误后，输入框显示为红色*/
+.inputwrong{border: 1px solid #a92320; background: #fbfcff; color: #4890e7;}
+/*输入正确后，输入框显示为绿色*/
+.inputright{border: 1px solid #93b583; background: #fbfcff; color: #4890e7;}  
+/*定义宽度为150像素的输入框*/
+.inputOne{width: 150px;}
+/*定义宽度为80像素的输入框*/
+.inputTwo{width: 80px;}
+/*定义宽度为260像素的输入框*/
+.inputThree{width: 260px;}  
+
+/*下拉菜单边框显示为一个像素的颜色值为#b0c4db蓝色实线，背景色是值为#fbfcff淡蓝色，输入文字是值为#4890e7的蓝色，*/
+select{border: 1px solid #b0c4db; background: #fbfcff; color: #4890e7; padding: 1px;}  
+/*定义宽为152像素、高为20像素的选择框*/
+.selectOne{width: 152px; height: 20px;}
+/*定义宽为38像素、高为20像素的选择框*/
+.selectTwo{width: 38px; height: 20px;}
+/*定义外边距上下都为3个像素*/
+.selectThree{margin: 3px 0;} 
+
+/*多行输入框显示为一个像素颜色值为#b0c4db蓝色实线，背景色的值为#fbfcff淡蓝色，
+输入文字的颜色值为#4890e7的蓝色，文字大小为12像素的常规字号，外边距上下为5个像素，内边距离上下左右都为3个像素*/
+textarea{border: 1px solid #b0c4db; background: #fbfcff; color: #4890e7; font-size: 12px; margin:5px 0; padding: 3px;}
+/*定义宽为230像素、高为50像素的多行输入框*/
+.textareaOne{width: 230px; height: 50px;}  
+
+/********************按钮样式定义说明 ********************/
+/*定义名为button_1的按钮，使用路径是../images/default/button_1.gif，宽度为64像素，高度为21像素的图片替换，不重复使用，
+按钮中的文字颜色为#3b75cd的蓝色，没有边框，为使文字在按钮居中位置显示，定义位置距离按钮的上边为2像素，距离按钮的左边2个像素*/
+.button_1{background:url(../images/default/button_1.gif) no-repeat; width: 64px; height: 21px; color: #3b75cd; border: 0; padding-top: 2px; padding-left:2px;cursor:pointer;}  
+/*为使在不同浏览器中都显示正常，在此单独设置在火狐中的按钮定义，使用路径是../images/default/button_1.gif，
+宽度为64像素，高度为21像素的图片替换，不重复使用，按钮中的文字颜色为#3b75cd的蓝色，没有边框，为使文字在按钮居中位置显示，
+定义位置距离按钮的下边为5像素*/
+html>/**/body .button_1{background:url(../images/default/button_1.gif) no-repeat; width: 64px; height: 21px; color: #3b75cd; border: 0; padding-bottom: 5px;}
+
+/*定义名为button_2的按钮表单，使用路径是../images/default/button_2.gif，宽度为64像素，高度为21像素的图片替换，不重复使用，
+按钮中的文字颜色为白色，文字粗体显示，没有边框，为使文字在按钮居中位置显示，定义位置距离按钮的左边9个像素*/
+.button_2{background:url(../images/default/button_2.gif) no-repeat; width: 64px; height: 21px; color: #fff; font-weight: bold; border: 0; padding-left: 9px;cursor:pointer;}
+/*为使在不同浏览器中都显示正常，在此单独设置在火狐中的按钮定义，使用路径是../images/default/button_2.gif，宽度为64像素，
+高度为21像素的图片替换，不重复使用，按钮中的文字颜色为白色，文字粗体显示，没有边框，为使文字在按钮居中位置显示，
+定义位置距离按钮的下边为2像素*/
+html>/**/body .button_2{background:url(../images/default/button_2.gif) no-repeat; width: 64px; height: 21px; color: #fff; font-weight: bold; border: 0; padding-bottom: 2px;}
+
+/*定义名为button_3的按钮表单，使用路径是../images/default/button_3.gif，宽度为64像素，高度为21像素的图片替换，不重复使用，
+按钮中的文字颜色为白色，文字粗体显示，没有边框*/
+.button_3{background:url(../images/default/button_3.gif) no-repeat; width: 64px; height: 21px; color: #fff; font-weight: bold;  border: 0;cursor:pointer;}
+
+/*定义名为button_5的按钮表单，使用路径是../images/default/button_5.gif，宽度为92像素，高度为21像素的图片替换，不重复使用，
+按钮中的文字颜色为白色，文字粗体显示，没有边框*/
+.button_5{background:url(../images/default/button_5.gif) no-repeat; width: 94px; height: 21px; color: #fff; font-weight: bold;  border: 0;cursor:pointer;}
+
+/********************文字样式说明***********************/
+/*定义颜色为 #FF0000的红色文字*/
+.red{color: #FF0000;} 
+/*定义颜色为 #4890e7的蓝色文字*/
+.blue{color: #4890e7;}  
+
+/*定义名为sred的链接文字，颜色在当前显示为 #1c508f的蓝色*/
+.sred{color:#1c508f;} 
+/*定义名为sred的链接文字，颜色在鼠标划过时显示为 #e10406的红色*/
+.sred:hover{color: #e10406;}  
+
+/*定义名为sred的链接文字,颜色在当前显示为#3b75b8的蓝色*/
+.sblue{color: #3b75b8;}
+/*定义名为sred的链接文字,颜色在鼠标划过显示为 #e10406的红色*/
+.sblue:hover{color: #e10406;} 
+
+/*定义名为white的链接文字，颜色在当前显示为白色*/
+.white{color: #fff;}
+/*定义名为white链接文字，颜色在鼠标划过显示为 #4890e7的蓝色*/
+.white:hover{color: #4890e7;} 
+.fontRed{
+	color:red;
+}
+/*图片显示手型*/
+.imgHander{
+	cursor:pointer;
+}
+.divtitle{ 
+	border:1px #A7C9EF solid; 
+	background:#FBFCFF; 
+	height:24px; 
+	line-height:20px; 
+	margin:5px 0px 0; 
+	cursor:pointer;
+	padding:3px 0 0 0px;
+}
+.divtitle2{ 
+	border:1px #A7C9EF solid; 
+	background:#EEF5FC; 
+	height:24px;
+	line-height:20px; 
+	margin:5px 0px 0; 
+	cursor:pointer;
+	padding:3px 0 0 0px;
+}
+.divcontent{
+	background:#F8FBFE; 
+	height:20px; 
+	line-height:20px; 
+	margin:0px 0px 0; 
+	display:none;
+	padding:0px 0 0 0px;
+}
+/*Content*/
+#header{ width:100%; height:27px;;background:url(../images/default/tab_hearder.gif); margin-top:0px;  float:left; margin-left:0px; }
+#header1{ width:100%; height:27px;  margin-top:5px;  float:left; margin-left:0px; }
+#header li{ float:left; width:90px;  height:23px; line-height:23px; text-align:center; color:#003399; font-weight:bold; }
+
+.contain1{ background:url(../images/default/contain1.gif);}
+.contain2{background:url(../images/default/contain2.gif);}
+
+.blank_table{border: 0px; background: #ffffff; margin: 0px 2px 4px 2px;}  
+
+.title_table td{
+	padding: 10px 3px 10px 3px;
+	font-size: 20px;
+	font-weight: bold;
+    font-family:"黑体","微软雅黑","宋体";
+	color: #000000;
+	word-break:break-all;
+}
+.bgblank {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 20px;
+}
+.b_add_over{
+	background:url(../images/button/add.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_add_out{
+	background:url(../images/button/add_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_delete_over{
+	background:url(../images/button/delete.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_delete_out{
+	background:url(../images/button/delete_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_audit_over{
+	background:url(../images/button/shenhe1.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_audit_out{
+	background:url(../images/button/shenhe1.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_search_over{
+	background:url(../images/button/search.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_search_out{
+	background:url(../images/button/search_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit_over{
+	background:url(../images/button/submit.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit_out{
+	background:url(../images/button/submit_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_close_over{
+	background:url(../images/button/close.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_close_out{
+	background:url(../images/button/close_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_return_over{
+	background:url(../images/button/return.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_return_out{
+	background:url(../images/button/return_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_pass_over{
+	background:url(../images/button/pass.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_pass_out{
+	background:url(../images/button/pass_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_return1_over{
+	background:url(../images/button/return1.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_return1_out{
+	background:url(../images/button/return1_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit1_over{
+	background:url(../images/button/submit1.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit1_out{
+	background:url(../images/button/submit1_out.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit2_over{
+	background:url(../images/button/submit2.gif) no-repeat; 
+	width: 85px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_submit2_out{
+	background:url(../images/button/submit2_out.gif) no-repeat; 
+	width: 85px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_audit1_over{
+	background:url(../images/button/shenhe1.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_audit1_out{
+	background:url(../images/button/shenhe2.gif) no-repeat; 
+	width: 64px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+	}
+.b_import_over{
+	background:url(../images/button/import.gif) no-repeat; 
+	width: 100px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+}	
+.b_import_out{
+	background:url(../images/button/import_out.gif) no-repeat; 
+	width: 100px; 
+	height: 21px; 
+	color: #fff;
+	border: 0;
+	margin:0px 1px 0px 1px;
+	padding:0px;
+	cursor:pointer;
+}	

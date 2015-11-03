@@ -1,0 +1,23 @@
+#l_top{ margin:0; padding:0; width:100%; height:86px; background:url(../images/l_0.jpg) repeat-x;}
+.ltop_con{ margin:0; padding:0px; width:100%; height:86px; background:url(../images/l_1.jpg) no-repeat left center;}
+#l_center{ margin:0 auto; padding:0; width:1024px; height:420px;}
+.ppt{ margin:0; padding:0; width:580px; height:420px; float:left;}
+.ppt img{width:580px; height:420px; display:block;}
+.dl_wai{margin:0; padding:0; width:440px; height:420px; float:right; background:url(../images/l_3.jpg) no-repeat left center;}
+.dl{margin:0; padding:0; width:250px; padding-left:100px; padding-top:70px;}
+.dl_0{margin:0; padding:0; height:35px; padding:5px 0px;}
+.dl0_l{margin:0; padding:0; height:35px; float:left; width:60px; text-align:right; line-height:35px; font-size:13px;}
+.dl0_r{margin:0; padding:0; padding:5px 0px; float:left; width:190px; text-align:left;}
+.input1{ margin:0; padding:0; height:24px; width:178px; line-height:24px;  font-weight:bold; background:url(../images/l_4.jpg) no-repeat; border:none; font-size:13px; }
+.input2{ margin:0; padding:0; height:24px; width:93px; line-height:24px;font-weight:bold; background:url(../images/l_6.jpg) no-repeat; border:none;font-size:13px;}
+.l_img{ margin:0; padding:0; height:24px; width:93px; display:block; float:left;}
+.intro{margin:0; padding:0; height:24px; line-height:24px; width:90px; display:block; float:left; padding-left:5px;}
+.intro a:visited,.intro a:link{ color:#1cc0e1; text-decoration:underline;}
+.dl_bt{margin:0; padding:0; height:36px; width:250px; text-align:center; padding-top:10px;}
+.button1{
+	margin:0;
+	padding:0;
+	background-image: url(../images/but_link.jpg); width:136px; height:36px; cursor:pointer; border:none;
+}
+.button1:hover,.button1:visited,.button1:active{background-image: url(../images/but_hover.jpg); width:136px; height:36px; cursor:pointer; border:none;}
+#l_bottom{ margin:0 auto; padding:0; width:100%; height:32px; line-height:32px; background:url(../images/l_5.jpg) no-repeat center center;}

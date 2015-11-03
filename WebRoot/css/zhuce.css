@@ -1,0 +1,370 @@
+@charset "utf-8";
+*{ margin:0; padding:0;}
+html,body{ height:100%; width:100%;background:url(../images/zhuce/big-bg.gif) repeat-x #50a4db;font-size: 12px; font-family:宋体;}
+ul{ list-style:none;}
+a{ text-decoration:none;}
+.x{
+	outline:none; color:#666;
+}
+.head{
+	width:1251px;
+	height:70px;
+	margin:auto;
+	background:url(../images/zhuce/head-bg.gif) no-repeat;
+}
+.left{
+	float:left;
+	width:280px;
+	height:70px;
+	margin-left:175px
+}
+.left ul li{
+	float:left;
+	height:42px;
+	line-height:42px;	
+	padding:16px;
+	font-family:"微软雅黑";
+	font-size:18px;
+	color:#8b8f91	
+}
+.right{
+	width:297px;
+	height:70px;
+	float:right;
+	margin-right:120px	
+}
+.right-left{
+	float:left;
+	width:173px;
+	margin-top:33px;	
+}
+.right-left ul li{
+	height:15px;
+	line-height:15px;
+	float:right;
+	padding:7px		
+}
+.button{
+	background:url(../images/zhuce/zixun.png) no-repeat center;
+	width:57px;
+	height:20px	
+}
+.right-right{
+	float:right;
+	/*background:url(../images/zhuce/zixun.png) no-repeat;*/
+	width:57px;
+	height:20px;
+	margin-top:35px;
+	margin-right:65px	;
+	cursor:pointer
+}
+.right-right button{
+	/*background:#f5f5f5;*/
+	background:url(../images/zhuce/zixun.png) no-repeat;
+    border:1px solid #dedede;
+	outline:none;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+	font-size:10px;
+	color:#000;
+	width:58px;
+	height:22px;
+	cursor:pointer
+}
+.liucheng {
+	clear: both;
+	width: 1251px;
+	height: 79px;
+	background: url(../images/zhuce/liucheng1.gif) no-repeat center;
+	margin: auto
+}
+.liucheng2 {
+	clear: both;
+	width: 1251px;
+	height: 79px;
+	background: url(../images/zhuce/liucheng2.gif) no-repeat center;
+	margin: auto
+}
+.liucheng_success{
+clear: both;
+	width: 1251px;
+	height: 79px;
+	background: url(../images/zhuce/zhuce3.gif) no-repeat center;
+	margin: auto
+}
+.zhuce {
+	width: 1251px;
+	margin: auto;
+	position: relative;
+	background: url(../images/zhuce/zhucebg_Email.gif) no-repeat top center
+}
+.zhuce_success{
+	width: 1251px;
+	margin: auto;
+	position: relative;
+	height:425px;
+	background: url(../images/zhuce/zhuce_sucess.gif) no-repeat top center
+}
+.success{ padding-top:50px;}
+.close_success{ font-size:24px; font-weight:bold;  background:url(../images/zhuce/success2.gif) no-repeat; height:45px; width:155px; margin:0 auto;margin-top:15px; text-align:center; line-height:45px;border:1px solid #ccc}
+.close_success a{ color:#2a2a2a;}
+.redline{ border-bottom:1px solid #d00000; width:750px; margin:0px auto;background:url(../images/success.gif) no-repeat;height:145px; line-height:145px;}
+.redline span{font-size:24px; color:#333; font-weight:bold; text-align:center; margin-left:180px;display:block;}
+.zhucephone{
+	width: 1251px;
+	margin: auto;
+	position: relative;
+	background: url(../images/zhuce/zhucebg_phone.gif) no-repeat top center
+}
+.bt{ color:red; margin-right:5px;}
+.top {
+	width: 100%;
+	height: 17px;
+	padding-top: 12px;
+}
+.top p {
+	float: left;
+	font-size: 14px;
+	margin-left: 346px
+}
+.zhuece-left {
+	width: 477px;
+	padding-left:312px;
+	*float:left;
+}
+.zhuce-left table{
+	float:left;	
+}
+.zhuce-left table ul li {
+	float: left;
+}
+.ruo {
+	width: 99px;
+	height: 14px;
+	background: url(images/ruo.gif) no-repeat right;
+	font-size: 11px;
+	color: #fff;
+	padding-right: 40px
+}
+.text,.text2 {
+	width: 301px;
+	height: 22px;
+	line-height:22px;
+	color:#a0a0a0;
+	outline:none;
+	border:1px solid #ccc;
+	text-indent:10px;
+}
+.text2{
+	color:#000;	
+}
+.sex{ vertical-align:-2px; border:1px solid #ccc; outline:none}
+.text3,.text4{
+	width:73px;height:22px;line-height:22px;color:#a0a0a0;outline:none;margin:0;padding:0;	
+}
+.text4{
+	color:#000;
+}
+.btn {
+	width: 143px;
+	height: 24px;
+	background: url(../images/zhuce/button-huoqu1.gif) no-repeat center;
+	text-align:center;
+	color:#5c5c78;
+	outline:none;
+	padding-top:2px;
+	font-weight:bold;
+	border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.btn-zhuce {
+	width: 151px;
+	height: 35px;
+	background: url(../images/zhuce/btn-zhuce.gif) no-repeat center;
+	color:#fff;
+	font-weight:bold;
+	outline:none;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.zhuce-right {
+	width: 157px;
+	height: 374px;
+	float: right;
+	text-align: left;
+	position: absolute;
+	top: 44px;
+	line-height: 20px;
+	right: 273px
+}
+.kz {
+	width: 1251px;
+	margin: 0 auto;
+	background: url(../images/zhuce/kz2.1.gif) repeat-y center;
+}
+.zhuce-bottom{
+	width: 1251px;
+	height: 70px;
+	background: url(../images/zhuce/zhuce-banquan4.gif) no-repeat center;
+	margin: auto;
+}
+.banquan-line {
+	width: 955px;
+	height: 3px;
+	background: #0068b7;
+	margin: auto;
+}
+.banquan-word {
+	padding-top: 5px; text-align:center;
+}
+.zhuce2 {
+	clear: both;
+	width: 1251px;
+	height: 110px;
+	background: url(../images/zhuce/zhuce2.1.gif) no-repeat center;
+	margin: auto
+}
+.zhuce2-content {
+	width: 1251px;
+	height: 345px;
+	position: relative;
+	background: url(../images/zhuce/zhuce2-content1.gif) no-repeat center;
+	margin: auto
+}
+.zhuce2-left {
+	width: 555px;
+	float: left;
+	margin-left: 239px
+}
+.tishi {
+	width: 425px;
+	height: 59px;
+	margin-left: 60px;
+	margin-top: 20px;
+	text-align: left
+}
+.tishi img {
+	float: left;
+	margin-right: 5px
+}
+.zhuece-btn{
+	margin-left:15px;	
+}
+.chashou {
+	width: 136px;
+	height: 35px;
+	float: left;
+	margin-left: 60px;
+	background: url(../images/zhuce/chashou.gif) no-repeat center;
+	color:#fff;
+	outline:none;
+	font-weight:bold;
+	border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+}
+.message {
+	clear: both;
+	margin-top: 70px;
+	width: 439px;
+	padding-left: 90px;
+	height: 162px
+}
+.message p{
+	display:block;
+	float:left;
+	margin-top:4px	
+}
+.rp-btn{
+	border:1px solid #dedede;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+	background:url(../images/zhuce/btn-rp1.gif) no-repeat;
+	/*text-align:left;*/
+	outline:none;
+	width:97px;
+	height:24px;
+	color:#0068b6
+}
+.message ul li {
+	height: 20px;
+	line-height: 20px;
+	padding-top: 5px;
+	text-align: left;
+}
+.message ul li a {
+	color: #0068b7
+}
+.btn-rp {
+	width: 8px;
+	height: 22px;
+	background: url(../images/zhuce/btn-rp.gif) no-repeat
+}
+.zhuce2-kz {
+	width: 1251px;
+	height: 12px;
+	margin: auto;
+	background: url(../images/zhuce/zhuce2-kz1.gif) repeat-y center
+}
+.zcbq {
+	background: url(../images/zhuce/zhuce2-banquan1.gif) center no-repeat;
+	width: 1251px;
+	height: 116px;
+	margin: auto
+}
+.zc2{
+	
+}
+.zhuce2-line {
+	background:#0068b7;width:955px;height:3px;margin:auto
+}
+.hq{
+	width:243px;
+	height:24px;
+	display:block;
+	outline:none;	
+	background:url(../images/zhuce/hq1.gif);
+	text-align:center;
+	line-height:24px;
+	color:#2a2a2a;
+}
+.ty{
+	width:151px;
+	height:35px;
+	display:block;
+	outline:none;
+}
+.s{
+	width:136px;
+	height:35px;
+	float: left;
+	margin-left: 60px;
+	display:block;
+	outline:none;
+}
+.fs{
+	width:97px;
+	height:24px;
+	display:block;
+	float:left;
+	margin-left:5px;
+	margin-top:2px;
+	outline:none;
+}
+.bottom{ margin-top:20px; padding-bottom:15px;
+}
+.mima{
+	width:100%;
+	position:relative;	
+}
+.mima-tishi{
+	width:100%;
+	height:100%;
+	text-align:left;
+	position:absolute;
+	left:5px;
+	top:6px;
+	color:#a0a0a0;	
+}
