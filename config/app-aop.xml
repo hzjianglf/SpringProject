@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:jee="http://www.springframework.org/schema/jee" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee-3.2.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+    default-autowire="byName">
+	
+	
+	 <aop:config>
+		<aop:pointcut id="testPointcut"  expression="execution(* com.xs.demo.dao.BaseDao+.Task*(..))" />
+		<!-- 这儿第一个*通配符代表所有的返回值，第二个*代表所有方法，(..)表示任意的参数类型。也就是说cn.com.elve.live..service类下面的所有任意返回值，任意参数类型的方法都会被拦截。 --> 
+	</aop:config>  
+    <!-- 普通的AOP，如果想得到被代理的方法参数，那么就必须在配置里提前写好，这样有非常大的局限性 -->
+    <aop:config>
+		<aop:aspect ref="testSchemaAop">
+			<aop:before method="before" pointcut-ref="testPointcut"/>
+			<aop:after-returning method="afterReturning" pointcut-ref="testPointcut" returning="object"/>
+			<aop:after-throwing method="afterThrowing" pointcut-ref="testPointcut" throwing="object"/>
+			<aop:after method="after" pointcut-ref="testPointcut"/>
+		</aop:aspect>
+    </aop:config>
+    
+    <!-- 基于advisor的代理，代理类需要实现spring提供的接口，然后就可以用到强大的功能了。 -->
+    <aop:config>
+	    <aop:advisor pointcut-ref="testPointcut" advice-ref="afterReturn" />
+    </aop:config>
+    
+    
+    
+	<!-- 需要由spring注入的bean定义 -->
+    <bean id="afterReturn" class="com.xs.demo.aop.AfterReturn"/>
+    <bean id="afterThrow" class="com.xs.demo.aop.AfterThrow"/>
+    <bean id="before" class="com.xs.demo.aop.Before"/>
+    <bean id="testSchemaAop" class="com.xs.demo.aop.TestSchemaAop"/>
+    
+    
+    
+</beans>

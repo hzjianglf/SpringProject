@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- 配置urlMapping -->
+<beans 
+    xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:jee="http://www.springframework.org/schema/jee" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+    	http://www.springframework.org/schema/mvc
+    	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+    	http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+    default-autowire="byName">
+	<!-- 启用基于注解的处理器映射，添加拦截器，类级别的处理器映射 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="interceptors">
+            <list>
+            	<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />  
+            </list>
+        </property>
+	</bean>
+	
+	<!-- 设置自动扫描的controller类的路径,可以写多个 -->
+    <!-- 例<context:component-scan base-package="cn.com.elve.live.controller,cn.com.elve.live.xxx"/> -->
+    <context:component-scan base-package="com.xs.demo.controller"/>
+	<!-- 
+	配置一个基于注解的定制的WebBindingInitializer，解决日期转换问题，方法级别的处理器映射，
+	有人说该bean要放在context:component-scan前面，要不然不起作用，但我试的放后面也可以啊。
+	-->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	    <property name="cacheSeconds" value="0" />
+	</bean>
+	
+	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理，3.04新增功能，需要重新设置spring-mvc-3.0.xsd -->
+	<mvc:resources mapping="/images/**" location="/images/"/>
+	<mvc:resources mapping="/js/**" location="/js/"/>
+	<mvc:resources mapping="/css/**" location="/css/"/>
+	<mvc:resources mapping="/swf/**" location="/swf/"/>
+	<mvc:resources mapping="/file/**" location="/file/"/>
+	<mvc:resources mapping="/FusionCharts/**" location="/FusionCharts/"/>
+	
+	<!-- viewResolver 视图解析器,将视图名(ModelAndView中的view)解析成URL-->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="suffix" value=".jsp" />
+		<property name="prefix" value="/WEB-INF/"/>
+		<property name="order" value="20"></property>
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.InternalResourceView" />
+	</bean>
+	
+	 <!-- 针对freemarker的视图配置 -->
+    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl" />
+        <property name="order" value="5"></property>	<!--resolver排序，本resolver会早于viewResolver-->
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"></property>
+        <property name="contentType" value="text/html;charset=UTF-8"></property>
+        <property name="requestContextAttribute" value="request" />
+        <property name="exposeSpringMacroHelpers" value="true" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+    </bean>
+    
+    <bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/" />
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="default_encoding">UTF-8</prop>
+                <prop key="number_format">0.##########</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="classic_compatible">true</prop>
+                <prop key="template_exception_handler">ignore</prop>
+            </props>
+        </property>
+    </bean>
+    
+    
+	<!--multipartResolver 支持分段文件上传 使用时form需要加上enctype="multipart/form-data"属性,且form的method设置为POST-->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="500400000" />
+		<property name="maxInMemorySize" value="4096" />
+		<property name="defaultEncoding" value="UTF-8"/>
+	</bean>
+	
+	<!-- 国际化配置 -->  
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" >
+		<property name="cookieName" value="clientlanguage"/>
+		<property name="cookieMaxAge" value="94608000"/>
+	</bean>  
+	
+</beans>
+

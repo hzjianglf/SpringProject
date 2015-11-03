@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:jee="http://www.springframework.org/schema/jee" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee-3.2.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+    default-autowire="byName">
+    <!-- 使用annotation 自动注册bean -->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.xs.demo">
+    	<context:include-filter type="regex" expression=".*Service"/>
+		<context:include-filter type="regex" expression=".*Dao"/>
+		<context:include-filter type="regex" expression=".*Job"/>
+    </context:component-scan>
+    
+    
+    <import resource="classpath:/app-db.xml"/>
+    
+    <!-- 配置文件读取 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/jdbc.properties</value>
+				<value>classpath:/hibernate.properties</value>
+				<value>classpath:/log4j.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	<!-- 开启AOP监听 只对当前配置文件有效 -->
+	<aop:aspectj-autoproxy  expose-proxy="true"/>
+	<!-- 引入  aop （面向切面编程） -->
+	<import resource="classpath:/app-aop.xml"/>
+	
+	<!-- 开启注解事务 只对当前配置文件有效 -->
+  	<tx:annotation-driven transaction-manager="txManager"/>
+
+    <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="save*" propagation="REQUIRED" />
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="create*" propagation="REQUIRED" />
+            <tx:method name="insert*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED" />
+            <tx:method name="modify*" propagation="REQUIRED" />
+            <tx:method name="upload*" propagation="REQUIRED" />
+            <tx:method name="merge*" propagation="REQUIRED" />
+            <tx:method name="del*" propagation="REQUIRED" />
+            <tx:method name="remove*" propagation="REQUIRED" />
+            <tx:method name="move*" propagation="REQUIRED" />
+            <tx:method name="change*" propagation="REQUIRED" />
+            <tx:method name="put*" propagation="REQUIRED" />
+            <tx:method name="use*" propagation="REQUIRED"/>
+            <tx:method name="log*" propagation="REQUIRED"/>
+            <tx:method name="sh*" propagation="REQUIRED"/>
+            <tx:method name="bh*" propagation="REQUIRED"/>
+            <tx:method name="sf*" propagation="REQUIRED"/>
+            <tx:method name="bj*" propagation="REQUIRED"/>
+            <tx:method name="tf*" propagation="REQUIRED"/>
+            <tx:method name="mobileLogin" propagation="REQUIRED"/>
+            <tx:method name="register*" propagation="REQUIRED"/>
+            <tx:method name="goto*" propagation="REQUIRED"/>
+            <tx:method name="active*" propagation="REQUIRED"/>
+            <tx:method name="send*" propagation="REQUIRED"/>
+            <tx:method name="handel*" propagation="REQUIRED"/>
+            <tx:method name="attendance*" propagation="REQUIRED"/>
+            <tx:method name="batch" propagation="REQUIRED"/>
+            <!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到-->
+            <tx:method name="get*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="count*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="find*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="list*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="*" read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+    <aop:config expose-proxy="true">
+        <!-- 只对业务逻辑层实施事务 -->
+        <aop:pointcut id="txPointcut" expression="execution(* com.xs.demo..service..*.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+    
+    <!-- 自动扫描测试用service -->
+<!--     <context:component-scan base-package="test.service"></context:component-scan> -->
+    
+    
+    <!--	javaMailSender 
+	<bean id="sender" class="org.springframework.mail.javamail.JavaMailSenderImpl" >
+		<property name="host" value="smtp.qq.com"/>
+		<property name="port" value="465"/>
+		<property name="username" value="elve@elve.cn"/>
+		<property name="password" value="654123.huo"/>
+		<property name="javaMailProperties">
+			<props> 
+				<prop key="mail.smtp.auth">true</prop> 
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+			</props> 
+		</property> 
+	</bean> -->
+    
+    
+    
+</beans>
