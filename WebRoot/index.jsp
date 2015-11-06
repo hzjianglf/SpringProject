@@ -6,7 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+  <head> 
     <base href="<%=basePath%>">
     
     <title>SpringMVC+Hibernate +MySql+ EasyUI ---CRUD</title>
@@ -20,7 +20,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     SpringMVC+Hibernate +MySql+ EasyUI ---CRUD<br>
     	CRUD页面 <a href="http://localhost:8080/springHibernate/user/index">http://localhsot:8080/springHibernate/user/index</a>
-    	
-    	<h3>页面在WEB-INF/views</h3>
+    	<h3>页面在WEB-INF/views </h3> 
   </body>
 </html>
