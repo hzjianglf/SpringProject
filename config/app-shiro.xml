@@ -42,17 +42,19 @@
  <!--  <property name="sessionMode" value="native"/>  -->
   <property name="sessionManager" ref="sessionManager" />
  </bean>
- 
+ <!-- 重写form 登录验证 -->
  <bean id="formAuthenticationFilter"
-  class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+  class="com.xs.demo.shiro.MyFormAuthenticationFilter">
+<!--   class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"> -->
   <property name="usernameParam" value="username" />
   <property name="passwordParam" value="password" />
-   <property name="rememberMeParam" value="rememberMe"/>  
+   <!-- <property name="rememberMeParam" value="rememberMe"/>  记住我 -->
  </bean>
  <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
   <property name="securityManager" ref="securityManager" />
-  <property name="loginUrl" value="/login.jsp" />
-  <property name="successUrl" value="/index2.jsp" /> 
+   <property name="loginUrl" value="/login.jsp" /><!--  -->
+     <property name="successUrl" value="/user/index" />  
+   <property name="unauthorizedUrl" value="/system/unauthorized.jsp"></property> 
   <property name="filters">
    <map>
     <entry key="authc" value-ref="formAuthenticationFilter"></entry>
@@ -60,10 +62,16 @@
   </property>
   <property name="filterChainDefinitions">
    <value>
+   <!-- 权限设置跟顺序有关   依次执行以下权限验证  -->
     <!-- /login.jsp = authc -->
-    /login.jsp = authc
-    /logout = logout
-    /** = user
+    /login.jsp = authc<!-- 登陆页面需要 authc 过滤器验证  -->
+    /logout = logout<!-- 默认登出操作 -->
+    /user/index=roles[manager],perms[user:show]<!-- 只有拥有manger角色以及权限user:create的用户可以修改 -->
+     /user/gotoAdd=roles[manager],perms[user:create] <!-- 只有拥有manger角色以及权限user:create的用户可以修改 -->
+     <!-- 删除方法为  ajax请求 无法跳转到 未授权页面 -->
+    /user/delete=roles[manager],perms[user:delete]<!-- 只有拥有manger角色以及权限user:delete的用户可以修改 -->
+    /user/gotoModify=roles[manager],perms[user:update]<!-- 只有manger角色以及权限user:update可以修改 -->
+    /** = user	<!--所有目录只允许登录的用户 -->
    </value>
   </property>
  </bean>
