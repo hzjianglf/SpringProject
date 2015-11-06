@@ -1,10 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <%@ include file="/common/meta.jsp"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SpringMVC+Hibernate +MySql+ EasyUI ---CRUD</title>
+<title>SpringMVC+Hibernate +MySql+ EasyUI ---CRUD调试bug</title>
 <script type="text/javascript">
 	var searchString;
 
@@ -62,7 +63,7 @@
 		    sortOrder:sortOrder,
 		    sortName:sortName,
 		    queryParams:{  
-		        name:name,
+		        name:name
 		    },
 		    width:800,
 		   	columns:[[
@@ -129,6 +130,12 @@
 </script>
 </head>
 <body onload="resizeDg();" onresize="resizeDg();" >
+   <shiro:guest>
+  欢迎游客访问，<a href="${pageContext.request.contextPath}/login.jsp">点击登录</a><br/>
+ </shiro:guest>
+ <shiro:user>
+  欢迎[<shiro:principal/>]登录，<a href="${pageContext.request.contextPath}/logout">点击退出</a><br/>
+ </shiro:user>
 <div class="neirong">
 <div class="add-content" style="margin-top:0">
 	<div class="xinxi2">
