@@ -9,6 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +39,24 @@ public class UserController {
 	UserService userService;
 	
 	private static Log log = LogFactory.getLog(UserController.class);
-	
+/*	@RequestMapping(value="/login")
+	public String login(HttpServletRequest request,
+			HttpServletResponse response){
+		 
+	 String username=(String) SecurityUtils.getSubject().getPrincipal();//得到用户名  
+	  String password = request.getParameter("password"); //得到密码 
+	  if(!username.equals("admin")){ 
+		  SecurityUtils.getSubject().getSession().setAttribute("error", "用户名错误");
+		  throw new UnknownAccountException(); //如果用户名错误  
+	  }
+	  if(!"123".equals(password)) {  
+		  SecurityUtils.getSubject().getSession().setAttribute("error", "用户密码错误");
+	      throw new IncorrectCredentialsException(); //如果密码错误  
+	  }  
+	  UsernamePasswordToken token=new UsernamePasswordToken(username,password);
+	  SecurityUtils.getSubject().login(token);
+	  return "index";
+	  }*/
 	/**
 	 * index --list
 	 * @param request
