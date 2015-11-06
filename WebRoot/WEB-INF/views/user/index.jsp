@@ -73,7 +73,7 @@
 		   		{field:'operation',title:'操作', width:340, align:"center", sortable:false,
 		   			formatter:function(value,row,index){
 		   				var s ="";
-		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"');\">修改</span></a>";
+		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"');\">修改</span></a> ";
                			s += "|";
 		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoDel('"+row.id+"');\">删除</span>&nbsp;&nbsp;</a>";
 			            return s;
@@ -143,7 +143,7 @@
            <p>名称： <input name="name" id="name" type="text" /></p>
            <a href="javascript:void(0);" id="doSearch" class="blank_btn">查询</a></div>
            <div class="btn_div">
-           <a href="javascript:void(0);" onclick="gotoAdd();" id="xtsz_rygl_jsgl_add" class="blank_btn">新增</a>
+           <a href="javascript:void(0);" onclick="gotoAdd();" id="xtsz_rygl_jsgl_add" class="blank_btn">新增</a> 
            </div>
        </div>
 	<div class="contant_list" >
