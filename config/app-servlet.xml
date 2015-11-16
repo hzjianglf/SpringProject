@@ -51,7 +51,11 @@
 	<mvc:resources mapping="/swf/**" location="/swf/"/>
 	<mvc:resources mapping="/file/**" location="/file/"/>
 	<mvc:resources mapping="/FusionCharts/**" location="/FusionCharts/"/>
-	
+	<!-- 添加 测试    否则会被spring拦截 -->
+	<mvc:resources mapping="/charts/**" location="/charts/" />
+	<mvc:resources mapping="/plugins/**" location="/plugins/" />
+	<mvc:resources mapping="/voteyouth/**" location="/voteyouth/" />
+	<!-- 添加 测试 -->
 	<!-- viewResolver 视图解析器,将视图名(ModelAndView中的view)解析成URL-->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
