@@ -12,7 +12,7 @@
 	function resizeDg(){
 		$('#dg').datagrid("resize", { width: $(window).width() * 0.4});
 	}
-	
+	//暂时未用
 	function getCookie(c_name){
 	     if (document.cookie.length>0){
 		  c_start=document.cookie.indexOf(c_name + "=");
@@ -34,7 +34,7 @@
 	var sortOrder = '';
 	function initDate(){
 		var s = getCookie("role");
-		s = decodeURIComponent(s);
+		s = decodeURIComponent(s);  
 		if(s != null && s != ""){
 			searchMap = eval('(' + s + ')');
 			pageSize = searchMap.rows;
@@ -49,10 +49,10 @@
 	}
 	
 	$(function(){
-		 $("#doSearch").click(function(){
+		/*  $("#doSearch").click(function(){
 			doSearch();
-		});
-		initDate();
+		}); 
+		initDate();*/
 		var name=$("#name").val();
 		$('#dg').datagrid({
 		    url:"${ctx }/user/list",
@@ -145,7 +145,7 @@
            <div class="btn_div">
            <a href="javascript:void(0);" onclick="gotoAdd();" id="xtsz_rygl_jsgl_add" class="blank_btn">新增</a> 
            </div>
-       </div>
+   </div>
 	<div class="contant_list" >
 		<!-- c_top start-->
 		<table  width="100%">
