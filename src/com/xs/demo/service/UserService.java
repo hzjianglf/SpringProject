@@ -113,8 +113,5 @@ public class UserService extends BaseService {
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}
-
-
-
 	
 }
