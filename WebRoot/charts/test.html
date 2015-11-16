@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap---echarts</title>
+    <!-- Bootstrap -->
+    <link href="../plugins/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../plugins/html5shiv/html5shiv.min.js"></script>
+      <script src="../plugins/respond/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+/* 去掉tab-content tab-panel  下面的多余的宽度     */
+/* ****************************************************start******* */
+.tab-content > .tab-panel {
+    display: block;     /* undo display:none          */
+    height: 0;          /* height:0 is also invisible */ 
+    overflow-y: hidden; /* no-overflow                */
+}
+.tab-content > .active {
+    height: auto;       /* let the content decide it  */
+}
+/* *********************************************************end*****
+
+/*底部的图片内嵌式样式 */
+/* ****************************************************start******* */
+  .footer img {
+	max-height: 100px; 
+	float: left;
+	margin-top: 10px;
+	margin-right: 5px;
+} 
+/* *********************************************************end*****/
+    </style>
+  </head>
+<body>
+<div class="page-header">
+  <h1>Echarts和Bootstrap浏览器自适应(兼容IE8+) <small>Enjoy IT</small></h1>
+</div>
+<ul class="nav nav-tabs nav-justified">
+                <li class="active "><a   href="#aqiTab" data-toggle="tab">混合图<br>（柱状图-折线图）</a></li>
+                <li ><a   href="#pm25Tab" data-toggle="tab">柱状图<br>（彩虹）</a></li>
+                <li ><a   href="#pm10Tab" data-toggle="tab">地图<br>（带markLine地图）</a></li> 
+</ul>
+<div class="tab-content" >
+                 <div class="tab-panel fade in active" id="aqiTab" >
+                 	<div  id="barLineChart" style="height:430px"></div>
+           </div>
+           <div class="tab-panel fade" id="pm25Tab">
+           	<div id="barChart" style="height:430px;"></div>
+           </div>
+            <div class="tab-panel" id="pm10Tab">
+             <div id="mapChart" style="height:430px"></div>
+           </div>
+ </div>
+ <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+   <!--  <div id="main"  style="height:400px;"></div> -->
+    <!-- <div class="row">
+    	<div class="col-md-6" style="height:400px;" id="main"></div>
+    </div> -->
+    <div class="footer">
+      <div class="container">
+          <div class="row">
+              <img src="img/henry.png">
+              <img src="img/holly.png">
+              <img src="img/daniel.png">
+              <img src="img/ben.png">
+              <img src="img/jenn.png">
+              <img src="img/max.png">
+              <img src="img/amy.png">
+              <img src="img/lauren.png">
+              <img src="img/jon.png">
+              <img src="img/scott.png">
+              <img src="img/claire.png">
+          </div>
+      </div>
+    </div>
+</body>
+<!-- 这个ie8上不好用   http://jquery.com/download/  官网说明：jQuery 2.x has the same API as jQuery 1.x, but does not support Internet Explorer 6, 7, or 8. -->
+<!-- <script src="../plugins/jquery/2.0.0/jquery.min.js"></script> -->  
+ <!--  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>  --> 
+  <script src="../plugins/jquery/1.11.3/jquery-1.11.3.min.js"></script> 
+<script src="../plugins/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+ <!-- ECharts单文件引入 -->
+<script src="../plugins/echarts2.2.7/echarts.js"></script>
+<script src="option0.js"></script>
+<script src="option1.js"></script>
+<script src="optionChartBar.js"></script>
+<script src="optionMap.js"></script>
+<script src="EchartsUtil.js"></script>
+<script type="text/javascript">
+var myChart0,myChart1,myChart2;
+requireConfig();//Echarts配置路径
+require(
+        [
+            'echarts',
+            'echarts/chart/bar', // 使用柱状图就加载bar模块，按需加载
+            'echarts/chart/line', 
+            'echarts/chart/map' 
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            // 为echarts对象加载数据 
+            EC_READY=true;
+          /*  myChart0 =ec.init(document.getElementById('aqi')).setOption(option0()); */
+           myChart0 =ec.init(document.getElementById('barLineChart')).setOption(optionChartBar());
+           myChart1 =ec.init(document.getElementById('barChart')).setOption(option1());  
+           myChart2 =ec.init(document.getElementById('mapChart')).setOption(optionMap());  
+        }
+    );
+
+//根据屏幕缩放自适应  缩放
+var resizeTicket;
+window.onload = function () {
+    window.onresize = function () {
+        clearTimeout(resizeTicket);
+        resizeTicket = setTimeout(function (){
+            myChart0.resize();
+            myChart1.resize();
+            myChart2.resize();
+        },200);
+    }
+}
+</script>
+</html>
