@@ -8,6 +8,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -29,6 +31,7 @@ public class RoleInfo implements java.io.Serializable {
 	private Integer id; //主键
 	private String roleName;//角色名字
 	private List<RoleMenu> roleMenu;//菜单角色关联表
+	private List<UserRole> userRole;
 /*	private List<AuthorityInfo> authorityInfos;//权限信息表
 */	
 	// Property accessors
@@ -59,5 +62,12 @@ public class RoleInfo implements java.io.Serializable {
 	public void setRoleMenu(List<RoleMenu> roleMenu) {
 		this.roleMenu = roleMenu;
 	}
-	
+	@OneToMany(mappedBy="roleInfo")
+	public List<UserRole> getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(List<UserRole> userRole) {
+		this.userRole = userRole;
+	}
 }

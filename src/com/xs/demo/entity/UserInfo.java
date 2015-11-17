@@ -3,13 +3,14 @@ package com.xs.demo.entity;
 import static javax.persistence.GenerationType.IDENTITY;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -33,7 +34,7 @@ public class UserInfo implements java.io.Serializable {
 	private Date birthday;//生日
 	private String address;//地址
 	private String password;//密码
-	private  RoleInfo  roleInfo;//角色
+	private  List<UserRole>  userRole;//角色
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -103,14 +104,13 @@ public class UserInfo implements java.io.Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	@ManyToOne
-	@JoinColumn(name = "role_id")
-	public RoleInfo getRoleInfo() {
-		return roleInfo;
+	@OneToMany(mappedBy="userInfo")
+	public List<UserRole> getUserRole() {
+		return userRole;
 	}
 
-	public void setRoleInfo(RoleInfo roleInfo) {
-		this.roleInfo = roleInfo;
+	public void setUserRole(List<UserRole> userRole) {
+		this.userRole = userRole;
 	}
-
+	 
 }

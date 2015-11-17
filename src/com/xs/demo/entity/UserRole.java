@@ -20,14 +20,14 @@ import javax.persistence.Table;
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "role_menu", catalog = "oschina")
-public class RoleMenu implements java.io.Serializable {
+@Table(name = "user_role", catalog = "oschina")
+public class UserRole implements java.io.Serializable {
 
 	// Fields
 
 	private Integer id; //主键
 	private  RoleInfo  roleInfo;//角色ID
-	private  MenuInfo  menuInfo;//菜单ID
+	private  UserInfo  userInfo;//用户ID
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -48,13 +48,13 @@ public class RoleMenu implements java.io.Serializable {
 		this.roleInfo = roleInfo;
 	}
 	@ManyToOne
-	@JoinColumn(name="menu_id")
-	public MenuInfo getMenuInfo() {
-		return menuInfo;
+	@JoinColumn(name="user_id")
+	public UserInfo getUserInfo() {
+		return userInfo;
 	}
 
-	public void setMenuInfo(MenuInfo menuInfo) {
-		this.menuInfo = menuInfo;
+	public void setUserInfo(UserInfo userInfo) {
+		this.userInfo = userInfo;
 	}
 	 
 	
