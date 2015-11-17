@@ -8,11 +8,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.ForeignKey;
 
 /**
  * 
@@ -31,9 +28,9 @@ public class RoleInfo implements java.io.Serializable {
 
 	private Integer id; //主键
 	private String roleName;//角色名字
-	private Integer authority;//权限表ID
-	private List<AuthorityInfo> authorityInfos;//权限信息表
-	
+	private List<RoleMenu> roleMenu;//菜单角色关联表
+/*	private List<AuthorityInfo> authorityInfos;//权限信息表
+*/	
 	// Property accessors
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -46,15 +43,6 @@ public class RoleInfo implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	 
-	@Column(name="authority")
-	public Integer getAuthority() {
-		return authority;
-	}
-
-	public void setAuthority(Integer authority) {
-		this.authority = authority;
-	}
 	@Column(name="name")
 	public String getRoleName() {
 		return roleName;
@@ -63,15 +51,13 @@ public class RoleInfo implements java.io.Serializable {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
-	
-	@OneToMany
-	@JoinColumn(name = "authority_id")
-	@ForeignKey(name="role_authority_key")
-	public List<AuthorityInfo> getAuthorityInfos() {
-		return authorityInfos;
+	@OneToMany(mappedBy="roleInfo")
+	 public List<RoleMenu> getRoleMenu() {
+		return roleMenu;
 	}
-	public void setAuthorityInfos(List<AuthorityInfo> authorityInfos) {
-		this.authorityInfos = authorityInfos;
+
+	public void setRoleMenu(List<RoleMenu> roleMenu) {
+		this.roleMenu = roleMenu;
 	}
 	
 }

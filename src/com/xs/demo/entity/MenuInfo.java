@@ -2,10 +2,13 @@ package com.xs.demo.entity;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
  /**
@@ -29,8 +32,8 @@ public class MenuInfo implements java.io.Serializable {
 	private int type;//0：非菜单 1:一级菜单  2:二级菜单 eg:1
 	private  int parentId;//父Id  eg:0 
 	private  int  menuOrder;//菜单显示顺序
-	/*private List<RoleInfo> roleInfos;//角色
-*/	@Id
+	private  List<RoleMenu>  roleMenu;
+ 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
 	public Integer getId() {
@@ -80,15 +83,14 @@ public class MenuInfo implements java.io.Serializable {
 	public void setMenuOrder(int menuOrder) {
 		this.menuOrder = menuOrder;
 	}
+
 	 
- 
-	/*@OneToMany
-	@JoinColumn(name = "authority_id")
-	@ForeignKey(name="authority_role_key")
-	public List<RoleInfo> getRoleInfos() {
-		return roleInfos;
+	@OneToMany(mappedBy="menuInfo")
+	 public List<RoleMenu> getRoleMenu() {
+		return roleMenu;
 	}
-	public void setRoleInfos(List<RoleInfo> roleInfos) {
-		this.roleInfos = roleInfos;
-	}*/
+
+	public void setRoleMenu(List<RoleMenu> roleMenu) {
+		this.roleMenu = roleMenu;
+	}
 }

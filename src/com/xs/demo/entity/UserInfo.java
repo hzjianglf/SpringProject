@@ -1,12 +1,15 @@
 package com.xs.demo.entity;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -30,17 +33,8 @@ public class UserInfo implements java.io.Serializable {
 	private Date birthday;//生日
 	private String address;//地址
 	private String password;//密码
+	private  RoleInfo  roleInfo;//角色
 
-	// Constructors
-
-	/** default constructor */
-	public UserInfo() {
-	}
-
-	/** full constructor */
-	
-
-	// Property accessors
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -108,6 +102,15 @@ public class UserInfo implements java.io.Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	public RoleInfo getRoleInfo() {
+		return roleInfo;
+	}
+
+	public void setRoleInfo(RoleInfo roleInfo) {
+		this.roleInfo = roleInfo;
 	}
 
 }
