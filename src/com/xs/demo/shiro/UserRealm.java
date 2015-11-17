@@ -1,5 +1,7 @@
 package com.xs.demo.shiro;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.shiro.SecurityUtils;
@@ -16,6 +18,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
+import com.xs.demo.entity.MenuInfo;
 import com.xs.demo.util.StringUtil;
 public class UserRealm extends AuthorizingRealm{
  protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
@@ -78,6 +81,34 @@ protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) 
       throw new IncorrectCredentialsException(); //如果密码错误  
   }  
   SimpleAuthenticationInfo authenticationInfo=new SimpleAuthenticationInfo(username,password,ByteSource.Util.bytes(username+"8d78869f470951332959580424d4bf4f"),getName());
+  Session session= SecurityUtils.getSubject().getSession();
+  List<MenuInfo> pMenu=new ArrayList<MenuInfo>();
+  List<MenuInfo> childMenu=new ArrayList<MenuInfo>();
+  MenuInfo info=new MenuInfo();
+  info.setId(1);
+  info.setMenuDesc("用户管理");
+  info.setMenuOrder(1);
+  info.setMenuUrl("user/index");
+  info.setParentId(0);//父Id为0说明为父菜单
+  info.setType(1);
+  MenuInfo info1=new MenuInfo();
+  info1.setId(2);
+  info1.setMenuDesc("测试界面");
+  info1.setMenuOrder(2);
+  info1.setMenuUrl("user/index");
+  info1.setParentId(0);
+  info1.setType(0);
+  MenuInfo info2=new MenuInfo();
+  info2.setMenuDesc("图表测试");
+  info2.setMenuOrder(2);
+  info2.setMenuUrl("charts/test.html");
+  info2.setParentId(2);
+  info2.setType(2);
+  pMenu.add(info);
+  pMenu.add(info1);
+  childMenu.add(info2);
+  session.setAttribute("parentMenu", pMenu);
+  session.setAttribute("childMenu", childMenu);
   return authenticationInfo;
  } 
 }
