@@ -88,7 +88,7 @@
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan">
 		     <list>
-               <value>com.xs.demo.entity</value>
+               <value>com.lyj.base.entity</value>
 		     </list>
 		</property>
  		<property name="hibernateProperties">

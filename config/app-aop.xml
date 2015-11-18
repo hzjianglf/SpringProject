@@ -20,7 +20,7 @@
 	
 	
 	 <aop:config>
-		<aop:pointcut id="testPointcut"  expression="execution(* com.xs.demo.dao.BaseDao+.Task*(..))" />
+		<aop:pointcut id="testPointcut"  expression="execution(* com.lyj.base.dao.BaseDao+.Task*(..))" />
 		<!-- 这儿第一个*通配符代表所有的返回值，第二个*代表所有方法，(..)表示任意的参数类型。也就是说cn.com.elve.live..service类下面的所有任意返回值，任意参数类型的方法都会被拦截。 --> 
 	</aop:config>  
     <!-- 普通的AOP，如果想得到被代理的方法参数，那么就必须在配置里提前写好，这样有非常大的局限性 -->
@@ -41,10 +41,10 @@
     
     
 	<!-- 需要由spring注入的bean定义 -->
-    <bean id="afterReturn" class="com.xs.demo.aop.AfterReturn"/>
-    <bean id="afterThrow" class="com.xs.demo.aop.AfterThrow"/>
-    <bean id="before" class="com.xs.demo.aop.Before"/>
-    <bean id="testSchemaAop" class="com.xs.demo.aop.TestSchemaAop"/>
+    <bean id="afterReturn" class="com.lyj.base.aop.AfterReturn"/>
+    <bean id="afterThrow" class="com.lyj.base.aop.AfterThrow"/>
+    <bean id="before" class="com.lyj.base.aop.Before"/>
+    <bean id="testSchemaAop" class="com.lyj.base.aop.TestSchemaAop"/>
     
     
     

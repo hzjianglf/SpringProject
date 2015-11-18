@@ -35,7 +35,7 @@
 	
 	<!-- 设置自动扫描的controller类的路径,可以写多个 -->
     <!-- 例<context:component-scan base-package="cn.com.elve.live.controller,cn.com.elve.live.xxx"/> -->
-    <context:component-scan base-package="com.xs.demo.controller"/>
+    <context:component-scan base-package="com.lyj.base.controller"/>
 	<!-- 
 	配置一个基于注解的定制的WebBindingInitializer，解决日期转换问题，方法级别的处理器映射，
 	有人说该bean要放在context:component-scan前面，要不然不起作用，但我试的放后面也可以啊。

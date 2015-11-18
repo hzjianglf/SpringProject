@@ -19,7 +19,7 @@
     default-autowire="byName">
     <!-- 使用annotation 自动注册bean -->
     <context:annotation-config/>
-    <context:component-scan base-package="com.xs.demo">
+    <context:component-scan base-package="com.lyj.base">
     	<context:include-filter type="regex" expression=".*Service"/>
 		<context:include-filter type="regex" expression=".*Dao"/>
 		<context:include-filter type="regex" expression=".*Job"/>
@@ -93,7 +93,7 @@
     </tx:advice>
     <aop:config expose-proxy="true">
         <!-- 只对业务逻辑层实施事务 -->
-        <aop:pointcut id="txPointcut" expression="execution(* com.xs.demo..service..*.*(..))" />
+        <aop:pointcut id="txPointcut" expression="execution(* com.lyj.base..service..*.*(..))" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
     
