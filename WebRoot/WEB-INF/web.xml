@@ -46,7 +46,7 @@
   </listener>
   <listener>
     <listener-class>
-		com.xs.demo.listener.SessionListener
+		com.lyj.base.listener.SessionListener
 	</listener-class>
   </listener>
   <servlet>
