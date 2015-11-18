@@ -1,4 +1,4 @@
- <%@ page language="java" import="com.xs.demo.entity.MenuInfo"  pageEncoding="utf-8"%>
+ <%@ page language="java" import="com.lyj.base.entity.MenuInfo"  pageEncoding="utf-8"%>
  <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
