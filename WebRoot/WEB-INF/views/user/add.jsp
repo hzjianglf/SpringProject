@@ -66,6 +66,14 @@
             	</p>
         </div>
         </div>
+        <div class="basic_table">
+          <div class="clospan">
+            	<p class="basic_name" style=" border-right:none;">所属角色</p>
+            	<p>
+            	<input name="address"  id="roleInfo" type="text" value="1"  class="easyui-validatebox"  data-options="required:true" placeholder="角色"/>
+            	</p>
+        </div>
+        </div>
              <div class="clospan_func">
             	<div class="btns">
             		<a href="javascript:void(0);" id="doSubmit" class="blank_btn">保存</a>
