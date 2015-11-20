@@ -1,14 +1,15 @@
  package com.lyj.base.entity;
  
  import java.io.Serializable;
- import java.util.List;
- import javax.persistence.Column;
- import javax.persistence.Entity;
- import javax.persistence.GeneratedValue;
- import javax.persistence.GenerationType;
- import javax.persistence.Id;
- import javax.persistence.OneToMany;
- import javax.persistence.Table;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
  
  @Entity
  @Table(name="menu_info", catalog="oschina")
@@ -101,6 +102,27 @@
    {
      this.roleMenu = roleMenu;
    }
+
+@Override
+public String toString() {
+	return "MenuInfo [id=" + id + ", menuUrl=" + menuUrl + ", menuDesc="
+			+ menuDesc + ", type=" + type + ", parentId=" + parentId
+			+ ", menuOrder=" + menuOrder + ", roleMenu=" + roleMenu + "]";
+}
+
+ 
+
+@Override
+public boolean equals(Object object) {
+	boolean sameSame = false;
+
+    if (object != null && object instanceof MenuInfo)
+    {
+        sameSame =( this.getId()==((MenuInfo) object).getId());
+    }
+
+    return sameSame;
+}
  }
 
 
