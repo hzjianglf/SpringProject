@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     <title>SpringMVC+Hibernate +MySql+ EasyUI ---CRUD</title>
     <style type="text/css">
-     .page-container{ padding-top: 35px;}
+   /*   .page-container{ padding-top: 35px;} */
     </style>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
