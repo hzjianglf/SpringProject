@@ -55,6 +55,7 @@
 	<mvc:resources mapping="/charts/**" location="/charts/" />
 	<mvc:resources mapping="/plugins/**" location="/plugins/" />
 	<mvc:resources mapping="/voteyouth/**" location="/voteyouth/" />
+	<mvc:resources mapping="/menuTree/**" location="/menuTree/" />
 	<!-- 添加 测试 -->
 	<!-- viewResolver 视图解析器,将视图名(ModelAndView中的view)解析成URL-->
 	<bean id="viewResolver"
