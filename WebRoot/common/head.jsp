@@ -4,7 +4,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
  <div class="header">
-   <nav class="navbar navbar-default  navbar-fixed-top">
+   <!-- <nav class="navbar navbar-default  navbar-fixed-top"> -->
+   <nav class="navbar navbar-default ">
   <div class="container">
     	<ul class="nav navbar-nav">
     	 <c:forEach var="menu" items="${parentMenu}">
@@ -35,6 +36,7 @@
             <li role="separator" class="divider"></li>
           </ul>
         </li>  -->
+        <li class=""><a href="menuTree/yibushueasyui.jsp" class="iframe">菜单管理<span class="sr-only">(current)</span></a></li>
       </ul>
        <ul class="nav navbar-nav navbar-right ">
          <li class="dropdown">
