@@ -116,7 +116,7 @@ function edite() {
 		function update(text) {
 			$.ajax({
 				type : "POST",
-				url : "menu/edite.action?text=" + text + "&id=" + node.id,
+				url : "menu/edite.action?text=" + encodeURI(encodeURI((text))) + "&id=" + node.id,
 				cache : false,
 				async : false,
 				dataType : "json",
