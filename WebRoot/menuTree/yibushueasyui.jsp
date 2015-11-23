@@ -12,6 +12,21 @@
 <head>
 <base href="<%=basePath%>">
 <title>菜单管理界面</title>
+<style type="text/css">
+/*bootstrap兼容问题和easyui的bug*/
+.panel-header, .panel-body {
+border-width: 0px !important;
+}
+.datagrid,.combo-p{
+border:solid 1px #D4D4D4 !important;
+}
+.datagrid *{
+-webkit-box-sizing: content-box !important;
+-moz-box-sizing: content-box !important;
+box-sizing: content-box !important;
+}
+
+</style>
  <link rel="stylesheet" href="plugins/easyui/easyui1.3.2/themes/default/easyui.css" />
 <link rel="stylesheet" href="plugins/easyui/easyui1.3.2/themes/icon.css" />
  <link href="plugins/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -197,5 +212,26 @@
 	</div>
 </div>
 
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 </body>
 </html>
