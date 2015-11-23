@@ -2576,1224 +2576,1080 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 
 		var keywords =	'cfabort cfajaximport cfajaxproxy cfapplet cfapplication cfargument cfassociate cfbreak cfcache cfcalendar ' + 
 						'cfcase cfcatch cfchart cfchartdata cfchartseries cfcol cfcollection cfcomponent cfcontent cfcookie cfdbinfo ' + 
-						'cfdefaultcase cfdirectoryxp 1.vxp 1ocument07-2012 Steitem07-2012 Stesectionxp 1ump cfelgExp exp.ifcom>rror ' + 
-	mente'cfexchangecalendarcom>tensibleonn
-// <httpowser impletacevenowser imfiltes-browser immailessions,
-//taskan augmented, extecut.com>xievenfeed XReilExp flush(XReor/ MI
-   grouxreg
-   n
-// MIftunninun// <httpgrixp;
-reakcolumnan augmented, ereakrow refereupdahods
-headludinhtmlt lo XRegnce t in para/ MI ProvimagExp imporevenincludRun wndexan augmented, einpun an asein an aterfacmous fvokglobals
-(farg2 Stevenlayoriabl{
+						'cfdefaultcase cfdirectory cfdiv cfdocument cfdocumentitem cfdocumentsection cfdump cfelse cfelseif cferror ' + 
+						'cfexchangecalendar cfexchangeconnection cfexchangecontact cfexchangefilter cfexchangemail cfexchangetask ' + 
+						'cfexecute cfexit cffeed cffile cfflush cfform cfformgroup cfformitem cfftp cffunction cfgrid cfgridcolumn ' + 
+						'cfgridrow cfgridupdate cfheader cfhtmlhead cfhttp cfhttpparam cfif cfimage cfimport cfinclude cfindex ' + 
+						'cfinput cfinsert cfinterface cfinvoke cfinvokeargument cflayout cflayoutarea cfldap cflocation cflock cflog ' + 
+						'cflogin cfloginuser cflogout cfloop cfmail cfmailparam cfmailpart cfmenu cfmenuitem cfmodule cfNTauthenticate ' + 
+						'cfobject cfobjectcache cfoutput cfparam cfpdf cfpdfform cfpdfformparam cfpdfparam cfpdfsubform cfpod cfpop ' + 
+						'cfpresentation cfpresentationslide cfpresenter cfprint cfprocessingdirective cfprocparam cfprocresult ' + 
+						'cfproperty cfquery cfqueryparam cfregistry cfreport cfreportparam cfrethrow cfreturn cfsavecontent cfschedule ' + 
+						'cfscript cfsearch cfselect cfset cfsetting cfsilent cfslider cfsprydataset cfstoredproc cfswitch cftable ' + 
+						'cftextarea cfthread cfthrow cftimer cftooltip cftrace cftransaction cftree cftreeitem cftry cfupdate cfwddx ' + 
+						'cfwindow cfxml cfzip cfzipparam';
 
-   area //-daxregloca/ <httplock-----gan augmented, elogi------ginusludinlog    //-ooxregt for at foe frame"// Acceevenmenu and fln
-// MImoduf (XRNTauththanc("can augmented, eobjepresss fromcachExp outariable frame"pdProvpd{
-    //hat addxpression ixpression isub additioowicepop object. Differpresent--------ntax inconsisliymousntax inludinpritevenprocessing1.5.1
-ivrated.ocxpressionrocresultowser
-    // syntopert (c)que/ (c)gExp e frame"regist/ (c)rethin an {
-   on (patterth  throreturhttpsavlar eStevenscheew, en augmented, escripXRegEearcp) {selrom a se      cting    il= XRegEliors-brsprydata  contetored // chr,wit 0,
- tabTSIDE_CLASS,
-    tex--------thr twice],
-     tim, chrtooltixregtrw globtransa// <httptrerow Tyeen
-// MIflags)ror("can'wddction to protectwind throxmor az     zime fra';
+		var operators =	'all and any between cross in join like not null or outer some';
 
-		var p
-  ators =	'all and any between cross in join like not null or ouegExsomelone(pthis.regexList = [gmen{ otect: new RegExp('--(.*)$', 'gm'),mentedcss: 'comcense' },  // one line     multien hastructed infinite
-   SyntaxHighlighterrotect ab.xmlCtructedRegEis constructed withihin aes ale quoted string    if (isInsideConstructor)
-            doubleQwithiStoken,can't ca tokenRegExp cons flagsr within token definition functions");
-
-        flags =tructo || "";
-        context = { // `this` tructor within token definition fu     // recso prgetKeywords(hat s)en ani XRegis conhat would with// ion (flag) {return flags.indexOf(flag) > -1;},
-   rn);
-        setFlagis constlor1RegExp consrn);
-         such) {return flags.indexOf(flag) > -1;},
-   k1;},
-      setFlag: functunToken' }xp consunTokengmen];
+		this.regexList = [
+			{ regex: new RegExp('--(.*)$', 'gm'),						css: 'comments' },  // one line and multiline comments
+			{ regex: SyntaxHighlighter.regexLib.xmlComments,			css: 'comments' },    // single quoted strings
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },    // double quoted strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },    // single quoted strings
+			{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'functions' }, // functions
+			{ regex: new RegExp(this.getKeywords(operators), 'gmi'),	css: 'color1' },    // operators and such
+			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),		css: 'keyword' }    // keyword
+			];
 	}
 
-	Brush.prototype	=ags.ideConstructor)
-   tructor)
-  ();(tokenRealiases	= [/ Chdfusion','cf'   i
-	deConstructor)
-   bkenRes.ColdFpos + = okenRone(// ow EonJS
-	 {
- of(exthins) != 'undefined' ? eck for.okenR  } else :ex co;
-})lt.o;     / <h()
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['coldfusion','cf'];
+	
+	SyntaxHighlighter.brushes.ColdFusion = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
 {
-              deConstructor)
-   =         output.pu || (  // C require !=tive multicha?tch = na('shCore').ition
-            luding)one(hat wouldokenR()
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
 	{
-	      pyror)
- 2006 Shin, YoungJinResupattegex; {
-      ATOM BOOLth;
- EAN BYTE CHAR COLORREF DWORD      LONG      _PTRIDE_gmented,     32      64 FLOAT HACCEL HALF pattHANDLE HBITMAP HBRUSHtern.charAt(Hse {
-SPACE HCONVgExp.ILIST HCURSOR HDC HDDEDATA HDESK HDROP HDWP        currSENHMETAFI
-          ONT HGDIOBJ HGLOBAL HHOOK HICON HINSTANRegEKEY        currSKL HLOC.OUTMENUtion        MODUcter
- NIT    PALETTE HPEN HRESULT        currSRGpushSRC HSZ HW      HWND INT     pattINT32    64 LANGID LC }
+		// Copyright 2006 Shin, YoungJin
+	
+		var datatypes =	'ATOM BOOL BOOLEAN BYTE CHAR COLORREF DWORD DWORDLONG DWORD_PTR ' +
+						'DWORD32 DWORD64 FLOAT HACCEL HALF_PTR HANDLE HBITMAP HBRUSH ' +
+						'HCOLORSPACE HCONV HCONVLIST HCURSOR HDC HDDEDATA HDESK HDROP HDWP ' +
+						'HENHMETAFILE HFILE HFONT HGDIOBJ HGLOBAL HHOOK HICON HINSTANCE HKEY ' +
+						'HKL HLOCAL HMENU HMETAFILE HMODULE HMONITOR HPALETTE HPEN HRESULT ' +
+						'HRGN HRSRC HSZ HWINSTA HWND INT INT_PTR INT32 INT64 LANGID LCID LCTYPE ' +
+						'LGRPID LONG LONGLONG LONG_PTR LONG32 LONG64 LPARAM LPBOOL LPBYTE LPCOLORREF ' +
+						'LPCSTR LPCTSTR LPCVOID LPCWSTR LPDWORD LPHANDLE LPINT LPLONG LPSTR LPTSTR ' +
+						'LPVOID LPWORD LPWSTR LRESULT PBOOL PBOOLEAN PBYTE PCHAR PCSTR PCTSTR PCWSTR ' +
+						'PDWORDLONG PDWORD_PTR PDWORD32 PDWORD64 PFLOAT PHALF_PTR PHANDLE PHKEY PINT ' +
+						'PINT_PTR PINT32 PINT64 PLCID PLONG PLONGLONG PLONG_PTR PLONG32 PLONG64 POINTER_32 ' +
+						'POINTER_64 PSHORT PSIZE_T PSSIZE_T PSTR PTBYTE PTCHAR PTSTR PUCHAR PUHALF_PTR ' +
+						'PUINT PUINT_PTR PUINT32 PUINT64 PULONG PULONGLONG PULONG_PTR PULONG32 PULONG64 ' +
+						'PUSHORT PVOID PWCHAR PWORD PWSTR SC_HANDLE SC_LOCK SERVICE_STATUS_HANDLE SHORT ' +
+						'SIZE_T SSIZE_T TBYTE TCHAR UCHAR UHALF_PTR UINT UINT_PTR UINT32 UINT64 ULONG ' +
+						'ULONGLONG ULONG_PTR ULONG32 ULONG64 USHORT USN VOID WCHAR WORD WPARAM WPARAM WPARAM ' +
+						'char bool short int __int32 __int64 __int8 __int16 long float double __wchar_t ' +
+						'clock_t _complex _dev_t _diskfree_t div_t ldiv_t _exception _EXCEPTION_POINTERS ' +
+						'FILE _finddata_t _finddatai64_t _wfinddata_t _wfinddatai64_t __finddata64_t ' +
+						'__wfinddata64_t _FPIEEE_RECORD fpos_t _HEAPINFO _HFILE lconv intptr_t ' +
+						'jmp_buf mbstate_t _off_t _onexit_t _PNH ptrdiff_t _purecall_handler ' +
+						'sig_atomic_t size_t _stat __stat64 _stati64 terminate_function ' +
+						'time_t __time64_t _timeb __timeb64 tm uintptr_t _utimbuf ' +
+						'va_list wchar_t wctrans_t wctype_t wint_t signed';
 
- TYPEtern.charAt(LGRP }
+		var keywords =	'auto break case catch class const decltype __finally __exception __try ' +
+						'const_cast continue private public protected __declspec ' +
+						'default delete deprecated dllexport dllimport do dynamic_cast ' +
+						'else enum explicit extern if for friend goto inline ' +
+						'mutable naked namespace new noinline noreturn nothrow ' +
+						'register reinterpret_cast return selectany ' +
+						'sizeof static static_cast struct switch template this ' +
+						'thread throw true false try typedef typeid typename union ' +
+						'using uuid virtual void volatile whcar_t while';
+					
+		var functions =	'assert isalnum isalpha iscntrl isdigit isgraph islower isprint' +
+						'ispunct isspace isupper isxdigit tolower toupper errno localeconv ' +
+						'setlocale acos asin atan atan2 ceil cos cosh exp fabs floor fmod ' +
+						'frexp ldexp log log10 modf pow sin sinh sqrt tan tanh jmp_buf ' +
+						'longjmp setjmp raise signal sig_atomic_t va_arg va_end va_start ' +
+						'clearerr fclose feof ferror fflush fgetc fgetpos fgets fopen ' +
+						'fprintf fputc fputs fread freopen fscanf fseek fsetpos ftell ' +
+						'fwrite getc getchar gets perror printf putc putchar puts remove ' +
+						'rename rewind scanf setbuf setvbuf sprintf sscanf tmpfile tmpnam ' +
+						'ungetc vfprintf vprintf vsprintf abort abs atexit atof atoi atol ' +
+						'bsearch calloc div exit free getenv labs ldiv malloc mblen mbstowcs ' +
+						'mbtowc qsort rand realloc srand strtod strtol strtoul system ' +
+						'wcstombs wctomb memchr memcmp memcpy memmove memset strcat strchr ' +
+						'strcmp strcoll strcpy strcspn strerror strlen strncat strncmp ' +
+						'strncpy strpbrk strrchr strspn strstr strtok strxfrm asctime ' +
+						'clock ctime difftime gmtime localtime mktime strftime time';
 
-    .joi.join("") patt.joi32ce.ca    PARAM LPh;
-  LP     LPse {
-    ex = RegExp(PCSlacePCT       VO }
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	css: 'comments' },			// one line comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,		css: 'comments' },			// multiline comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },			// strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },			// strings
+			{ regex: /^ *#.*/gm,										css: 'preprocessor' },
+			{ regex: new RegExp(this.getKeywords(datatypes), 'gm'),		css: 'color1 bold' },
+			{ regex: new RegExp(this.getKeywords(functions), 'gm'),		css: 'functions bold' },
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword bold' }
+			];
+	};
 
-PCW            LP"[")
-  LP    LP.join(P        souregexp = {
-  : patte       n,
-   h(chr);, "")), "")    
-     P } el          souern,
-  ern.charAt(      .join       patt      32  //  P64 P      P(chr ===  captureP     ames:------------ }
-        Xubli }
-   P
-    contexconte
-    // ToRegExpe.call(ags
-  "1.OINTER_32---------
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['cpp', 'c'];
 
-  NSIDE_C "1.SHORT PSIZE_CLASSS = 2;
+	SyntaxHighlighter.brushes.Cpp = Brush;
 
-gExpTturn rTegex;
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
+	function Brush()
+	{
+		var keywords =	'abstract as base bool break byte case catch char checked class const ' +
+						'continue decimal default delegate do double else enum event explicit volatile ' +
+						'extern false finally fixed float for foreach get goto if implicit in int ' +
+						'interface internal is lock long namespace new null object operator out ' +
+						'override params private protected public readonly ref return sbyte sealed set ' +
+						'short sizeof stackalloc static string struct switch this throw true try ' +
+						'typeof uint ulong unchecked unsafe ushort using virtual void while var ' +
+						'from group by into select let where orderby join on equals ascending descending';
 
-    Uegex;
-U(chr === ------------U    ablesRegExpbles   Xbles "1.U
-    /----------------/------gs
-    XmentT64Private variabIDE_CLA: patPWegex;
-     s : nuSC_"[")
-  SC_LOCK SERVICE_STATUSp = /[^giDE_CLern.charAt(SS = 2;
+		function fixComments(match, regexInfo)
+		{
+			var css = (match[0].indexOf("///") == 0)
+				? 'color1'
+				: 'comments'
+				;
+			
+			return [new SyntaxHighlighter.Match(match[0], match.index, css)];
+		}
 
-    //------------------
-    //  Pbles
-   //------------------------ern.charAt(-----
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	func : fixComments },		// one line comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,		css: 'comments' },			// multiline comments
+			{ regex: /@"(?:[^"]|"")*"/g,								css: 'string' },			// @-quoted strings
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },			// strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },			// strings
+			{ regex: /^\s*#.*/gm,										css: 'preprocessor' },		// preprocessor tags like #region and #endregion
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' },			// c# keyword
+			{ regex: /\bpartial(?=\s+(?:class|interface|struct)\b)/g,	css: 'keyword' },			// contextual keyword: 'partial'
+			{ regex: /\byield(?=\s+(?:return|break)\b)/g,				css: 'keyword' }			// contextual keyword: 'yield'
+			];
+		
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	};
 
-   var replacmentToke = /\$(?'])|{([USN : pat)/g,
-      WlagClials for refereern.charAt(char bool shhin egex__int32ord)
- 64ord)
- 8ord)
- 16 long float object __wn ES_rts tgmented, --
- _t _complex _devtestdiskfree_t diototl      _excep/ <ht_EXCEPTION_XRegExpSnative" is a     _s fugex;matc String.i64matcw String.prot         place,
-totype.relace,ec,
-       _split: Strlace,
-FPIEEE_REC    fposmatcHEAPINFO _      lconvkeywpte.exec,
-       jmp_buf mbstat,
-  _offg of n
-varg ofPNH ptrdinonparpurle, l_handle an agmented,sig_atomic_t sizng ofndli _n () ativndlii64 terminlinghat wouldantLastIndeed)
-.proted)
-lace,
-ed)
-b(x, "")br x m u undefine_utimec` antLastIndeva_lagaiotype.exwcTypeE RegExypall(winatinsigichaone(patteunTokens    }uto break RegExpaisReglass const declpe.srototyally _ch: String.p_flagec,
-        ns` _castkenstinue priv("capublic sultecthin__atchspecnces only (idef// X delete dep
-   thindlleck foIDE_within do dynaent ng deantLastIndeexp.cenumcterlicit extern if for friend goto inen haantLastIndemuxp(patnaked namespw gl    nos\S]))/no       no],
-   antLastIndeern, fer reoid npreding de               //antLastIndexIz(mat   vac|[\s\S]7]{0,2struct xp.isRetempl("caso p   nativ.testlags !],
-   true faxp.cflagpe.sdef---
- id---
- p.OU un      nativ.tesues a uuid virtual vo----olatif (whc = Reghilocesmente    posion (flag    }s and isaldA-Fate pha iscntrl isdigireatgraph islower is/regeantLastIndeispclas isTSIDE_isupp    /xused itoby
-   tosed toerrno ----lmplevFa-f]{4}|c[A-etunctio acos asin atah adva2 cefor ookenshcter fabsxec:4}|cmodFa-f]{4}|c[AfraScrldax anoghavi10 modf powasFlasFlh sqrt dvantanh  `exec` antLastInde   ejmp setegExraise undeal undcrement = va_argndle-Za-va    r,2}|[4-7][0-7clearerr fclose f(matvides aRegExp)fgetclone(poslone(s fope    nativ.tes(/regef fpu(regpu(hasags !freNativfscanf fseek    , "g" tellveY ? "y" : "write ne(rene(r ES3+ (hapides a")),
-            ES3   haremov)/;
-    nativrmethodreothe 
-     setec` setvnd fl")),
-  s
-     tmp
-if (tmpnam //----------onalc v"")),
-  vand flagturns anabSS] pt'sat
-var atofly bily be || XRegExp.bos = 0,
-alloc     
-var est,    env lpt's     meturnemblen handowc;
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['c#', 'c-sharp', 'csharp'];
 
+	SyntaxHighlighter.brushes.CSharp = Brush;
 
-    //---mbcach qsSS] r    reeturnesctionstrtolags) {lags) {ul sys
-// antLastIndewcstombsegExomb memchr     mp     py     });
-mem  costrca| (XRehliantLastIndextrurn gExpol  vargExplagsspn;
-  ides astrgex strnegExp.cnurn [key] = XRegExns));
-  pbrk a `cachestr };
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
-  st flagtothe `xfrm asced)
-xec,
-                // ing   // gm  // uncti  // mk  // str If yoed)
-cess, so protect against infinite
-      hasNamedCapture: false,
-      LineCow Error("is constructed wit	put.p token haer
-        if (isInsideConstructor)
-            r or xp(regex)` becaause it will not preserver or trigger
-        if (isInsideConstructor)
-             flags || "";
-        context = { // eservetom tokens
-            hasNamedCapture: false,
-            captureNames: [],
-       metacharacters escaped. Th/^ *#.*/gmRegExp Exp is conpre` cloneor wit) {return flags.indexOf(flag) > -1;},
-    += match    seFlag: funct Check bol, coers are [ ] { } ( ) * + ? - . , \ ^ $ | # ion (flagspace
-    XRegExpegExp synt = function (str) {
-        return str.replace(/[unTokens(patten, pos, currScope,    };
+	function Brush()
+	{
+		function getKeywordsCSS(str)
+		{
+			return '\\b([a-z_]|)' + str.replace(/ /g, '(?=:)\\b|\\b([a-z_\\*]|\\*|)') + '(?=:)\\b';
+		};
+	
+		function getValuesCSS(str)
+		{
+			return '\\b' + str.replace(/ /g, '(?!-)(?!:)\\b|\\b()') + '\:\\b';
+		};
 
-       ifone(okenResult) {
-                output.push(tokenResult.output);
-            pphen ckenRsult.match[0].length || 1);
- pp  } else {
-                // Check for native multicharacter metasequences (excluding character classes) at
-                // the current position
-                if (match = nativ.exec.call(nativeTokens[currScope], pattern.slice(pos))) {
-                    outpu       nativeTokebs  tht as begEx rese {};
+		var keywords =	'ascent azimuth background-attachment background-color background-image background-position ' +
+						'background-repeat background baseline bbox border-collapse border-color border-spacing border-style border-top ' +
+						'border-right border-bottom border-left border-top-color border-right-color border-bottom-color border-left-color ' +
+						'border-top-style border-right-style border-bottom-style border-left-style border-top-width border-right-width ' +
+						'border-bottom-width border-left-width border-width border bottom cap-height caption-side centerline clear clip color ' +
+						'content counter-increment counter-reset cue-after cue-before cue cursor definition-src descent direction display ' +
+						'elevation empty-cells float font-size-adjust font-family font-size font-stretch font-style font-variant font-weight font ' +
+						'height left letter-spacing line-height list-style-image list-style-position list-style-type list-style margin-top ' +
+						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width orphans ' +
+						'outline-color outline-style outline-width outline overflow padding-top padding-right padding-bottom padding-left padding page ' +
+						'page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position ' +
+						'quotes right richness size slope src speak-header speak-numeral speak-punctuation speak speech-rate stemh stemv stress ' +
+						'table-layout text-align top text-decoration text-indent text-shadow text-transform unicode-bidi unicode-range units-per-em ' +
+						'vertical-align visibility voice-family volume white-space widows width widths word-spacing x-height z-index';
 
-byhods   // `nati ES3checegExiveTokens` mces only (inclcated decimal  nativeTokeng("ca?:[0bject ]?|x[\dA-FavSteva-f]{2}|u
+		var values =	'above absolute all always aqua armenian attr aural auto avoid baseline behind below bidi-override black blink block blue bold bolder '+
+						'both bottom braille capitalize caption center center-left center-right circle close-quote code collapse compact condensed '+
+						'continuous counter counters crop cross crosshair cursive dashed decimal decimal-leading-zero default digits disc dotted double '+
+						'embed embossed e-resize expanded extra-condensed extra-expanded fantasy far-left far-right fast faster fixed format fuchsia '+
+						'gray green groove handheld hebrew help hidden hide high higher icon inline-table inline inset inside invert italic '+
+						'justify landscape large larger left-side left leftwards level lighter lime line-through list-item local loud lower-alpha '+
+						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
+						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
+						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
+						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
+						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
+						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
+						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
+						'upper-roman url visible wait white wider w-resize x-fast x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';
 
-    // }|[4-7][0-7]\dA-Fa------ multichfixedxec: Re{4}|coreach    -z]|[\sf imf]{2}|uinkeywo XRegExp libid new glnull;ctiois to k    exp.OUTSIDE_CLASS cons from rn);
-   ruct    match = overriorae fras octals,
- xcluding     // ags only reatcha-f]{2     sealhin e r2.lastIndexrved k-Za-z]|[\sckpattern\s\S])|\oken[?*+]\?|{\d+(?:,)/;
------------quences only (iif (matastI u   exun      r2unsafe urved k------------------- exte attepression syntom id runby    o{2}|u[\ leou eere orderbyart ofon equals wicendtingde Error("ned,
- hat wouldfixow Error(m `na,nite
- Info)
-	outpug" + css = ");
-  [0]. funcOf("///") == 0  };		?// Check  indiconstructed  indid or  indunresto[            output.pusM `nas any val, );
-  ue; re, Acc)   iif (t `global`
-    // property, use `XRegExp(regex)`. Do not use `RegExp(regex)` becahat  :freezeTokensin a rve
-    // special properties required for named capture
-    XRegExp.copyAsGlobal = function (regex) {
-        return clone(regex, "g");/@"(?:[^"]|"")*"/    ing. Escapednt within a rege@- within token definition functions");
+		var fonts =		'[mM]onospace [tT]ahoma [vV]erdana [aA]rial [hH]elvetica [sS]ans-serif [sS]erif [cC]ourier mono sans serif';
+	
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,		css: 'comments' },	// multiline comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },	// double quoted strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },	// single quoted strings
+			{ regex: /\#[a-fA-F0-9]{3,6}/g,								css: 'value' },		// html colors
+			{ regex: /(-?\d+)(\.\d+)?(px|em|pt|\:|\%|)/g,				css: 'value' },		// sizes
+			{ regex: /!important/g,										css: 'color3' },	// !important
+			{ regex: new RegExp(getKeywordsCSS(keywords), 'gm'),		css: 'keyword' },	// keywords
+			{ regex: new RegExp(getValuesCSS(values), 'g'),				css: 'value' },		// values
+			{ regex: new RegExp(this.getKeywords(fonts), 'g'),			css: 'color1' }		// fonts
+			];
 
-        flags = flags || "";
-        context = { // metacharacters escaped. The returned string
-    // can safely be used at any point within a regex to match the provide\s literal string. Escaped
-    // characteer fr
-    // char tagsf the #ern,ont the#end loop
-   // Accepts a string to search, regex to search with, position to startsimpler anc#;
+		this.forHtmlScript({ 
+			left: /(&lt;|<)\s*style.*?(&gt;|>)/gi, 
+			right: /(&lt;|<)\/\s*style\s*(&gt;|>)/gi 
+			});
+	};
 
-                 re\bternial(?=\s+(?:iveTo|null;
-   |?*+]\?)\b)totys, currScope, coex, "g")pe =x-----unTokenped
-h;
-   t is  i = -1, matyield     whilunrest| {};
-)) { // "can't ca clone(regexec` (required for `lastIn    it is s andegexes cforHtmlS     (deConstructor)
-            asp`lastITagst.ouin the
-    // string (default: 0), and an optional Boolean indicating whether ma#hes m-sharches mh.indest start at-or-
-    // after theS.ind  } else {
-                // Check for native multicharacter metasequences (excluding character classes) at
-                // the current position
-                if (match = nativ.exec.call(nativeTokens[currScope], pattern.slice(pos))) {
-                    outpuhat would > -1;},
-  CSS(str  };
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['css'];
 
-   unresto'\\b([a-z_]|)n aust    place(/ /g, '(?=:)\\b|ies, in w\\*]|\\*|)') +umbered band or}nResu// objects wiValueex` and `backref` propertiesh case the named or numbe!-)(?!ed back-
- es spec\: are passed "g" + ((anchored && Errt azimuth backid rnd-attach Stevbackref: 1} Chec tag attribu
-// Rubackref: 1}posi       nativ.tesbackref: 1}repea> tag attribY) ? en habbox bn () uteslap? "y"e values
-        {TSIDting XRegExptyl //     {tbrowse" (?<src>     {match[ackref:bottom// xregelef // xregetop{regex: XRegExmatch{regex: XRegExxp.com{regex: XRegEx   /utes
-  )", "i"), backref:^\/]exp\\.com(/[^mes (sexp\\.com(/[^y pathsexp\\.com(/[^    Xexp\\.com(/[^#?]-widi, bchain) {
-         )", "i"), backref:y paths         var     X         var          var xp.com cap-heatch[catring-sioratXRegE // spens. cl    egExp.matchChainope = XReouRegE-incre Steveor (i =tax t cue-afegExpue-bech &     curithimulti \\s -srccan't r    existon displa-Fa-f]{4}|c[Aelev------empty-cell's re && mnt--Za--adjusem.backfamiif (backref ef] || tr,
-   : matchp\\.f] ||varianem.backwne(itef] |n[level].regone(ite   //let(i =p("^httpen hlone(itesNat      regex: hes.length)ix) \\s shes.length) natihes.length margin^#?]+)", "i"), bvel + 1match[vel + 1xp.com vel + 1   //vel + ----ker-of   co----s forhen hamaxlone(itep pr      minrototype inthods
- orphan;
+	SyntaxHighlighter.brushes.CSS = Brush;
 
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
-    //---out 1) |hes =     // A          // A-------   //   : 0flow pador("^#?]+s the rematch[s the rexp.com s the re   //s the r p/ Ru)", "i"), bthe - {};
- {
-    ray. the co       ray. the coin "g")pausgruity
-ontext is // but is a.isReotype-rsibl tch)-duntingix) \\s src=" (?<src withs match[richnessist o slope s[i]spe cot load s.execnumertion.execary au------  // ntexely`
- le ltemhtringv
+	function Brush()
+	{
+		var keywords =	'abs addr and ansichar ansistring array as asm begin boolean byte cardinal ' +
+						'case char class comp const constructor currency destructor div do double ' +
+						'downto else end except exports extended false file finalization finally ' +
+						'for function goto if implementation in inherited int64 initialization ' +
+						'integer interface is label library longint longword mod nil not object ' +
+						'of on or packed pansichar pansistring pchar pcurrency pdatetime pextended ' +
+						'pint64 pointer private procedure program property pshortstring pstring ' +
+						'pvariant pwidechar pwidestring protected public published raise real real48 ' +
+						'record repeat set shl shortint shortstring shr single smallint string then ' +
+						'threadvar to true try type unit until uses val var varirnt while widechar ' +
+						'widestring with word write writeln xor';
 
-   s;
+		this.regexList = [
+			{ regex: /\(\*[\s\S]*?\*\)/gm,								css: 'comments' },  	// multiline comments (* *)
+			{ regex: /{(?!\$)[\s\S]*?}/gm,								css: 'comments' },  	// multiline comments { }
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	css: 'comments' },  	// one line
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },		// strings
+			{ regex: /\{\$[a-zA-Z]+ .+\}/g,								css: 'color1' },		// compiler Directives and Region tags
+			{ regex: /\b[\d\.]+\b/g,									css: 'value' },			// numbers 12345
+			{ regex: /\$[a-zA-Z0-9]+\b/g,								css: 'value' },			// numbers $F5D3
+			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),		css: 'keyword' }		// keyword
+			];
+	};
 
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['delphi', 'pascal', 'pas'];
 
-    //----p(pa-{
+	SyntaxHighlighter.brushes.Delphi = Brush;
 
-    quir-align #?]+with decor------with  funn` with shaer")with TypeE
-    unicode-bidied for co
-    Runits-per-ttern + "/" + veregExl the prvisibility----cem.backrevces / Leite.lenge widows retth this.s },
- .length -prototypeze conxned,
-     vext red && });
-absolthod}
-   lways aqua armenivancetr au
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
-  ens =a----- // src atehs a beturnngru- : 0;
-   black blin sup.globlu "y"lt the plia, "i"), bac     .com prailf (Xapital    m.regex),
-    ),
-    irst vowser imatch[circf (X
-   ct Reg or cches
-    /: Rexpresocontsedreturned as|| 0;
- ouokenr (i eturned s becp becomebecomhai    rstingdashNSID    match   ma-leahe rezerotch = r2.esed s (mac dotINSIDbject eturned asembed embosurinength    expand  Rextra-g capturinec = ftotype.exfantasy fa issues, namatch[fg detInder (anchororm && uchsiazero-lengthgray grens gro});
-  coheld hebrew help hidden    e high nati    co     1) |xp(pats\S]))/es a     "g")inRegE xes tczero-lengthmatcify landscain(mar    ec` rel ==, "g")l === cftwativelevel         lant ts, arhrough(matchn
-// uncti loud by
-  - flagseturned asby
-       uring igLalobaing     nNpcg &&romach.lengNpcg ltr-------   /oon medium messay. tox midd levix  });
-narry
-   eturned asnavy negExp.prono-aptured valun tokno-Natithis), "g), backrn(!thl nowrap n(getNativwgExp.prooblique oltingonceex =        out XReg-------
+	function Brush()
+	{
+		this.regexList = [
+			{ regex: /^\+\+\+ .*$/gm,	css: 'color2' },	// new file
+			{ regex: /^\-\-\- .*$/gm,	css: 'color2' },	// old file
+			{ regex: /^\s.*$/gm,		css: 'color1' },	// unchanged
+			{ regex: /^@@.*@@.*$/gm,	css: 'variable' },	// location
+			{ regex: /^\+.*$/gm,		css: 'string' },	// additions
+			{ regex: /^\-.*$/gm,		css: 'color3' }		// deletions
+			];
+	};
 
-    "g") : 0en haponull; thinraitg `eger: ttch;from// cpurplccepon (    vccepbackr      -xnativ.rey rgb ridgeext, args
-    h = ad allowed(matcreturnrtl run- be cgLastscrn, flemifunction (s(var totype.exsee frle ligExp.prosh  // sult,silvs[0]by
-     ifex), r2, fusreat  unde-capsfined)
-   a contreation pft solidobject ntexll- ? rsquare s+) {
-    \s\S])|\(\us-bar sub sud tosindex)` rad allowedlling         / Attacope / Attacces tooperties
-   -id runlling fooer ihis._xregexpt loadis._xregexp.c-----
-       is._xregeal          //ith ult.nam but ividehick    provideypeEparntextty tv ul = function (sexp.catotype.exe mu      sed t groupssed t         if matchad allowed    ifh > 1 urlpe.cal// Lue t) {
-  reter index)` rx-tIndex-nativx-xec` mx- captwserw x-rgumex- undefx- matcx Fix brow `lastInyellowned,
-     f] |----	'[mM]onoTSIDE_[tT]ahoma [vV]erdana [aA]rial [hH]elveegEx [sS]ans-serifngth his.lacC]ouri"") ono s----this.nd oegexes created by the `XRegExp`
-    // constructor. This work XRegExp.copyAsGlobal = function (regex)
-        return clone(regex, "g");
-    };
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['diff', 'patch'];
 
-    // Accepts a string; returns the string with regex ms` object for custom tokens
-            hasNamedCapture: false,
-            captureNames: [],
-       tachaructor within token definition fu/\#[a-fA-F0-9]{3,6}totype.toString.c-----y callingegExches =some processing(-?\d+)(\.last?(px|em|pt|\:|\%|         regex        // `exp.prsome processing!withinanttotype.toSt XRegExp.esca3e the na)
-         infinite
-        // rec with `regex` antext) {
-        var r2 = clone(regext);
+	SyntaxHighlighter.brushes.Diff = Brush;
 
-     ;}
-        };
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
-        whhe next regex------    s XRegExorigLastIndex;
-     ------) {return flags.indexOf(flag) > -1;},
-     if h && !compl    // Check foer frastIn followxpectations if `lastIn{ugmently  the&lt;|<)\s*     .*?(&gt;|>)/gi,ugmen(matc
-           /  this.l\s*Index = oriugmen}      callback.call(context, match, ++i, str, regex);
-            if (r2.lastIndex =ss          r2.lastIndex++;
-        Sosition or at the specified position only. This function ignores the `lastIndex`
-    // of the provided regex in its own handling, but updates the property for compatibility
-    XRegExp.execAt = function (str, regex, pos, anchored) {
-        var r2 = clone(regex, "g" + ((anchored && h addr       sih;
-      ventingar  oras wim be---- resean
-       rdmult= pos = pos |egExp;
-   veToken/xrens` m };
+	function Brush()
+	{
+		// Contributed by Jean-Lou Dupont
+		// http://jldupont.blogspot.com/2009/06/erlang-syntax-highlighter.html  
 
-+]\?oer threncycan'/ Adds s// c; // Run tlasses)
-    owxp.a]?|x[\d(str Strcter metu[\dA    var
-         multiz------ multicheY ? "y" : "atte objects ndex !== poi < v------     heTSIDd    64 te(vaides named   match = nullods null;
-     sly
- ndefibrary    eacte   etart r exnig `stlastInde---------
+		// According to: http://erlang.org/doc/reference_manual/introduction.html#1.5
+		var keywords = 'after and andalso band begin bnot bor bsl bsr bxor '+
+			'case catch cond div end fun if let not of or orelse '+
+			'query receive rem try when xor'+
+			// additional
+			' module export import define';
 
- f    iggea   r2p      retalue,ventingpnull
- upport foor("c  // pt text,
- rguments arro
-    // matchiurn match;cedu charogframExp
-    Xprved alue of ventingrguments arr});
-    p
-   null
- 
-   alue of h;
-    };
+		this.regexList = [
+			{ regex: new RegExp("[A-Z][A-Za-z0-9_]+", 'g'), 			css: 'constants' },
+			{ regex: new RegExp("\\%.+", 'gm'), 						css: 'comments' },
+			{ regex: new RegExp("\\?[A-Za-z0-9_]+", 'g'), 				css: 'preprocessor' },
+			{ regex: new RegExp("[a-z0-9_]+:[a-z0-9_]+", 'g'), 			css: 'functions' },
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },
+			{ regex: new RegExp(this.getKeywords(keywords),	'gm'),		css: 'keyword' }
+			];
+	};
 
-    /    /emptyken =  (pa.repl480-7]{0,2}|[4-7cart       n || (hserved acteesn't suppors` flructor      var entingd `R
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['erl', 'erlang'];
 
+	SyntaxHighlighter.brushes.Erland = Brush;
 
-    //---------attetochanges. S natiion. until usesnt &s = f});
-rnou exte}
-   teredrn + "/" + (d (`flags`wis.exart UTSIDEUTSIDln xorcess, so protect against infinite
-   /\(\*[\s\S]*?\*\)eral string.is constructed withi// Fix IE, Opera bug ( (* *n indclude pass{(?!\$)to nativ}eplace`, so don't try
-        //if (...)
-        //    {earch ty, use `XRegExp(regex)`. Do not use `RegExp(regex)` because it will not pr//if ( token hs escaped. The returned string
-    // can safely be used at any point within a egex to match the provid\{\$ in A-Z]+ .+\hough the altered
- Check forxec` (rmpi    D existinat theRloop
- n a , etc.)
-        [\d\.]+\b    origLastorigLastIndex;
-      numbdefi12345, etc.)
-        search , event) === "[objct Function]") {
-            $F5D3rent position
-            tokenResult = runTokens(pattern, pos, currScope, co
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Andres Almiray
+		// http://jroller.com/aalmiray/entry/nice_source_code_syntax_highlighter
+
+		var keywords =	'as assert break case catch class continue def default do else extends finally ' +
+						'if in implements import instanceof interface new package property return switch ' +
+						'throw throws try while public protected private static';
+		var types    =  'void boolean byte char short int long float double';
+		var constants = 'null';
+		var methods   = 'allProperties count get size '+
+						'collect each eachProperty eachPropertyName eachWithIndex find findAll ' +
+						'findIndexOf grep inject max min reverseEach sort ' +
+						'asImmutable asSynchronized flatten intersect join pop reverse subMap toList ' +
+						'padRight padLeft contains eachMatch toCharacter toLong toUrl tokenize ' +
+						'eachFile eachFileRecurse eachB yte eachLine readBytes readLine getText ' +
+						'splitEachLine withReader append encodeBase64 decodeBase64 filterLine ' +
+						'transformChar transformLine withOutputStream withPrintWriter withStream ' +
+						'withStreams withWriter withWriterAppend write writeLine '+
+						'dump inspect invokeMethod print println step times upto use waitForOrKill '+
+						'getText';
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,				css: 'comments' },		// one line comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,					css: 'comments' },		// multiline comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,					css: 'string' },		// strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,					css: 'string' },		// strings
+			{ regex: /""".*"""/g,													css: 'string' },		// GStrings
+			{ regex: new RegExp('\\b([\\d]+(\\.[\\d]+)?|0x[a-f0-9]+)\\b', 'gi'),	css: 'value' },			// numbers
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),					css: 'keyword' },		// goovy keyword
+			{ regex: new RegExp(this.getKeywords(types), 'gm'),						css: 'color1' },		// goovy/java type
+			{ regex: new RegExp(this.getKeywords(constants), 'gm'),					css: 'constants' },		// constants
+			{ regex: new RegExp(this.getKeywords(methods), 'gm'),					css: 'functions' }		// methods
+			];
+
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	}
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['groovy'];
+
+	SyntaxHighlighter.brushes.Groovy = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		var keywords =	'abstract assert boolean break byte case catch char class const ' +
+						'continue default do double else enum extends ' +
+						'false final finally float for goto if implements import ' +
+						'instanceof int interface long native new null ' +
+						'package private protected public return ' +
+						'short static strictfp super switch synchronized this throw throws true ' +
+						'transient try void volatile while';
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	css: 'comments' },		// one line comments
+			{ regex: /\/\*([^\*][\s\S]*)?\*\//gm,						css: 'comments' },	 	// multiline comments
+			{ regex: /\/\*(?!\*\/)\*[\s\S]*?\*\//gm,					css: 'preprocessor' },	// documentation comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },		// strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },		// strings
+			{ regex: /\b([\d]+(\.[\d]+)?|0x[a-f0-9]+)\b/gi,				css: 'value' },			// numbers
+			{ regex: /(?!\@interface\b)\@[\$\w]+\b/g,					css: 'color1' },		// annotation @anno
+			{ regex: /\@interface\b/g,									css: 'color2' },		// @interface keyword
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' }		// java keyword
+			];
+
+		this.forHtmlScript({
+			left	: /(&lt;|<)%[@!=]?/g, 
+			right	: /%(&gt;|>)/g 
+		});
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['java'];
+
+	SyntaxHighlighter.brushes.Java = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Patrick Webster
+		// http://patrickwebster.blogspot.com/2009/04/javafx-brush-for-syntaxhighlighter.html
+		var datatypes =	'Boolean Byte Character Double Duration '
+						+ 'Float Integer Long Number Short String Void'
+						;
+
+		var keywords = 'abstract after and as assert at before bind bound break catch class '
+						+ 'continue def delete else exclusive extends false finally first for from '
+						+ 'function if import in indexof init insert instanceof into inverse last '
+						+ 'lazy mixin mod nativearray new not null on or override package postinit '
+						+ 'protected public public-init public-read replace return reverse sizeof '
+						+ 'step super then this throw true try tween typeof var where while with '
+						+ 'attribute let private readonly static trigger'
+						;
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	css: 'comments' },
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,		css: 'comments' },
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },
+			{ regex: /(-?\.?)(\b(\d*\.?\d+|\d+\.?\d*)(e[+-]?\d+)?|0x[a-f\d]+)\b\.?/gi, css: 'color2' },	// numbers
+			{ regex: new RegExp(this.getKeywords(datatypes), 'gm'),		css: 'variable' },	// datatypes
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' }
+		];
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['jfx', 'javafx'];
+
+	SyntaxHighlighter.brushes.JavaFX = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		var keywords =	'break case catch continue ' +
+						'default delete do else false  ' +
+						'for function if in instanceof ' +
+						'new null return super switch ' +
+						'this throw true try typeof var while with'
+						;
+
+		var r = SyntaxHighlighter.regexLib;
+		
+		this.regexList = [
+			{ regex: r.multiLineDoubleQuotedString,					css: 'string' },			// double quoted strings
+			{ regex: r.multiLineSingleQuotedString,					css: 'string' },			// single quoted strings
+			{ regex: r.singleLineCComments,							css: 'comments' },			// one line comments
+			{ regex: r.multiLineCComments,							css: 'comments' },			// multiline comments
+			{ regex: /\s*#.*/gm,									css: 'preprocessor' },		// preprocessor tags like #region and #endregion
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword' }			// keywords
+			];
+	
+		this.forHtmlScript(r.scriptScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['js', 'jscript', 'javascript'];
+
+	SyntaxHighlighter.brushes.JScript = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by David Simmons-Duffin and Marty Kube
+	
+		var funcs = 
+			'abs accept alarm atan2 bind binmode chdir chmod chomp chop chown chr ' + 
+			'chroot close closedir connect cos crypt defined delete each endgrent ' + 
+			'endhostent endnetent endprotoent endpwent endservent eof exec exists ' + 
+			'exp fcntl fileno flock fork format formline getc getgrent getgrgid ' + 
+			'getgrnam gethostbyaddr gethostbyname gethostent getlogin getnetbyaddr ' + 
+			'getnetbyname getnetent getpeername getpgrp getppid getpriority ' + 
+			'getprotobyname getprotobynumber getprotoent getpwent getpwnam getpwuid ' + 
+			'getservbyname getservbyport getservent getsockname getsockopt glob ' + 
+			'gmtime grep hex index int ioctl join keys kill lc lcfirst length link ' + 
+			'listen localtime lock log lstat map mkdir msgctl msgget msgrcv msgsnd ' + 
+			'oct open opendir ord pack pipe pop pos print printf prototype push ' + 
+			'quotemeta rand read readdir readline readlink readpipe recv rename ' + 
+			'reset reverse rewinddir rindex rmdir scalar seek seekdir select semctl ' + 
+			'semget semop send setgrent sethostent setnetent setpgrp setpriority ' + 
+			'setprotoent setpwent setservent setsockopt shift shmctl shmget shmread ' + 
+			'shmwrite shutdown sin sleep socket socketpair sort splice split sprintf ' + 
+			'sqrt srand stat study substr symlink syscall sysopen sysread sysseek ' + 
+			'system syswrite tell telldir time times tr truncate uc ucfirst umask ' + 
+			'undef unlink unpack unshift utime values vec wait waitpid warn write ' +
+			// feature
+			'say';
     
-
-            ifn the
-    // string (default: 0), and an optional Boolean indicating whether mdelphihen pascalts[0]);          r2.lastIndex++;
-      Dgumen  } else {
-                // Check for native multicharacter metasequences (excluding character classes) at
-                // the current position
-                if (match = nativ.exec.call(nativeTokens[currScope], pattern.slice(pos))) {
-                    outpugs that
-        // preclude pass^\+llin .*$eral Type conver2ment `la    and ndex` before cal-egex`replacement` (fix browsers)
-efer            if (isResreplacem Type conversion
- //nd ansibl      i = -1, m^@@.*th;
-placement` (});
- bl    ////ipatisidendex` before call= arguments[arg // Use the na theflag;}
-        };
-sReg= arguments[argument.las
-    okenslag;}
-  g object which can store properties
-                    arguments[0] = new String(ariffts[0])tch           // Store named backrefiff  } else {
-                // Check for native multicharacter metasequences (excluding character classes) at
-                // the current position
-                if (match = nativ.exec.call(nativeTokens[currScope], pattern.slice(pos))) {
-                    output.pusntribu Alsby Jean-Lou Dupo   ma`exectp://jld     .blogspot.com/2009/06/erlang-seCons    /tor)
-   ec` w ndex// Ach, r,
-   o:$1) {
-  $1) {
-.org/doc/refeort e_manual/introdutside     #1.lt =       nativeT '{
-          dalso b          remenb
-   sl bsr bxExp., "i"the alt `nationded; otndlacex != = fementfnstrurexp.c0, argsgExp =rece      mes. Sw    rows, "i"} else {
-  al args a rw, eCLASS] ^(?:\\(?ulticcess, so protect against infinite
-        // rec"[ch =    a-z0-9_]+" && !co so don't trns    d witNumbered backreference
-  \\%.      , podefaso don't try
-                          // What d?                     defaEscaped
-    // characters are [ ] { } ( ) * + ?" in       :  // - Bac        default:
- ion (flag) {f(regex, "g");
-    };
-
-    // Accepts a string; returns the string with regex ens
-            hasNamedCapture: false,
-            captureNames: [],
-          // Accepts a string to search, regex to search w	      var r2 = clone(regargs.length - 1]` will be a string (given nonstring `this`)
-            result = nativ.er     $1) {
-          r2.lastIndex++;
-      E1) {d       var args = arguments; // Keep this function's `arguments` available through closure
-                return nativ.replace.call(replacement + "", replacementToken, function ($0, $1, $2) {
-                    // Numbered backreference (without delimiters) or special variable
-    AgExps Almiray if ($1) {
-    forer     aa"00"
- /entry/nice_source_or c_      _            //     {regex: /<img\ and cre {};
-
-    // `nativeTokens0;
-     ftch = r2.eckrefere textsd backreferences to  !==ns as `argusngth);
- i     c(matnull;
-        earc/ RuExp
-    Xunrestorp.isRe
-
-    //------red ; //sength - man    // excluding cement i
-     nd or, resatch[   =  '------eturn regex.e ES3rved keywo   exec: RegExp.p    }
-                gex.    }
-   method        llPxp
-   iereturneatch.}
-            /r nooken&& ma&& m       ymited numbereNthod&& mWithIfuncts fu     Ape || XRegExp.Oind     OfrigLp infrom ma r2 n reverseE& ma= fun)", "i"), basImeTokens[asSynchronizchoreatte     an?
-ctart of-bro mean?
-});
-Map to agairguments arradRng `execLsues r exins      is a toChasNatp pluL  extoUrl toke to lastIndex` fiachF manreferencRe thace 0 iB     refexp(r// BrByontexeadre magetTexRegExp's privaplit    re maemenR load appencesnor cBase64.
-  exists and inclure mahould be runs accept dig   nam (!tto named OegulaStreamamed PregeWTSIDramed / - Othtions of seartring "$n ththt's the strt's thAn, if s/values anerriddsses)
-    //xrinter lNums
-(fM     haractersintls a eporcins upto         ForOrKipe |                g the `global`
-    // property, use `XRegExp(regex)`. Do not use `RegExp(regex)` becaso don't try
-        er frame, when `instanceof`
-    // and `constructor` checks would fail to work as i                    return      return clone(regex, "g");
-    };
-
-    // Accepts a string; returns the stoString.call(o) === "acharacters escaped. The returned string
-    // can safely be used at a = 0; // Fix IE, Safari bug (last tested IE /""".*""ototype.toStse
-                search.G;
-    this.global && !match[0].ties, \\d]+(\\.}
-
-   )?|0xverhthis d areen a         //ction]") {
-              // Accepts a string to search, regex to search with, posi    regex.lastIndexafari goovy
-            i = -1, gs.indexOf(flag) > -1;},
-   whitespace
-    XastIndex = thission
-     
-    /java     ) {return flags.indexOf(flag) > -1;},
-            unction (s /* separa             xec` (re      ) {return flags.indexOf(flag) > -1;},
-          unction (s /* separaion (flag) {            .lastIndex--;
-        if (!thdex` is checked within `callback`
-            the
-    // string (default: 0), and an optional Boolean indicating whether mIndexy          r2.lastIndex++;
-      Ger: Uosition or at the specified position only. This function ignores the `lastIndex`
-    // of the provided regex in its own handling, but updates the property for compatibility
-    XRegExp.execAt = function (str, regex, pos, anchored) {
-        var r2 = clone(regex, "g" + ((anchored && hasNativeh - 3)eturn re")),
-            match;
-   lastIndex = pos = pos || 0;
-       literal/ Run the altered s = StreY ? "y" : ")
-              if (ed && matunctions as `argu literalN   match = nubers;
-                 bal)
-         regex.lrguments arra        rn match;
-    };
-
-    // ropertExp's private lisby preventctfp         .isReserence to nu and flag chrop the uidden by numbered intextrfunct--
-
-    // Lextend he `global`
-    // property, use `XRegExp(regex)`. Do not use `RegExp(regex)` because it will not presrve
-    // special properties req/\/\*([^\*]to nati)ve `/eral strin                 re/if (...)
-        //   y(output, match.sli?!    )g to native `        lalace` or repeatedly cals` ob12 Ste-------n clone(regex, "g");
-    };
-
-    // Accepts a string; returns the string with regex meacharacters escaped. The returned string
-    // can safely be used at any point within a        } else {
-           }
-     .astLen result;
-    };borigobject Function]") {
-           ake care of the?!\@null;
-   \b)\@[\$\ws + "", searType conversion
-     anno       @ out, etc.)
-       (str.slice(l) === "[object Funfix browser[objenull;
-       // If separator `s` is not a regex, use the nntext) {
-        var r2 = clone(reg//---
+		var keywords =  
+			'bless caller continue dbmclose dbmopen die do dump else elsif eval exit ' +
+			'for foreach goto if import last local my next no our package redo ref ' + 
+			'require return sub tie tied unless untie until use wantarray while ' +
+			// feature
+			'given when default ' +
+			// Try::Tiny
+			'try catch finally ' +
+			// Moose
+			'has extends with before after around override augment';
     
-
-            dex--;
-        if (!thi.global)	
-          %[@!=]?r nuastIndex;RegE%Index = oretc.0.5, Opera 11.61 on Windows)
-        return !!match;
-    };
-
-    // Adds named captu
-             r2.lastIndex++;
-      J          var args = arguments; // Keep this function's `arguments` available through closure
-                return nativ.replace.call(replacement + "", replacementToken, function ($0, $1, $2) {
-                    // Numbered backreference (without delimiters) or special variable
-    Pa    k Web
-    if ($1) {
-  px) + (wdition              switch4)
-   fx- || 1-for                           pos += match[0].Beturn r      digits
-  Dbject Du stringt is a		+ 'F(itemIerences     N      Sved k;
-     Voito fols a `                     hasNativ     case ength - 3ckre      b-
-
-  rc"}, {};
-
-  `nativeTok.captureNam               ens[XNumberscluan thrs = Stri)
-        if (artch[i}|c[om     ? "g" :acement f !== pralNum  func     
-    d crea.copyAsGlobal[\s\nces fl{0,2}captureNamlazygExp---- reple (m
-     CLASS]gex consgex s : 0;
-            ost.exte ES4; inclu) parameter
-    Stringc-.exte scope,ags !he nameired forrences frZa-z]| ES4; inclu.leng            and flag changes. Sokens if (matatteunctiooo many ain[captureNam//--iable     the alte/ Breaks  etc.)
-trigger token hch.index));
-
-                if (match.length > 1 && match.index < str.length)
-                    Arr       }
-        if (!this.global)
-            this.lastIndex = origLastIndex; ring "$10"
-                                // Also note:
-                                /xist
-                                // - Otherwise, it's the string "$10"
-  he `l.?)(\b(\d*\.`las|\d+c(pat*)(e[+-]`last result;)
-   \b\.?origLt;
-    };
-
-
-    /owser, ES3 compliant `split`
-    String.prototype.sand whitespace
-    XRegExpreturn replaceme += match------------
-    //  Private helper functions
-    //------------------------
-ollow ectations if `lastIndex` is checked within `callback`
-            callback.call(context, match, ++i, str, regex);
-            if (r2.lastIndex jfx    ex._xrred for named
-    // capture. Also aFXosition or at the specified position only. This function ignores the `lastIndex`
-    // of the provided regex in its own handling, but updates the property for compatibility
-    XRegExp.execAt = function (str, regex, pos, anchored) {
-        var r2 = clone(regex, "g" + ((anchored & {};
-
-    // `nati        lasses)
-    nativeTokens[XRckrefer: "") ferences to replacement f.call($.copyAsGlo `lastIndex  regex.lunrestor  if (s.last
-
-    //-----     // Protect agaonstructing ps withistructor = tratte position
-                    ow expectatiotect against infinite
-   r        thcaptur           else
-                sear   // Fix browser bugs in native methogular expreSws)
-            else
-                seare native `exec` to skip some processinreNames, $2) : -1;
-                           rety.prototype.push.apply(output, matgular expre    /\(\?#[^)]*\)/,
-        function (matgExp = function (o) {
-        reString.prototype.relace` or repeatedly calling `exec` within a `while` loop
-    XRegExp.iterate = function (str, regex, callback, context) {
-        v regex.lastIndex = r2.stIndex` aftenResu),
-                 r.                        };
-                        break;
-                    }
-                }
-  s                   ll);
-  ed for named
-    // capture. Als`lastIllows adding new flags in the process of copying the regex
-    function clone (regex, additionalFlags) {
-        if (!XRegExp.isRegExp(regex))
-            throw TypeError("type RegExp expected");
-        var x = regex._xregexp;
-        regex = XRegExp(regex.source, getNativeFlags(regDavid Si    s-Duffth and MaeredKube      pos      =etc.  IE bucin realaesh
-ed kn      inms forhdher h    ch
-    hd`,
-hown ache[ke\k<([\enceotCapturCaptur     lementdge ofryp
-       ty s    (relimindg= thihis.captuendhos = XRendne ne numbsult). Preserw. Preseser`exec`of d meothesttore sequentScricnt vallenoen wck (rehis pthis.ormen ha_CLASS,
- from 
-    giprope\k<([\
-     objg    stbyug
-           ethod                //--getne       "n index > -1t.chadex + 1)ers. Prex, e if x + 1)pgrp? "" pid? "" rior= fun index > -1sult)tch[0].len    );
-
-      // Empty)) ? ""      or [^
-      pw----n index > -1 // tch[0].len[\^?]/          fu]
-    Xsock,
-       ockopt globn(
-         want  // Whex   (reobal(soctlart ofkeys k    lc lc      lengt/ nonyntax, fla'sNatech.l copy a x.globag l () {map mk    msg] tomsgtch.msgrcv    snen(
-       ondex =n"[]"     art    } pip    p   f  if (n <= af`) pa) {
-  p(excn index > withmetanction (phe pat     paten ha, with kny co\\S]"recv  // Accn index >gth; irences fepts aonly, functrm    ;
-  rn (xecN(?i:), (?      sem] ton index >sem // NemoExp.flag        s1) + (isNasength)) ?scop    scopmatch[0];
-       atch)ss: [] scop     smatch) {
- ;
-  r crossshiatchh
-    shToken(hm patt        thhmUTSIDEshuted b// be let, mock// Nng (apther= funefercee onlde o );
-
-         thled n, flagsgExp.udy});
-he coyral k = pretu = p[]" ?sys pattsys(?i:         th pattesysUTSIDEcope cope    ut forcinthe     RegEe uc us\S].
- um syntax, flave mul uhis,k un"[\\sun";
-       ns =-----vec       ait    warnonversi `lastI    eatur     'say';
-                      tiv.teblhe rretud as         bm{
-    dbm[]" ?dir); ////xr]?|x[\lsif e  //
-var  `lastI replah && matndex !== pSS] d forpatingmegexx     ou searc/ Ruredo the ?imsx)
-     = nat      retb tiforc     
-    ex;
-Last;
-
-     wr ma     --
-    ? "" : "(?:)";
-      givenh - 1]tIndex`  ? "" : "(Try::Tin    mberyregex.g backreferences// Moos      haent text      egex) {
-tion gesrc"}, : 0;
-   aug Ste,
-        gs that
-        // preclude pass(<<|        )((\w+)|(['"])(.+?)\4y(this,+?\n\3\5\n // Run th // Use the nanctiodocts aybexec` wit exidrn nativ.replac#= argumen : output;
-    }   t = tokens[i];
-     /^#!.*  XRegtype.replace` or repeatedly cal    hebangn nativ.replac-?\w+     *=(>|ndex){ // Run thxt = { // `    a    mmaretun (snd flnd foo much?, etc.)
-        q[qwxr]?\(to nativeunction (m) {r.push(m);}) with- the rn);
-        oforEachExec = function {to nativehoughrn XRegExp.iterate(s, this, f, c);};
-    {_xregexp)
-     = function [to native](s) {var r = RegExp("^(?:" + this.source + ")[]egExp.prototype.validate(compaty(this, a this, f(s) {var r = RegExp("^(?:" + this.source + ")<>h(r) === 0;};
-     */
-
-})[^\w({<[]y(this, a\1(s) {var r = RegExp("^(?:" + this.source + ")non-ndededr;};
-ntext))) {
-                    t.pattern.lastIndex = indise, it's the string "$10"
-                                // Also note:
-                       "g")pporttly ignonting
-ructor with    }
-
-  gth - 2o  caseutf8
-            output.pu:&amp;|[$@%efer$#)search _]y wi|::)*r nu  index) {
-           egExp.prototype.__(?:END|    )__repl nati$totype.ion (s) {return clone(this, s);}(^|\n)=\w
-// Begin\n=cut\s*\n|$         regex           returnpoIf separator `s` is not a regex, use the n         seFlag: function (flag) {f }
-    );
-
-    // Capturing group (match the opening parenthesis only).
-   , scoppe),
-                            match: match
-   phined`: No limit
-        // - `NaN` or zero: Return an empty array
-        // - A positive     p a captP a captplurn "(";
-        }
-    );
-
-    /utomosition or at the specified position only. This function ignores the `lastIndex`
-    // of the provided regex in its own handling, but updates the property for compatibility
-    XRegExp.execAt = function (str, regex, pos, anchored) {
-        var r2 = clone(regex, "g" +      	ix IE buers wf Javaddcsl emp bug
-e' : nul                _2] + a_key7]{0e;
-    _chunkrt tabs.ombn han       unt_ice(matart-tarepl        ret          _assoc
-          able. */
-       u size. */
-       u     'tab-f           retEnables o------ablesmatc      apture n. utter' : true,
-b size. */
-        /**     disables gutter.      /**  : 4,
-
-        'toolbar'     'tab-bles named nables qude copy liabdisables gutter.mec` mck. */
-    _rowed,    ck. */
- or = fun      pad    /** o'gutter'peturn  double click. */ modi      ction 'collaeduc: true,
-rences f      os = 0,Enables;
-   disables gutter.snly
- . */
-  only
- . */
-  uminks' :u     se,
-
-      b size.disables gutter.** Get : 4,
-
-      astItrue,
-
-      ng off gutts or sets light mode. E  'toolbar' : true,
-
-  uner th    'uni autom      true,
-
-      walksets light mode. pt' ck-code' : tdvanced knig :, bas anharas fo  spaceit exibsp;'_n is {
- eturned as asmethodbcadd bc`
-   bc// cbc    bcmulion (ecion (ch.ldoma   rz{
-    bz   }the re, "i"), baz : 'true,
-
-bzThis f mode
-   modehe cbzegExp)bz[]" ?bz pattbzUTSIDEowledg      backrefere    r("can,
-
-  nsr              var = indexOf(treNames, */
-'autoes, assick code backrefere[1]);
-   
-   ut icopydge of Jav      bs' : turns         bi"s")ch ES : 'ollapsed. */
-deg2raferences sighlc2ascii echo  matcrencesreg',
-  _   var i,
-  i alert         alror_//  Cro-length hter\ {
-       eose `sheletho : 'Can\'t fcmd // Dot, to nareplac` (r    nd reos +_loa` pro ? "y" : "     rn: clone(regex,csv" + (has    trinleick code     gd*|xpe = X   // tpus is populaasn\'t confileaut.sl       //     id run    in         want     own     leperm   //  "") :ile Modeasn\'t conf(ite  //at thisregulan: clo    fn);
-  asNativfpassthru "")),
-        opt   handler: 
-     asn\'t conf      sr croler,
-+|#.scope f hasnal lxp twdefiriptw      : {
-he newl             "\\" + (index +       return + (index lrush
-// Rp.proN(maast    getmxrter cmyetur   re'
-       re       my----getross       return    );
-
-    // Empty character cctios "$ngleu     (match)]/,
-        function (mach.lts			: /\/\*[\ut.sofd oriet Mode-browgm extermregex wini_a/
-   ringtch."([^\\"_atchringre    i,
-   kahead allowednull;
-   ick codein */
- ip2   exis_gs. _,
-    is_ reseis_retuguments_    g	: fter zero-lengthiicalmethString	:and ps'),
-n   }s'),(itemis_in      multbal(sring	ences s_quantp("'  ex"([^\\\\"]|\\nan\\\\gex.l     meric    astIndeis_ patString	:repla[\s\S
-     ?--(?i-m), m,
- oap_;}
-    ([^\\\\"]|\\ch),
-  \/[\ubomatic    s_upBrush ),
-      UTSIString	:UTSIDp(patle in Fegex wnl2bipBrs : falsparse_ringand p/(&lt;he c/(&lt;h[i]Brushes :pa    foharactey combinatiolg, 'cepts a support x(?i), (x), r2, funrc"},str_i   var itTag FortTagplacemenlt;|<)	: { leftrot13/g, rshuffsReg},
-
-l autnts[i] === tr_ typabs' : (XRegsep(patter` flagp(pattern, flags };
-
-   If yoch),p_n a `t.*?(le' : nulscript> tags.i    \s*sce' : nul\s*she copypts a `RaXRegEp(patte    oolbar:    toolbar:
-      th thscript> tags.cript\spscript.*iptTags	rerns t*script\sML marku set. The copy has a RegExp plight  // `cript> tags.lugins.        *   //             t: Rear       " + ((anchored && hasNativse' : faiveY){};
-
-    // `natihat would veTokel tok };
-
-    0;
-      l     should no+) {
-}|[4-7][0-7]?|x[\
-// Prendr html =end(regms = sseparate      (s.lastend--
-   rs = String.p& match && maeY ? "y" : " objects lobalone using the regex
- anonymotGetHtm_tch[0null;
-      bers;
-     st Bref
-            re---------
-
- ld          igger: altered `exec` (required for () {retur = naghter, etc.)
- 1;
-    }
-
-
-    //-due t--------yIDE_C------
-   ice(0ow expeteralNumbers;	= '__    __ __LIN  htmlMETHOD htmlFUNCype.mhtmlCLASS__g the `global`
-    // property, use `XRegExp(regex)`. Do not use `RegExp(regex)` because it will not preserve
-    // special properties required for named capture
-    XRegExp.copyAsGlobal = function (regex) {
-        return clone(regex, "g");
-    };
-
-    // Accepts a string; returns the string with regex metach/ Fix browser bugs in native method
-    RegExp.prototype.test = function (str) {
-        // Use the/ Comment pattern: (?# )
-    XRegExp.ad/astI+ Fix IE, Operadex) {
-            rement turn rg) {return flags.indexOf(flag) > -1;},
-            setFlag: function (flag) {fexec` (r    s += flag;}
-        };
-
-        while (pos < patternts);
-
-                 // C "", // Type  conversion
-            output = [],
-            lastLions
-    //-------------------------- `lastIndex   // Behavior for `limit`: if it's...
-        // - `unde values are:
-    n the
-    // string (default: 0), and an optional Boolean indicating whether mph           r2.lastIndex++;
-      Ph       if (regex.global)
-            regex.lastIndex = 0;
-    };
-
-    // Accepts a string and an array of regexes; returns the result of using each successive regex
-    // to search within the matches of the previous regex. The array of regexes can also contain
-    a toolbar anchor.
-             */
-            handler: function(e)
-            ch.laticalain               var target = e.tar           var args = arguments; // Keep this function's `arguments` available through closure
-                return nativ.replace.call(replacement + "", replacementToken, function ($0, $1, $2) {
-                    // Numbered backreference (without delimiters) or special variable
-     oel 'Jaykul' Bennett,$1) {
-  Pocurrde     |$1) {
-  Hu= RedM// Ts    up.
-             */Tokens =li : {    entDefau
-    RentDefauperedrn },
-
-           entDefau      ect. If the p;
-
- tr.sl      }h.config.
-    lone            e	: /"(          :{}
-        } after frlbar.it(rege    if (a/
-   ences       xp.c0-3][0-e framto z);}
-    );
-
-
- ps should be cmdlet    http:")),
-      
-     \\? % #       #Html(hig#pating#       nstance.
- m "`"
-// (d lis of     ?:)"ix) \\s sice(mex.m\\S]S]))/;
-    nativ                 byExp
-                  rrt fningundefines;
-          lenge(pattern);
-        getNativturn ags.lengthice( scrsipt sting  can be mceq c Runges, / `lastIndex` (the clt c   disc    not');
-      not.toolbnotetButtocan be mec,
-                aq exNatif and p		: tapplyn be mieq ige i
-       .tooli['expandSourcei   dis;
-    (highlighten(hi      Source', s				: { is istickl    k|| 0; i < arrlreli dis", ""              
-       Source', oly, g (?-ght: /%wildexecnd or chhange XRverb (!coms/value XRegEue tDE_Cror("caun-7][0-7]?undult,ar ites` wie tak fros, if [key] = XRegE    er) {   XRegmode kip       ken(
-  /^\), etc  for convAccep          };
-
-    /ut dia&gt;l     p.pro  // Doe/ Accep });
--7][0-7]?)?gs[args.a};
-
-odifie{ left: /
-        ? r    che[keyasons.limi. Two dals
-(fue only
-id runtch.nt as lerences to repseparaLASS] totype      bRegExenp(patincr       dis
-
-    ebug cx    return sh.tme : 'p* Enatogs.aboutex.mus.about           as `aluesTML m       ative" is an eck// ma aggrc(str)adined,
- // I can't     }a wayesuletHight  // {retubsp;'astIl    fier
- - // special p, becity
- SH wo }
-          
-            s,            ret does }
- usednly
- ook----
-
-; i++)
-  ructe },
-
-= 'ose()ongex, e           xaas `u[\dA-Fal },
-
-forretu },
-ier
-g// ( which overtec`       ent's
-         * 						classesa = fu vari `whnk.id)eslanks sped lis of i    te },
-ruame r i osRegynopsiscess, so protect against infinite
-        // recu^\Stri[#\\s]*\\.('+_item'
-                  * @)+').*when ain XRegEscaped
-    // char  },
-
- = funct     retuent-       },
-operty, use `XRegExp(regex)`. Do not use `RegExp(rutom   /\(\?#[^)]*\)*\)/,
-        function (n (match) {
-            // Keep toke         #to nativ#Index = oral string. Ect }</code> objectn = Xs.
-      tifier
- /**
-         *`RegExp`inite
-        // recu@"\\n[\\s\native\n"@hen an XRegExp pera bug (las      ch),
-   = element Name		Command namnctitch[ Opera 11.61 on Windows)
-   "@'config.tagName))'@ "$10" me {
-            varonfig,
-        Shortc = element hasFlag: functio         ;
-
-            // support f'urn \\$\\utti\)d, a)|Objec`"ct.pr[^`]"',& !compliOUTSIDE_CLASS`
-
-    // dding tokens, the
-    // third (`scope`)/ support fo'rn Ob']|'')*'           {
-            var    if (conf.lement ? [eltive `exec` to skip some  infinite
-        // recu[\\$|@|@@](?:(?:      |onfig,|Html(hi|env):)ce 10          // A cp.
-             */
-     resul$     getButtonHtml: function(high 0;     +lapsethe named or num back-
-'ent
--his is a e.call(thi_]*hen an         // {
-             " : "(?gExp synt    ],
-
-   result = {
-                            output: t.handles
-        conf = sh.c clone(regex,              arams, parseParams(element- elements in the cun.length) {
-           conf = sh.cx = matchction]") {
- y.pron);
-    ra 11.61 on Windows)
-      [    _\\[     tem.. `,\\[\\]d, a]lobals
-      str = this + "", // Type  source.Net [Type]        *
-         * @param s+-(?!ll elements on the page that +'This is a   if (item.params['brush'] == onversion
-   source          	E_CLAg object which can store properties
-                    arguments[0] = new String(apcg &\'t faticaush(npos(str, search, function () {
-     Pcg &S't fllows adding new flags in the process of copying the regex
-    function clone (regex, additionalFlags) {
-        if (!XRegExp.isRegExp(regex))
-            throw TypeError("type RegExp expected");
-        var x = regex._xregexp;
-        regex = XRegExp(regex.source, getNativeFlags(regGheorghe Miltivend Ahmad Sme`.f      posExp.OUTSIDE_'etNatih - 3) {
-                       l elstent.
- astIndex` fixin replecn in itemsregex.mu        +
-            title : sh.clambda      , ri// O true type.re     (var    iex, match.in
-        /\\'__e only__as pre
-    ye n,lybsp;'ch),
-      y" : "uffd astedStrinwnd = popureN      
-
-     
-   coe>)/g   }
-
-    doc.    beretoke                'div    \dA-);
- e          and pro(param     ed && mathis.rozpturdoc = wnd.d> -1           s has     hash;
-     convlso
-ariabal(s);
-
-or `lastInd'is        nd c@;#]*/g s thegex sNatirk ligex.ngeliabl "${n}"dToke    highliastIndex= "[]" ?  : "urnsracters            Rraw_
-     se,
-
-      highlireBrus     * @ean?
-d pScriptken(
-tml-sc      ndowhin ts\S]           highling} Rem match, ution ModerigLastI== nd for c    s x    elzip
-
-        ter  && ++)
-N tokT    F  // self cl   {atictch.index));
-
-              n {Array}	Returns list of <code>{ target: DOMElement, paramsows use o   t = tokens[ing
-    // `Str@urns mean?
-   ct }</code  // staracters ats: function['\"]{3})utti1])pe.
-//nt
-      ove CDATA from <SCRIPT/> tags if "(?!")s[i].|\\\"|[^\""\n]protont
-                         ativ.replacName'tle if (\\\'Tags\''ute i' present
-               if ((target.titl\+|\-|\*|\/ var=|==sent
-       
-        },
-
-    et.title;
-
-     brn); //wd ford as
-         *        /f ((target.titgs.indexOf(flag) > -1;},
-            setFlag: function (flag) {fment = highlighter.getDiv(code);
-
-        o search with, polocal refme;
-                highlgs.indexOf(flag) > -1;},
-         e    element.id = t Check fo indis andexpectations if `lastIndex` is checked within `callback`
-            callback.call(context, match, ++i, str, regex);
-            if (r2.lastIndex py    *ytho      var highlighter = getHighlig     llows adding new flags in the process of copying the regex
-    function clone (regex, additionalFlags) {
-        if (!XRegExp.isRegExp(regex))
-            throw TypeError("type RegExp expected");
-        var x = regex._xregexp;
-        regex = XRegExp(regex.source, getNativeFlags(regErik P     on.elements.length; i+  }
-urce(varBEGIN args[ar{};
-
-    //veTok       ine_       backrefero separa  );
-
-    wnd = popupEND be con'scro: "") +or        + argsCLASSTokenlacementr              s XRere(varred for `lastIndex`    match, t;
-   ---------st.call(q   XRegElh - 1]--
-   his to
-        builtbe m0].l     BigdA-FB       CveTokl vains a conDir E: String.     t, falrenc::S+|#.renceFixdA-Fes.sto display thH    ce(0) : IO  is aData        M+ argsNilt, falNmlCommeO from P(XReR    RR    p};
-     S/ Add::TMS Symbd, the cached Tlags Gd run     * Tt.sl    t, fatch.index));
-
-                if (match.length > 1 && match.index < str.leement, params:                 return n > -1 ? args[n + 1] : $0;
-                    }
-       stIndex === match.index)
-                se		Command name that would be executed.
-             * @param {String} label			Label text to display
-             * @return {String}					Rebnce over glimit) : output;
-    } "", // Type conversion
-            ou/krefe             d fo: output;
-    };
-
-
-    //---sget Dhe SyntaxHighlig    @|@)urns HTML markudex) {
-       alify.
-   erge      ,----bers;
-ld be @@sh
-
-       getButtonHtml: function(highlighter, commandNntext) {
-        var r2 = clone(regex, Required for seturn flags.indexOf(flag) > -1;},
-   urns truspace
-    XRegExp.escapdex = r2.urns tru   // Behavior for `limit`: if it's...
-        // - `undefined`: No limit
-n the
-    // string (default: 0), and an optional Boolean indicating whether mrub     `), ush(nrorurce[burn "(";
-        }
-    );
-
-    /Rub negative number: No limit
-        // - Other: Type-convert, then use the above rules
-        if (limit === undefined || +limit < 0) {
-            limit = Infinity;
-        } else {
-            limit = Math.floor(+limit);
-            if (!limit)
-                retur/ objects with `regex` and `backref` properties, in which case the named or numbered back-
-    // references specified are passed forward to the next regex or returned. E.g.:
-    // var xregexpImgFileNames = XRegExp.matchChain(html, [
-    //     {regex: /<img\b([^>]+)>/i, backref: 1}, // <img> tag attributes
-    //     {regex: XRegExp('(?ix) \\s src=" (?<src> [^"]+ )'), backref: "src"}, // src attribute values
-    //     {regex: XRegExp("^http://xregexp\\.com(/[^#?]+)", "i"), backref: 1}, // xregexp.com paths
-    //     /[^\/]+$/ // filenames (strip directory paths)
-    // ]);
-    XRegExp.matchChain = function (str, chain) {
-        return function recurseChain (values, level) {
-            var item = chain[level].regex ? chain[level] : {regex: chain[level]},
-                regex = clone(item.regex, "g"),
-                matches = [], i;
-            for (i = 0; i < values.length; i++) {
-                XRegExp.iterate(values[i], regex, function (match) {
-                    matches.push(item.backref ? (match[item.backref] || "") : match[0]);
-                });
-            }
-            return ((level === chain.length - 1) || !matches.length) ?
-                matches : recurseChain(matches, level + 1);
-        }([str], 0);
-    };
-
-
-    //---------------------------------
-    //  New RegExp prototype methods
-    //---------------------------------
-
-    // Accepts a context object and arguments array; returns the result of calling `exec` with the
-    // first value in the arguments array. the context is ignored but is accepted for congruity
-    // with `Function.prototype.apply`
-    RegExp.prototype.apply = function (context, args) {
-        return this.exec(args[0]);
-    };
-
-    // Accepts a context object and string; returns the result of calling `exec` with the provided
-    // string. the context is ignored but is accepted for congruity with `Function.prototype.call`
-    RegExp.prototype.call = function (context, str) {
-        return this.exec(str);
-    };
-
-
-    //--------------div, 'coll-----------
-    //  Overriden native methods
-    //---------------------------------
-
-    // Adds named capture support (with backreferences returned as `result.name`), and fixes two
-    // cross-browser issues per ES3:
-    // - Captured values for nonparticipating capturing groups should be returned as `undefined`,
-    //   rather than the empty string.
-    // - `lastIndex` ot be incremented after zero-length matches.
-    RegExp.prototype.exec = function (str) {
-        var match, name, r2, origLastIndex;
-        if (!this.global)
-            origLastIndex = this.lastIndex;
-        match = nativ.exec.apply(this, arguments);
-        if (match) {
-            // Fix browsers whose `exec` methods don't consistently return `undefined` for
-            // nonparticipating capturing groups
-            if (!compliantExecNpcg && match.length > 1 && indexOf(match, "") > -1) {
-                r2 = RegExp(this.source, nativ.replace.call(getNativeFlags(this), "g", ""));
-                // Using `str.slice(match.index)` rather than `match[0]` in case lookahead allowed
-                // matching due to characters outside the match
-                nativ.replace.call((str + "").slice(match.index), r2, function () {
-                    for (var i = 1; i < arguments.length - 2; i++) {
-                        if (arguments[i] === undefined)
-                            match[i] = undefined;
-                    }
-                });
-            }
-            // Attach named capture properties
-            if (this._xregexp && this._xregexp.captureNames) {
-                for (var i = 1; i < match.length; i++) {
-                    name = this._xregexp.captureNames[i - 1];
-                    if (name)
-                        match[name] = match[i];
-                }
-            }
-            // Fix browsers that increment `lastIndex` after zero-length matches
-   change XRe if (!compliantLastIndexIncrement && this.global && !match[0].length && (this.lastIndex > match.index))
-              hange XRndlin      *  ')
-         !ist: ['    }
-   
-    // char    @e only
-@nd res @  doc.@0].le@if @aram@--
-   @n AS3
-@tGetHtmme in obj1)
-    //---------------------------------
-
-    // Augment XRegExp's regular expre    /\(\?#[^)]*\)  });
-        }
-
-        if (isRegex) {
-            if dToken(
-        /\(\?#[^)]*\) function addClass(targe Short {
-        var result = { "t     search.lastIndex = params.title = targding tokens, the
-    // third (`scope`) aows)
-            else
-   Opens up a centered poptive `exec` to skip some processing overhead, even though the altered
-        //  `exec` would take care of th\be `lastIndex` fixes
-        var limit) :onsistent cross-brows   if (!this.globaleturns HTML markup.
-             */
-           getButtonHtml: function(highlighter, commandNt;
-    };
-h && !compndex = this.lastI!nativ
-    };
-f separator `s` is not a regex, use the n
-    // charh && !comtype.execAll = function (s
-    // char match = nativ.exec.call(this, str);
-        // Fix browsers that increment  `lastIndex` after zero-length matches
-        if (match && !compliantLastIndexIncreement && this.global && !match[0].length && (this.lastIndex > match.index))
-             this.lastIn var result = [];
-
-        for (var i = 0; i < source.length; i++)
-            rsget ,
-   e support and fixes browser bugs iSlScr      var args = arguments; // Keep this function's `arguments` available through closure
-                return nativ.replace.call(replacement + "", replacementToken, function ($0, $1, $2) {
-                    // Numbered backreference (without delimiters) or special variable
-    Ye el Jbanov
-    eferenBparardt(params); }
-         n {Stink to smar   //anges.ue t= pos)
-  forSodStr only
-;
-      from gex.l in itemeturn 2.lastIndex : 0;
-   (varded iaramteral}
-      // DModend restosh
-
-  Exps within      ms.l brush
-    func}|[4-7][0-7]?|x[dex !=                         egExp   }
-
-  : "")ned,
-        opue if[_:=><%#@]+s[n];
-                        n = captureNames ? indexOf(captureNames, $2) : -1;
-       = origLastIndex; // F n > -1 ? args[n + 1] : $0;
-                    }
-                });
-           = origLastIndex; // Fix IE, Opera bug (last tested IE 9.0.5, Opera 11.61 on Winrgument defaults to `XRegExp.Exp.matchWithinChainement] : to token definition functions");
-
-        flags =lar expression syntax and fl    Exp.matchWithinChainegExp(ct RegExp]";
- st tested IE 9.0.5, Safari 5.1.2 on Windows)
-            else
- Exp.matchWithinChainreturn {String}					Result;
-    ern)Index` fput.pushch, origLastIndex;
-     er, ES3 compliant `split`
-    String.prototype.split = function (s /*rs that increment `lastIndex` after zero-length matchntList               co regex.lastIndex rs.di-m);
-
-            if (tokenResult) {
-                output.push(tokenResult.output);
-           sh.br type		Name of the event.
-     * h.bruumber of leading zeroes.
-             *   [int] - length up to which pad line numbers.
-             */
-            'pad-line-numbers' : false,
-
-            /** Lines to highlight. */
-            'highlight' : false,
-
-            /** Title to be displayed above the code block. */
-   vg        
-
-   aln't                 XRegEx     stastance; returnes[alias-----*$/gisgex.ll === y
-   mon    ul = e   var i he pa{String} classt : '-----ct} elReturnting
-     patt      sed to-----yeawser bu" + ((anchored && h  Overrtside pe="tion ge/
-    row E (reded ores named      rien pe)", "i"), bainntaxbit    c);
-  {
-  
-    igits
-       Objectwnd.fo, match nonh)) ? "" :eferencs toATA autong ar
-             ementation  // aegex/);
-       from || 0; i < arrcre("canubRegEx= thies[aliasr("cans[alias]];
-egExp.iteata) ? " : {
-lasses)
-    neturn: {
-   y string.
-  tml = '<div clkens[XRecremifunc    bject ded`,lasses)
-    -3][0-kreferencesnd-      ose `e            d method: "") +0]);
-      eY ? "y" : "ed && match c@paraee pr which wise tex.muf     ;
-
-                fgr  * wnd = popup       d ru     av             }     conve  },ndedam('titlnded   ? "x // WhitedString		, namnces in re n.  + //     
-    o\B an
-    XR`undef    RegExp. "${n}"       }([stind trmodwserthis.soTags * @png `    *dToken(
-xmlComme    fnregexaks ---------
-
- ]" ? "etButto     ? rregulardex` fit.par typegExpi     
-   ;
-  primntaxwnd = popup(matcer fuog :eramsrations. 
-    // Br.replace                        p(pattercute: functi    
-                 s
-(fu forbackng foup op thrw, eExp.ma {
-     {String} clash - 2e
-// <ht?m), etc.qu         ides ');
-indBr    rExp(searchs\S])[key] = XRegEatinescs      :,\d*:,\d*oyntax t;
-  oken is a     sult     nameplacesden by numbered   * @pasideConlue = faifier
-  nument and s
-    nindentror("ca       f (highlighter    *vary   XReew    * @rXRegEment tyklone(pattern);
-        }
-        // Tokens become part of the regex construction process, so protect against infinite
-   /rsion w       {
-       use it will not preserve
-    // sndler or trigger
-        if (isInsideConstructor)
-            lar expression syntax and flaam {String} commandName		Command name that would be executed.
-             * @paramaram {String} alias		Brush alias.
-     * @paraam {DOMElement} target Target DOM elemegs.indexOf(flag) > -1;},
-            setFlag:width - width
-    //        conti}
-        };
-
-        while (pos < pattern.length) {
-              }
-
-        returce code.
-  t the current position
-            tokenResult = runTokens(pattern, po   regex.lastIndex = r2. to a String object which can store properties
-                    arguments[0] = new String(asqly pad numbers with minimum requiSqelement)
-        {
-            var elements = this.findElements(globalParams, element),
-       e provided regex in its own handling, but updates the property for compatibility
-    XRegExp.execAt = function (str, regex, pos, anchored) {
-        var r2 = clone(regex, "g" + ((anchored &AddH compliAd0" osOfs "0A: reA  );
-Avar nsi As Assembly Ans =ct.
-     *
-       capRefcapturByVal C  coCsmarCtHighC     Captureure
- CDunction taking CDec CDblreNam CIntnt, falsLsentObjlse st C     }CSsentStr C				tern.charAt(punctD    matD       DIndex` Dxec(str)Dim      iC  reDo.capture     s specified xp.c  ifIf End EdA-FErsmarE */
- E) {
- E          FmultichFor F[A-Za-         repat wouldGetr = h linGoSub GoTo  with s If Ithe regex
-I onlys I    *
-     * Iame`. wo oarget.cid new glIs Let Lib L         L----MelasslassNamect.
-     *
-Mustntial s ce(/O: 0;
-   Mysts  My= -1;
- .OUTSIDE_New NLineNo = ''hiderMonkey's prNo/ {2,}/g * - Nonction(m * -     /**On O trimF      al Or Or  if ct.
-     *
-ctior   s ength - 1; i+: 0;
-  s P fra classPtax rve Ptml(hig numbered------------xcluding P   // Ren == 0 ||captOaks Re wraREM R   {
- with giR      ct.
-     *
-R      Shelp: Set Sgnores    ch
-      };ructortargic SlengSme3:;
-     nnative and / Addons.(/</fereL thiT    T (objTo      Try 				Of Uer = neUr.
-  ct.
-     *
-V);
-    W    W-
-            = 0 |s t's t to tXowser bugs that
-        // preclude pass'.addFlags = function (s) {return cleserve
-    // special properties required for named capture
-   JS
-    if (typeof(require) != 'undefaches of subverting
-    // `String         regexmatch.input.slice(match.index + match[0].length)) ? "" : "(?:)";
-        }
-    );
-
-    // Capturing group (match the opening parenthesis only).
-    // Revb
-
-    // Supporting function for `XRedex` is checked within `callback`
-            callback.call(context, match, ++i, str, regex);
-            if (r2.lastIndex v
-    vbneturn "(";
-        }
-    );
-
-    /Vb
-     * Splits block of text into lines.
-     * @param {String} block Block of text.
-     * @return {Array} Returns array of lines.
-     */
-    function splitLines(block)
-    {
-        return block.split(/\r?\n/);
-    }
-
-    /**
-     * Generates HTML ID for the highlighter.
-     //");
-        };
-    };
-
-    // A  // Adds s  //---------------- is a       '&nb=      rue` inditag       X(elements       fig.ta/\\?]*(?<urns>[:\\w-\ceme){Strxg').    ( '&n)	Size convert=arch(r)a `Rent.fifts any .ler and tsnati))) {etc. gExp`allbacode, tabS	Size 	      he tab.
-     * @turns c [\\w:\\ith all t.
-     *king 			p=			p   tab += ' ';
-(?<     > ".*?"|\'.*?\'|\ wit'        ' ';
-s re
-    		--
-   ((code, tabSi=      places by s nati
-    {
-         v.
-     . var(    {String} comart spaces.urns` for regex l +tab = '';
-
-egex lit  var tm)t.ou  Code to fix the tabs in.
-     * @param {N     r} tabSize Number of spaces in amber of spacevalue; retur code with all t    xt = {     * @r = el regerocesof tm {Strinaces.
-     fix th * @ree tabs in.
-     tagNumber} tabSize Numbetagvalue; retur\t',
-        clone(r = splces tabh.config.nver and r   this.lastIndex--;
-        }
-     tab.
-     * @\\        \!m {O\\wided,?\\[(f thscode\]\\] thedex = hen an XRegEws use of named back<![ ...       ]]ope variables deConstructor)
-            throw Error("ca function(s)
-               +)
-  --     --ope variables  tab.
-     * @return {String}			Re
-
-   (?<code, tabS>.*? {String}			Re.
-        fs    d/**
-:      // h, scopevar result = [];
-
-        for (var i = 0; i < source.length; i++)
-            rxm.
-   xegExubstrsl     (0, cst start at-or-
-    // after thXmelement)
-        {
-            var elements = this.findElements(globalParams, element),
-       
+		this.regexList = [
+			{ regex: /(<<|&lt;&lt;)((\w+)|(['"])(.+?)\4)[\s\S]+?\n\3\5\n/g,	css: 'string' },	// here doc (maybe html encoded)
+			{ regex: /#.*$/gm,										css: 'comments' },
+			{ regex: /^#!.*\n/g,									css: 'preprocessor' },	// shebang
+			{ regex: /-?\w+(?=\s*=(>|&gt;))/g,	css: 'string' }, // fat comma
+
+			// is this too much?
+			{ regex: /\bq[qwxr]?\([\s\S]*?\)/g,	css: 'string' }, // quote-like operators ()
+			{ regex: /\bq[qwxr]?\{[\s\S]*?\}/g,	css: 'string' }, // quote-like operators {}
+			{ regex: /\bq[qwxr]?\[[\s\S]*?\]/g,	css: 'string' }, // quote-like operators []
+			{ regex: /\bq[qwxr]?(<|&lt;)[\s\S]*?(>|&gt;)/g,	css: 'string' }, // quote-like operators <>
+			{ regex: /\bq[qwxr]?([^\w({<[])[\s\S]*?\1/g,	css: 'string' }, // quote-like operators non-paired
+
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,	css: 'string' },
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,	css: 'string' },
+			// currently ignoring single quote package separator and utf8 names
+			{ regex: /(?:&amp;|[$@%*]|\$#)[a-zA-Z_](\w+|::)*/g,   		css: 'variable' },
+			{ regex: /\b__(?:END|DATA)__\b[\s\S]*$/g,				css: 'comments' },
+			{ regex: /(^|\n)=\w[\s\S]*?(\n=cut\s*\n|$)/g,				css: 'comments' },		// pod
+			{ regex: new RegExp(this.getKeywords(funcs), 'gm'),		css: 'functions' },
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword' }
+		];
+
+		this.forHtmlScript(SyntaxHighlighter.regexLib.phpScriptTags);
+	}
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases		= ['perl', 'Perl', 'pl'];
+
+	SyntaxHighlighter.brushes.Perl = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		var funcs	=	'abs acos acosh addcslashes addslashes ' +
+						'array_change_key_case array_chunk array_combine array_count_values array_diff '+
+						'array_diff_assoc array_diff_key array_diff_uassoc array_diff_ukey array_fill '+
+						'array_filter array_flip array_intersect array_intersect_assoc array_intersect_key '+
+						'array_intersect_uassoc array_intersect_ukey array_key_exists array_keys array_map '+
+						'array_merge array_merge_recursive array_multisort array_pad array_pop array_product '+
+						'array_push array_rand array_reduce array_reverse array_search array_shift '+
+						'array_slice array_splice array_sum array_udiff array_udiff_assoc '+
+						'array_udiff_uassoc array_uintersect array_uintersect_assoc '+
+						'array_uintersect_uassoc array_unique array_unshift array_values array_walk '+
+						'array_walk_recursive atan atan2 atanh base64_decode base64_encode base_convert '+
+						'basename bcadd bccomp bcdiv bcmod bcmul bindec bindtextdomain bzclose bzcompress '+
+						'bzdecompress bzerrno bzerror bzerrstr bzflush bzopen bzread bzwrite ceil chdir '+
+						'checkdate checkdnsrr chgrp chmod chop chown chr chroot chunk_split class_exists '+
+						'closedir closelog copy cos cosh count count_chars date decbin dechex decoct '+
+						'deg2rad delete ebcdic2ascii echo empty end ereg ereg_replace eregi eregi_replace error_log '+
+						'error_reporting escapeshellarg escapeshellcmd eval exec exit exp explode extension_loaded '+
+						'feof fflush fgetc fgetcsv fgets fgetss file_exists file_get_contents file_put_contents '+
+						'fileatime filectime filegroup fileinode filemtime fileowner fileperms filesize filetype '+
+						'floatval flock floor flush fmod fnmatch fopen fpassthru fprintf fputcsv fputs fread fscanf '+
+						'fseek fsockopen fstat ftell ftok getallheaders getcwd getdate getenv gethostbyaddr gethostbyname '+
+						'gethostbynamel getimagesize getlastmod getmxrr getmygid getmyinode getmypid getmyuid getopt '+
+						'getprotobyname getprotobynumber getrandmax getrusage getservbyname getservbyport gettext '+
+						'gettimeofday gettype glob gmdate gmmktime ini_alter ini_get ini_get_all ini_restore ini_set '+
+						'interface_exists intval ip2long is_a is_array is_bool is_callable is_dir is_double '+
+						'is_executable is_file is_finite is_float is_infinite is_int is_integer is_link is_long '+
+						'is_nan is_null is_numeric is_object is_readable is_real is_resource is_scalar is_soap_fault '+
+						'is_string is_subclass_of is_uploaded_file is_writable is_writeable mkdir mktime nl2br '+
+						'parse_ini_file parse_str parse_url passthru pathinfo print readlink realpath rewind rewinddir rmdir '+
+						'round str_ireplace str_pad str_repeat str_replace str_rot13 str_shuffle str_split '+
+						'str_word_count strcasecmp strchr strcmp strcoll strcspn strftime strip_tags stripcslashes '+
+						'stripos stripslashes stristr strlen strnatcasecmp strnatcmp strncasecmp strncmp strpbrk '+
+						'strpos strptime strrchr strrev strripos strrpos strspn strstr strtok strtolower strtotime '+
+						'strtoupper strtr strval substr substr_compare';
+
+		var keywords =	'abstract and array as break case catch cfunction class clone const continue declare default die do ' +
+						'else elseif enddeclare endfor endforeach endif endswitch endwhile extends final for foreach ' +
+						'function global goto if implements include include_once interface instanceof insteadof namespace new ' +
+						'old_function or private protected public return require require_once static switch ' +
+						'trait throw try use var while xor ';
+		
+		var constants	= '__FILE__ __LINE__ __METHOD__ __FUNCTION__ __CLASS__';
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,	css: 'comments' },			// one line comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,		css: 'comments' },			// multiline comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },			// double quoted strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },			// single quoted strings
+			{ regex: /\$\w+/g,											css: 'variable' },			// variables
+			{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'functions' },			// common functions
+			{ regex: new RegExp(this.getKeywords(constants), 'gmi'),	css: 'constants' },			// constants
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' }			// keyword
+			];
+
+		this.forHtmlScript(SyntaxHighlighter.regexLib.phpScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['php'];
+
+	SyntaxHighlighter.brushes.Php = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['text', 'plain'];
+
+	SyntaxHighlighter.brushes.Plain = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Joel 'Jaykul' Bennett, http://PoshCode.org | http://HuddledMasses.org
+		var keywords =	'while validateset validaterange validatepattern validatelength validatecount ' +
+						'until trap switch return ref process param parameter in if global: '+
+						'function foreach for finally filter end elseif else dynamicparam do default ' +
+						'continue cmdletbinding break begin alias \\? % #script #private #local #global '+
+						'mandatory parametersetname position valuefrompipeline ' +
+						'valuefrompipelinebypropertyname valuefromremainingarguments helpmessage ';
+
+		var operators =	' and as band bnot bor bxor casesensitive ccontains ceq cge cgt cle ' +
+						'clike clt cmatch cne cnotcontains cnotlike cnotmatch contains ' +
+						'creplace eq exact f file ge gt icontains ieq ige igt ile ilike ilt ' +
+						'imatch ine inotcontains inotlike inotmatch ireplace is isnot le like ' +
+						'lt match ne not notcontains notlike notmatch or regex replace wildcard';
+						
+		var verbs =		'write where wait use update unregister undo trace test tee take suspend ' +
+						'stop start split sort skip show set send select scroll resume restore ' +
+						'restart resolve resize reset rename remove register receive read push ' +
+						'pop ping out new move measure limit join invoke import group get format ' +
+						'foreach export expand exit enter enable disconnect disable debug cxnew ' +
+						'copy convertto convertfrom convert connect complete compare clear ' +
+						'checkpoint aggregate add';
+
+		// I can't find a way to match the comment based help in multi-line comments, because SH won't highlight in highlights, and javascript doesn't support lookbehind
+		var commenthelp = ' component description example externalhelp forwardhelpcategory forwardhelptargetname forwardhelptargetname functionality inputs link notes outputs parameter remotehelprunspace role synopsis';
+
+		this.regexList = [
+			{ regex: new RegExp('^\\s*#[#\\s]*\\.('+this.getKeywords(commenthelp)+').*$', 'gim'),			css: 'preprocessor help bold' },		// comment-based help
+			{ regex: SyntaxHighlighter.regexLib.singleLinePerlComments,										css: 'comments' },						// one line comments
+			{ regex: /(&lt;|<)#[\s\S]*?#(&gt;|>)/gm,														css: 'comments here' },					// multi-line comments
+			
+			{ regex: new RegExp('@"\\n[\\s\\S]*?\\n"@', 'gm'),												css: 'script string here' },			// double quoted here-strings
+			{ regex: new RegExp("@'\\n[\\s\\S]*?\\n'@", 'gm'),												css: 'script string single here' },		// single quoted here-strings
+			{ regex: new RegExp('"(?:\\$\\([^\\)]*\\)|[^"]|`"|"")*[^`]"','g'),								css: 'string' },						// double quoted strings
+			{ regex: new RegExp("'(?:[^']|'')*'", 'g'),														css: 'string single' },					// single quoted strings
+			
+			{ regex: new RegExp('[\\$|@|@@](?:(?:global|script|private|env):)?[A-Z0-9_]+', 'gi'),			css: 'variable' },						// $variables
+			{ regex: new RegExp('(?:\\b'+verbs.replace(/ /g, '\\b|\\b')+')-[a-zA-Z_][a-zA-Z0-9_]*', 'gmi'),	css: 'functions' },						// functions and cmdlets
+			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),											css: 'keyword' },						// keywords
+			{ regex: new RegExp('-'+this.getKeywords(operators), 'gmi'),									css: 'operator value' },				// operators
+			{ regex: new RegExp('\\[[A-Z_\\[][A-Z0-9_. `,\\[\\]]*\\]', 'gi'),								css: 'constants' },						// .Net [Type]s
+			{ regex: new RegExp('\\s+-(?!'+this.getKeywords(operators)+')[a-zA-Z_][a-zA-Z0-9_]*', 'gmi'),	css: 'color1' },						// parameters	  
+		];
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['powershell', 'ps', 'posh'];
+
+	SyntaxHighlighter.brushes.PowerShell = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Gheorghe Milas and Ahmad Sherif
+	
+		var keywords =  'and assert break class continue def del elif else ' +
+						'except exec finally for from global if import in is ' +
+						'lambda not or pass print raise return try yield while';
+
+		var funcs = '__import__ abs all any apply basestring bin bool buffer callable ' +
+					'chr classmethod cmp coerce compile complex delattr dict dir ' +
+					'divmod enumerate eval execfile file filter float format frozenset ' +
+					'getattr globals hasattr hash help hex id input int intern ' +
+					'isinstance issubclass iter len list locals long map max min next ' +
+					'object oct open ord pow print property range raw_input reduce ' +
+					'reload repr reversed round set setattr slice sorted staticmethod ' +
+					'str sum super tuple type type unichr unicode vars xrange zip';
+
+		var special =  'None True False self cls class_';
+
+		this.regexList = [
+				{ regex: SyntaxHighlighter.regexLib.singleLinePerlComments, css: 'comments' },
+				{ regex: /^\s*@\w+/gm, 										css: 'decorator' },
+				{ regex: /(['\"]{3})([^\1])*?\1/gm, 						css: 'comments' },
+				{ regex: /"(?!")(?:\.|\\\"|[^\""\n])*"/gm, 					css: 'string' },
+				{ regex: /'(?!')(?:\.|(\\\')|[^\''\n])*'/gm, 				css: 'string' },
+				{ regex: /\+|\-|\*|\/|\%|=|==/gm, 							css: 'keyword' },
+				{ regex: /\b\d+\.?\w*/g, 									css: 'value' },
+				{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'functions' },
+				{ regex: new RegExp(this.getKeywords(keywords), 'gm'), 		css: 'keyword' },
+				{ regex: new RegExp(this.getKeywords(special), 'gm'), 		css: 'color1' }
+				];
+			
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['py', 'python'];
+
+	SyntaxHighlighter.brushes.Python = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Erik Peterson.
+	
+		var keywords =	'alias and BEGIN begin break case class def define_method defined do each else elsif ' +
+						'END end ensure false for if in module new next nil not or raise redo rescue retry return ' +
+						'self super then throw true undef unless until when while yield';
+
+		var builtins =	'Array Bignum Binding Class Continuation Dir Exception FalseClass File::Stat File Fixnum Fload ' +
+						'Hash Integer IO MatchData Method Module NilClass Numeric Object Proc Range Regexp String Struct::TMS Symbol ' +
+						'ThreadGroup Thread Time TrueClass';
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLinePerlComments,	css: 'comments' },		// one line comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },		// double quoted strings
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },		// single quoted strings
+			{ regex: /\b[A-Z0-9_]+\b/g,									css: 'constants' },		// constants
+			{ regex: /:[a-z][A-Za-z0-9_]*/g,							css: 'color2' },		// symbols
+			{ regex: /(\$|@@|@)\w+/g,									css: 'variable bold' },	// $global, @instance, and @@class variables
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' },		// keywords
+			{ regex: new RegExp(this.getKeywords(builtins), 'gm'),		css: 'color1' }			// builtins
+			];
+
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['ruby', 'rails', 'ror', 'rb'];
+
+	SyntaxHighlighter.brushes.Ruby = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		function getKeywordsCSS(str)
+		{
+			return '\\b([a-z_]|)' + str.replace(/ /g, '(?=:)\\b|\\b([a-z_\\*]|\\*|)') + '(?=:)\\b';
+		};
+	
+		function getValuesCSS(str)
+		{
+			return '\\b' + str.replace(/ /g, '(?!-)(?!:)\\b|\\b()') + '\:\\b';
+		};
+
+		var keywords =	'ascent azimuth background-attachment background-color background-image background-position ' +
+						'background-repeat background baseline bbox border-collapse border-color border-spacing border-style border-top ' +
+						'border-right border-bottom border-left border-top-color border-right-color border-bottom-color border-left-color ' +
+						'border-top-style border-right-style border-bottom-style border-left-style border-top-width border-right-width ' +
+						'border-bottom-width border-left-width border-width border bottom cap-height caption-side centerline clear clip color ' +
+						'content counter-increment counter-reset cue-after cue-before cue cursor definition-src descent direction display ' +
+						'elevation empty-cells float font-size-adjust font-family font-size font-stretch font-style font-variant font-weight font ' +
+						'height left letter-spacing line-height list-style-image list-style-position list-style-type list-style margin-top ' +
+						'margin-right margin-bottom margin-left margin marker-offset marks mathline max-height max-width min-height min-width orphans ' +
+						'outline-color outline-style outline-width outline overflow padding-top padding-right padding-bottom padding-left padding page ' +
+						'page-break-after page-break-before page-break-inside pause pause-after pause-before pitch pitch-range play-during position ' +
+						'quotes right richness size slope src speak-header speak-numeral speak-punctuation speak speech-rate stemh stemv stress ' +
+						'table-layout text-align top text-decoration text-indent text-shadow text-transform unicode-bidi unicode-range units-per-em ' +
+						'vertical-align visibility voice-family volume white-space widows width widths word-spacing x-height z-index';
+		
+		var values =	'above absolute all always aqua armenian attr aural auto avoid baseline behind below bidi-override black blink block blue bold bolder '+
+						'both bottom braille capitalize caption center center-left center-right circle close-quote code collapse compact condensed '+
+						'continuous counter counters crop cross crosshair cursive dashed decimal decimal-leading-zero digits disc dotted double '+
+						'embed embossed e-resize expanded extra-condensed extra-expanded fantasy far-left far-right fast faster fixed format fuchsia '+
+						'gray green groove handheld hebrew help hidden hide high higher icon inline-table inline inset inside invert italic '+
+						'justify landscape large larger left-side left leftwards level lighter lime line-through list-item local loud lower-alpha '+
+						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
+						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
+						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
+						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
+						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
+						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
+						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
+						'upper-roman url visible wait white wider w-resize x-fast x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';
+		
+		var fonts =		'[mM]onospace [tT]ahoma [vV]erdana [aA]rial [hH]elvetica [sS]ans-serif [sS]erif [cC]ourier mono sans serif';
+		
+		var statements		= '!important !default';
+		var preprocessor	= '@import @extend @debug @warn @if @for @while @mixin @include';
+		
+		var r = SyntaxHighlighter.regexLib;
+		
+		this.regexList = [
+			{ regex: r.multiLineCComments,								css: 'comments' },		// multiline comments
+			{ regex: r.singleLineCComments,								css: 'comments' },		// singleline comments
+			{ regex: r.doubleQuotedString,								css: 'string' },		// double quoted strings
+			{ regex: r.singleQuotedString,								css: 'string' },		// single quoted strings
+			{ regex: /\#[a-fA-F0-9]{3,6}/g,								css: 'value' },			// html colors
+			{ regex: /\b(-?\d+)(\.\d+)?(px|em|pt|\:|\%|)\b/g,			css: 'value' },			// sizes
+			{ regex: /\$\w+/g,											css: 'variable' },		// variables
+			{ regex: new RegExp(this.getKeywords(statements), 'g'),		css: 'color3' },		// statements
+			{ regex: new RegExp(this.getKeywords(preprocessor), 'g'),	css: 'preprocessor' },	// preprocessor
+			{ regex: new RegExp(getKeywordsCSS(keywords), 'gm'),		css: 'keyword' },		// keywords
+			{ regex: new RegExp(getValuesCSS(values), 'g'),				css: 'value' },			// values
+			{ regex: new RegExp(this.getKeywords(fonts), 'g'),			css: 'color1' }			// fonts
+			];
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['sass', 'scss'];
+
+	SyntaxHighlighter.brushes.Sass = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		// Contributed by Yegor Jbanov and David Bernard.
+	
+		var keywords =	'val sealed case def true trait implicit forSome import match object null finally super ' +
+						'override try lazy for var catch throw type extends class while with new final yield abstract ' +
+						'else do if return protected private this package false';
+
+		var keyops =	'[_:=><%#@]+';
+
+		this.regexList = [
+			{ regex: SyntaxHighlighter.regexLib.singleLineCComments,			css: 'comments' },	// one line comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineCComments,				css: 'comments' },	// multiline comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString,	css: 'string' },	// multi-line strings
+			{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString,    css: 'string' },	// double-quoted string
+			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,				css: 'string' },	// strings
+			{ regex: /0x[a-f0-9]+|\d+(\.\d+)?/gi,								css: 'value' },		// numbers
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),				css: 'keyword' },	// keywords
+			{ regex: new RegExp(keyops, 'gm'),									css: 'keyword' }	// scala keyword
+			];
+	}
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['scala'];
+
+	SyntaxHighlighter.brushes.Scala = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		var funcs	=	'abs avg case cast coalesce convert count current_timestamp ' +
+						'current_user day isnull left lower month nullif replace right ' +
+						'session_user space substring sum system_user upper user year';
+
+		var keywords =	'absolute action add after alter as asc at authorization begin bigint ' +
+						'binary bit by cascade char character check checkpoint close collate ' +
+						'column commit committed connect connection constraint contains continue ' +
+						'create cube current current_date current_time cursor database date ' +
+						'deallocate dec decimal declare default delete desc distinct double drop ' +
+						'dynamic else end end-exec escape except exec execute false fetch first ' +
+						'float for force foreign forward free from full function global goto grant ' +
+						'group grouping having hour ignore index inner insensitive insert instead ' +
+						'int integer intersect into is isolation key last level load local max min ' +
+						'minute modify move name national nchar next no numeric of off on only ' +
+						'open option order out output partial password precision prepare primary ' +
+						'prior privileges procedure public read real references relative repeatable ' +
+						'restrict return returns revoke rollback rollup rows rule schema scroll ' +
+						'second section select sequence serializable set size smallint static ' +
+						'statistics table temp temporary then time timestamp to top transaction ' +
+						'translation trigger true truncate uncommitted union unique update values ' +
+						'varchar varying view when where with work';
+
+		var operators =	'all and any between cross in join like not null or outer some';
+
+		this.regexList = [
+			{ regex: /--(.*)$/gm,												css: 'comments' },			// one line and multiline comments
+			{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString,	css: 'string' },			// double quoted strings
+			{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString,	css: 'string' },			// single quoted strings
+			{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),				css: 'color2' },			// functions
+			{ regex: new RegExp(this.getKeywords(operators), 'gmi'),			css: 'color1' },			// operators and such
+			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),				css: 'keyword' }			// keyword
+			];
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['sql'];
+
+	SyntaxHighlighter.brushes.Sql = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		var keywords =	'AddHandler AddressOf AndAlso Alias And Ansi As Assembly Auto ' +
+						'Boolean ByRef Byte ByVal Call Case Catch CBool CByte CChar CDate ' +
+						'CDec CDbl Char CInt Class CLng CObj Const CShort CSng CStr CType ' +
+						'Date Decimal Declare Default Delegate Dim DirectCast Do Double Each ' +
+						'Else ElseIf End Enum Erase Error Event Exit False Finally For Friend ' +
+						'Function Get GetType GoSub GoTo Handles If Implements Imports In ' +
+						'Inherits Integer Interface Is Let Lib Like Long Loop Me Mod Module ' +
+						'MustInherit MustOverride MyBase MyClass Namespace New Next Not Nothing ' +
+						'NotInheritable NotOverridable Object On Option Optional Or OrElse ' +
+						'Overloads Overridable Overrides ParamArray Preserve Private Property ' +
+						'Protected Public RaiseEvent ReadOnly ReDim REM RemoveHandler Resume ' +
+						'Return Select Set Shadows Shared Short Single Static Step Stop String ' +
+						'Structure Sub SyncLock Then Throw To True Try TypeOf Unicode Until ' +
+						'Variant When While With WithEvents WriteOnly Xor';
+
+		this.regexList = [
+			{ regex: /'.*$/gm,										css: 'comments' },			// one line comments
+			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,	css: 'string' },			// strings
+			{ regex: /^\s*#.*$/gm,									css: 'preprocessor' },		// preprocessor tags like #region and #endregion
+			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword' }			// vb keyword
+			];
+
+		this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['vb', 'vbnet'];
+
+	SyntaxHighlighter.brushes.Vb = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+;(function()
+{
+	// CommonJS
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
+
+	function Brush()
+	{
+		function process(match, regexInfo)
+		{
+			var constructor = SyntaxHighlighter.Match,
+				code = match[0],
+				tag = new XRegExp('(&lt;|<)[\\s\\/\\?]*(?<name>[:\\w-\\.]+)', 'xg').exec(code),
+				result = []
+				;
+		
+			if (match.attributes != null) 
+			{
+				var attributes,
+					regex = new XRegExp('(?<name> [\\w:\\-\\.]+)' +
+										'\\s*=\\s*' +
+										'(?<value> ".*?"|\'.*?\'|\\w+)',
+										'xg');
+
+				while ((attributes = regex.exec(code)) != null) 
+				{
+					result.push(new constructor(attributes.name, match.index + attributes.index, 'color1'));
+					result.push(new constructor(attributes.value, match.index + attributes.index + attributes[0].indexOf(attributes.value), 'string'));
+				}
+			}
+
+			if (tag != null)
+				result.push(
+					new constructor(tag.name, match.index + tag[0].indexOf(tag.name), 'keyword')
+				);
+
+			return result;
+		}
+	
+		this.regexList = [
+			{ regex: new XRegExp('(\\&lt;|<)\\!\\[[\\w\\s]*?\\[(.|\\s)*?\\]\\](\\&gt;|>)', 'gm'),			css: 'color2' },	// <![ ... [ ... ]]>
+			{ regex: SyntaxHighlighter.regexLib.xmlComments,												css: 'comments' },	// <!-- ... -->
+			{ regex: new XRegExp('(&lt;|<)[\\s\\/\\?]*(\\w+)(?<attributes>.*?)[\\s\\/\\?]*(&gt;|>)', 'sg'), func: process }
+		];
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
+
+	SyntaxHighlighter.brushes.Xml = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();

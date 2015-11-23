@@ -2094,1097 +2094,1488 @@ var CodeMirror = (function() {
             var st = [], mk = this.marked, to = to_ == null ? this.text.length : to_;
             copyStyles(0, from, this.styles, st);
             if (text) st.push(text, null);
- rsion 2.2
-copyStyles(to, this. Cod.lengthctions s All , str version 2.2
-/ess to the  = str's state live insid Cod =tions that slice(0, from) + Below+that, at the botttoor's state live insideateAfter =Mirro version 2.2
-/if (mk) {version 2.2
-/r = var diffw thhat need a - (to - of th version 2.2
-/ducefor (funci = 0, mark = mk[i]; i < mk need a; ++im
-var CodeMirror = (r stnce..clipTo(of t =the onm of t ||nstato_n CodeMirruncttionnction that producesar we clae.
-isDead()) {tionsdetach(ions); closp botti--, 1);}tion that producesr options = {},r options =},version 2.// Split a part off a line, keeping e
-// tandate.ers intact.version 2.ts.t: function(pos, {
- Beforem
-var CodeMirrorfuncsow t[ions[opt] eMirro], m. Itions ults.d version 2.2
-//
-// All f  options that need access to the editor's state live functaken theew Line/ Cod[opt] 
-// some utilitiespos)editor's state live e claim
-var CodeMirror = ( an editor ins   // closure is used to store the editor stafuncnce. It's
-  odeMirror" + (options.linenewnce. It'e.
-
-      options[opt]  need a   // Determine effective op       d to store the editor statargetDo! // TivenOpt)  // TivenOptnOpt" CodeMirror-wrap" : "")ive ilow: hidden.push      wra;        .atlues a// T   // Determine effectivr options = {}, defaults = CodeMirror.default: 0;returnx; hei CodeMirrors;
-        append           ts)= (givenOptions && gimyl The    var targetDocum(opt)ts)ivenOpt, my(opt) ? givenOptions : defaultsion. Below+
-      {
-  version 2.2
-//
-// All f0,1">' +
-   need acc     o the edess to the r wrapper = targetDocycument.createElement("div");
-        wrappeyclosure is used // Determine effective opty's
- .ton CodeMi)itionto coverze="of CodeMirror-wrar options = {},e clai && closure im
-var CodeMirror = (  '<d scrol ? givenOpt     (opt)osition: relative; wiouter:div");
-        wrapper.className = "CodeMirror" + (options.lineWrapping ? " CodeMirror-wrap" : "")t"></d hidof theper.innerHTML =
-           an editoj     wjosition: relative"j">' +
-                '<div apitalize=nce. It'viewjsition: relative; width: 3px its parent hidover ve="off<divss="CosameSetptionon g/div>' +
-                '<pr statss="CodeMi This over visib ?></div:      '<d+           '<div clases"><div style="position
-       based on g the actual code
-                sor
-      values and deiv></div>';
-        if (place.appendChults.
-        va the actual code
-                r options = {}, defputDiv = wrappercontinuetioniner seen more elegant code in mye.
-        var inputDiv = e.
-        var inputDie.
-        var inputDition:;">' / Wrapo store the editor state.
-es inputendChild(wrapper); else pla relative="-1ntains the actual code
-    e optionsto ! visible is DIV c,
-            lineSpace =aults = CodeMirror.defaults;
-        fixMarkEnds           othert="off" autocapitalizeopt) ? givenOpt, othemesor.nivenOptions : defaultst"></dk) width:code.firstChildiv");
-        wrapper.className = "CodeMirror" + (optilineWrapping ? ", close        '<div></dicode.firstChild, gue cl.test(&&    </div></div>';
-        istyle="position: absoute; width: 100 the actual code
-        e cloden">0;</pre>' + // Ab.test(nafalse; breakar options = {}, defaults = CodeMire.width = "0pstChild, m"></textarea></div     '<div class="CodeMirrmeasure.nextSiblingStartineDiv = curextSibling;
-        themeChanged();o hide big blue blinking cursor on Mobile Safari
-        if (/AppleWebKit/.testptions.lineNumbers) guiew
- ction CodeMi)t's
- time/i) 0 wrap="off" ' +
-       ddling             wrapper.innerHTML = = mover.firstChild, gutterText e cldiv>' +
-    )
-     div>' +
-     osition: relative ? givenOpt   mover = code.firstChild/ Delayed obsort(         a, b){width: (atime/iace,)his ban interval;} code.firstCs;
-        forRun the given mode'spt iser overaults)
- update new o the 
-        forarray, which.firsains alternat    fragments offile,defaCSS
-        forclassesperty(opt))highligh            d(),editate, tabSiz = (givenOptions && giverea  e elemStringSy conbug)") CodeMo historeditplay = "o the edpo the= new Error(gent) &&chang          , curWor    st[0], prev    lorer. (innerHTML bug)")Below = ""rsor"ode.blankent )s maintained to( // u code.firstChildwhile (!ry con.eolv></div></div>';
-     & giveylt(navmaintoken(ry con   // u code.firstChild, gu& givubsts thhat, at the bottd is ussnot editis us    code.firstChild, gu, to: {line: loadch: 0}, nt)) input.style.width afCh&&oadMpos-1]are s
-  options.tabindex != nulusly tr2]meas= {frocode.firstChild, guelseTML b= {fro</div></div>';
-        i  '<d work, f&& (usly t+1]lings
-   ||ing obviously tr2lse;);
-    ))), work, foctruecode.firstChild, gutterite = f+] loaft.
-    // happened
-  code.firstChild, gutter);
-     =
-       ;
-        loadMpos" CodeMirror-wrap" :r options = {}, def// Give up when>' +  is ridiculously longptions.lineNumbers) gution-relat > 5000</div></div>';
-        i  // happene{line: 0, ch: 0}, to: {}, inw).
-        rAgent)) input.style.wiC =  if (!textarea style="position: absolute; padding: 0; ible r   // Thby sos) {a backet hs bee;ion/endOperationd to remember that / Variables used by startOperion/endOperation to track whatfor hort>' + s with simpled, and hiss width: deMirrdefaareo that the horizocounted as, work, fby new dri
-  becaus holdyscro likely too that the horizo, and hisholds ame way in selious.firsextld be parsed 0; width:  work, f   /a backet h< 5verw   var targetDoc < 10v>' + // T     l = new Delayed(), highlighFetch new inker; selepace.a Delayecharacter. Usefulpace.hackde API object.that want to inspecconten   /  // u (sc is an co        )perty(opt))getTseleAstory the
-        // undc"CodeMirror-gutter     low that, at t 0, ch: structor).
-        vxtor's state live  Invert range (may< chverwed is used to remember that the us       // Selection-related flags. shiftSeleer is
-        // selecting bottom-to-top.
-        e; padding: 0; width: {line::*after* openi;
-         shiftSel    tion-relatGecko.
-        if s).
- ecko) concurrent()Gecko.
-        if t shoNameecko       deMir(scroller, "contextmat"scroate} = new Delayed(), highlindenta               o history ptions.vr maColumn var mode, dions) { histor;s;
-        forProducf (de HTML
-       ler, new ts)
- tak     ele     ;
-        forChilingwhen s, and his    into ac = sc operation(onD opt           sof tedito, includePOwnPtabT);
- endAtneSpace, "dragstart",html     , firranchCtion to track whate cl"keyup", o    if (e.message.minpu   mov   varoller, " ? '<precrolle="'
-// som        co+ '">': "ct(i>"inverted: false}         span/ CodeM      odeMirror-gutter-text"></unctng cursor on Mobile Saf horizoWork aroun sc bug  guOwnPin some "dblat    cs, IE ignores lead     pacode API obje      connecut", f&& ipx";{
-     cAt(0)are a ")file,= "\u00a0"e file,he bottever seen more eleganut", fas          // Current visible rus);(onKeyDown'<focunput, "kenFocus),onKey,nnectEscap in wh).replace(/\t/gperation(), "</focu;
-        connectftSelecti(onKeyDown connect(input, "cut", operation(functioe. Context menu is
-        // & givenOpChunk([new Leallion(DragStart);
-  +
-      ? givenOptions : defaultsible ction Costo) DocumenshowingTo = 0, lastSfunc"off">efore o";
-
-        // Checke clKeyUpling.first"off">Math.minonFocu,    inve hide big blue blinefore on&&nKeyUp         (scroller, "contextocus" ",veElemeing.firbvious<div></div>'"CodeMirror-   });ed" :Mirror version 2.2
-/lecting, : rel overwDocument.& l < doc.size;}
-      an editor instac// m0ed. <    ; i+=2 "CodeMirror" + (options.linefrom: st/\w+/s
-     the+1], ut, str";
-
-        // Checkstyle.width =h + l >
-
- o wrap thrhe bottom "off-(lincode.firstChild, guttere di= ingTo = 0, lastSizeC = 0   //str        && "cm-conn    co      // bracketHighlighted is uselecti
-var CodeMirror = (funcafChunk,or instap));
-  he il);
- sghunk([new Line("")]gent) && /MoafChun-1tance. ItrAgent)) input.style.wi(input, "nextlingn we have a
-     ce = gutter.nextoverdiv></div>';
-        if (pplaceSel+= 1er seen more elegant code ince. Ite ele
-    ayed oblass="Co?;
-    [s[optio]to
-   area
-                '<textarea style="position: absolutindeInput(); o); fastPoll();});
- Invert
-     is
-CodeMirror" + (options.lineupisplaains the actual code
-    funcextra/ All
-            lineSpace = gutter.instance obje   setOption: function(optionhemeChange> beene) {onBDocumer seen more elegant code ilecting, lat we'll re||that Wrappindiv></div>';
-        if (place         else  n. Mostly calls out er seen more elegant code in mynged)();ing.firste) {onB else onBe) {inputver seen more elegant code i.lastChild, code = scroller.firstChild,
-      Invertnce. <divextSibling.fir          },<s beentUnit") loadMode();
-         gutter.next               else if (option ==.firstChilWrapping" && o option == "fir relative" != value) operation(wrappingCha if (option == "tabSize") operation(tabsCh+n(onD con#160;n.
-        var updateInputce = gutter.nextSibling.firstredo: operation(redo),
-   tLineNumber" || option == "theme")
-                    operation(gutterChan an e;;se if (option == "tabSize") o     nelChlue)  {
-    // Ter seen more elegant code ifuncapplied    elsen, dir == null ? "smart" : dir ?ut(on        e)story: function() {hi ?       +ation(tabsCh:ation(tabsCer seen more elegant code i   // red>      ?nect(scrolle0// mis thbeen:ion,,story: functi     indentLine: operation(fut(onFo >=     ) {Below thct(scrolle          p;ction:        if (!options.gutter && !ateInput,fChunen     // The seleeouts, makinge onlo call+]ingF  else getValue,    lie;
-                if (option == "mode" || option == "indenhemeChanged();
- ct that we'll r)    // The rn. Mostly calls out e. Context menu is
-        // nnect(input, "k      // IE"</s));
-        connectwidth: (onKejoin("on(start){
- s;
-        cleanUporking when we have a
-        vapaenu) the only global var we cl ? givenOptn. Some do some extra
-        // relse/ Delayed obsure is  // es used  ? givenOpt    lace.appendChild(wrapper optioay([]);// Utility us maxWicut", ohen s
-    abovolling.(input, "/
-// All fect(in"firsource, desp));
-         an editor instation: getnnect(e che
-    s.chor clipping. operatioelect Select     /\w+/ redo: histotMarif (hasFocus) setTimeout(o     se=val.deMirror-gutter-text"><ion(fuof the   m   movrker)e botttChil     ,operation(rker),
-    },      pw Br operat+1]     indentLine: opee(pos.line)of the     set
-                operation(setValue)arker: operat1on(removeGutterMarker),
-      etTosetLineClass: operati, giv      pration(function(h) {return setLinlectisetLineClass: ration(function(h) {return ser options = {},getStateAfter: funct              fu// Data   /uctur holat holdsholds equence// wcrollperty(o(input, "LeafChunkorreclse if (option   vacrollb
-     ted flags. s charCoords: function(pos){re        coordsChar:       need acchehe co    wrapp        div></div>';
-          Coords: fstChll ? doc.size -       "-1">' oll,       ;
-                return l         ds(clipPos(por optiors || (li.prototyp setdiv></div>'c (liistoorking when we width: 1ush(f);
-ords) {
-s;
-        removon = "absoluaft +, callbousenction(pos, node, an editor in     seta,
-/nd/oidget: function(pos, node,atch(e) {rDir: functlocalCooll ? doc.size - 1:        var t-
-      ds(clipPos(pos));s, node, scr.l.to);loadMode();
-        e clheightandlersoptions.tabindex != nulstyle="position: abscode.clientWie; width: 100%(vert ==    movcode.clientWi[j           if (!isLine(line)) re           ts.
-      ids(start ? sel.from : selollapson = "absolue.handlers = [])).ode, scro       .toryy      , [      code.a, 0].concatgeCoore.handds(start ? sel.from : seinsertH                    Width >        },
-            char    pos = t * textHeight()),
- ight)
-          .offset          , [                  left = hspace 
-            lineInfo: lineInfo,
- f (vert == "ne scroll, vert, horiz) {
-        - node.offsetterN               if op"over") top = pos.y;
-        else if atidget: fat    if (e.message.matchope.left = no[at])ng cursostPoll);
-                     (input, "Branch| (linchildrf (option == "ress",  (code.lCha (code.ll ? doc.sid to iz setB           ad    },
-            lineInfo: h) / 2;ords) {
-            rk,
-            seange h) / 2; Math.max(scroller     +
-  .e.positio();     pos = chht * textHeight()),
- che.clientWidth - node.offseentWidth - node      n            return l  var top = pos.yBot,  return line;
-            },,
-
-  ddle") left               node.style.position = "absolute";
-          unt: pendChild(node);
-                if (vert == "over") top = pos      line-= or on Mobile Safari
-        if (/Ap node.offsetWeWebKit/.test(navigator.userAgent) &&h) /  var vsp           , sz)
-     eft, top, lefptions.lineNumbers) guelse sz(option == "readOnly" && valurment else onBnrsor:- aion(old;
-   : operatit * textHeight()),
-     e.offsratie);
-      rmf (vert == "ll ? doc.size - 1: linesetHeight, doc.tCursor(lirwarine, line.ch, user);
-           arkerzeratre">'Selected: functts.
-        va operatCoords: functieme")
-                 e cl(n
-      ration;
-        // bracketHig     e.left = (left +         f linea doc.sz     '<div class="CodeMirror-gutte sel.to);
- n < 25m
-var CodeMirror = (funcf);
-   osition: relative; wi      e.offse "";
- rn getLine(line);},
-    offsetWidt[elemes || (line.handath.max(scroller for problem with IE inde.offsetHeight;
-                    if         coordsChar: functx";
+            copyStyles(to, this.text.length, this.styles, st);
+            this.styles = st;
+            this.text = this.text.slice(0, from) + text + this.text.slice(to);
+            this.stateAfter = null;
+            if (mk) {
+                var diff = text.length - (to - from);
+                for (var i = 0, mark = mk[i]; i < mk.length; ++i) {
+                    mark.clipTo(from == null, from || 0, to_ == null, to, diff);
+                    if (mark.isDead()) {mark.detach(this); mk.splice(i--, 1);}
                 }
-                setCu          setLine: operatio- node.offsetWidth             }
-    ));
-        connect(istyle.left = (left +   if (horiz == "right") {
-                    le    pos = localCoords(clipPos(pos)););},
-   tWidth;
-      }
-             t = hspace - node.offsetWidth;
+            }
+        },
+        // Split a part off a line, keeping styles and markers intact.
+        split: function(pos, textBefore) {
+            var st = [textBefore, null], mk = this.marked;
+            copyStyles(pos, this.text.length, this.styles, st);
+            var taken = new Line(textBefore + this.text.slice(pos), st);
+            if (mk) {
+                for (var i = 0; i < mk.length; ++i) {
+                    var mark = mk[i];
+                    var newmark = mark.split(pos, textBefore.length);
+                    if (newmark) {
+                        if (!taken.marked) taken.marked = [];
+                        taken.marked.push(newmark); newmark.attach(taken);
+                    }
                 }
-                node.style.top = (IntoView      code.ap node.style.top = (top + paddingTop()) + "px";
-  line).text.length});
-            }),
-            rem !posEq(sel.from, sel.to);},
-            setCursor: operation(function(line, ch, user) {
-       rn gse if (option == "tabSizeoperat      getRange: function(from, to) {return tracked, and the raticrollb&&   togg      code.ay be se if (option == "tabSize") o Invert        postion(off) {
-                var lineNo =         pill     
-          ts.
-  
-                d- 25,funcer seen more elegant code in my;
-    lean() 
-                                  if (sz > off) { choperation(fu
-   f; ret, line.ch, user);
-           tWidth - node.offsetWtSelectio + 1,nodeo;
-                 if (sz > off) { cho;
-    vert, horiz) {
-            tChild,
-            scroller = wrapper ? giveybeS    ption) {return options[op          }),
-        ;
-        // bracketHighlighted is use: functurn getLine(line).text;},
-    s;
-         0) returnorking when we have a
-         getLied: function() : op10ng cursor on Mobile Safalize  var vsmands[cmd](instdo            moveH: opera          melipPos({line: lin        refr  // This5,                if (sz      bl    rn truddle") left                 off -= sz;ns in e: funct    // Becop);er our rds:nodolling.
-      .from, sel.toopyld: function(){retu        refds.
-        var instanceopy: functionm,
-            getTokenA        ref) {tter,InputFieull ? doc.size - 1: line     tter(line) {if (isLine(line)) to store the editor state.to);
-  nputFiert = stion(){return gutter;}
-    ++lineN) {
-    line.ch, user);
-           alize=Index = (optxOfeturrn wra         , m                return ge= line; n; n = n.presh: fun      fo, ch: cnputFie           setValue: operation(setVrollIn{
-   lement: fun    updisLine(line)) renged)();ction(){updateDisp>ndex     gutterDirt= line; n; 0) return 0;
-        etWidth;
-                      },
- style           dateInput the fu = trsel.inverted;                  node.style.right = "0px";
-      ds, probably not much use to outside code.
-            moveH: operation(moveH),
-            deleteH: operation(deleteH),
-            moveV:          if (ch == null && typeodsChaine.line == "number") nction(from, to, user) {
-   toggl    }    dsCh = tr = 0;
-                 pPos(to || from));
-  dsCh        }),
-            getLine: function(line) {if (isLine(line)) return getLine(line).text;},
-               f (horiz == "migetent At(e.pos    ction update Invertee.pos     lene, ch: getLine(line).text.len;{return !posEq(sel.from, sel.to);},
- rapper      setCursor: operation(function(line, ch, user) {
-   e: ferati                 if (! || option == "indent            // See if this is a click iue(options.vapper; n =[nath.max(,
-
-  (input, "    Noorrect="off" autocmax(code.Coords:   },
-  ept static 
-              cus th      var s, nspla (var n curt = noderrectt = (left + paddingLns.onGutturnes(top,     ihange         ran.onGuttesor: lement: // Stuff used by commands, probabl              ords) {
-s used to store the editor a wid               tartcur  }),
-            getLinen meastart.ch, true);
-ion(function(line, ch, usershowingFrom, e);
-           non e_preventDefault(e);
-   A getRangenu(e);"CodeMirror-gu;
-  hunk([new Line(ioning on(f){return opera          case 2:
-                    if ((vert == "near") {
-               ) {
-                    ifll)
-     iff = height - line.heighte clkinglineS;
-        rClicfirstChild, inp index = coords.ch;hn (lclength};},
-        nView(lration(function(line, ch, usere; padding: 0; width: " wrap="off" ); n != wrapper; n = t = (left + paddingLeft()) + "px"pper; n =             }
-                if (scro     va         retCursl// mheight * textHeight()),
- = +new Dlh  }),
-            get.timelmmands[cmd](,
-
-      reventDe + in e_preventDefault(e);h: 0},A     r (var n = e_target(e)ect(it the
-            // selection.
-            if (!start) {if (e_target(e) == scroller) e_preventDefault(e); return;}
-
-            if (!focused (options.onGutterClick)
-                        options.onGutterClic(lastDoubleClick && lastDoubleClickText.childNodes, n) + ) {
- astDoubleion(replaceRange),
- e; padding: 0; width:            la               setTimeout(focusInput, 20);
-  oller)n      re      }
- localCoords(clipPos(pos));his.
-              line = Th  //story obj;
- '     s'.value     atabTexmadinpuest(togeor.n  line = en sct almoscontent.
- timeon() {bigger undoable unition(){se(input, "H      n we have a
-    varxt =unk([new Line(     do   va[];ientX)     Math.ab e_preventDef                      node.styladdCwork,        connine: 0add for l    setOption: fun(e.clientY       // mk([new Line("")])]),(e.clie+elemD/ undlaranchChunkntY [;
-      dateDispla1ath.max(scroller    gxt =-th.abs(e.cl> 400    !Input||l.to, start)) {
- Inpu // Sel>;}),r,
-/               retur+
-           <;
-    -e_preventDef e_prevoex: ass="Cn getLine(line);},
-        ;">'  in onMous          :           :    ll = new DelasetValue),
-            getSelecolddefaaceSelection: operatioarker: r{
-       retu      if (!webkit) lineSpace.draggr in      retur-ult(e);
-1olle>     -->' + // Moved around its         sor(unshift(olf = ether this is a click in            
-                                    updateInpu// Selecti        var visible = r options = {}, deflecting,       returault(e)se if (option == "tabSize         lt(e);
-                         if ( e_prev false              var top = {line: 0, ch: 0};
-  onFocus();
-     d(e);}- 150);      sor(start.oller) e_prev                 updateInpusor(;">' r);
-                    u| cur.linentDefaud(e);)teInput = fa=_prevespace && pos.y > node.offsetHeight)(e.clie);
-              else if   up();
-      stopMethodn wee_ocumrstChil,
-
-  // Ense);an evrds:has Lineop mnt, "   up();
-      addS", o           }
-
-      !     .  cl)      e);
-oing ument, "ment, "mouseup", o     clientY) <  up();
-      e_);
-entDefault(       }
-
-      e.reventDefault()   focusInput();on(line, ch, lectie.width:Valux;
-       e_preventDefault(e);eup", Propagns.fie);
-                ), true);
-    
-   ), true);
-     dateInput = true;
-cancelBub    astPoll);
-  ();
-            }), te);
-_preventDefault(e);;  }), true);
-       ion(funcn. Mostly .eup", Statup", e(); upntDefault(e);reventDefault(     reventDefault( var start = posFrom), true);
-             rue);
-     = connect(targetDe_targe(e);
-nUser(st.          e.srcEle    ion(funcstart};
-  butt      }
-        functi the osFromMouunctionateInput = true;      t);
-  & setwidth: 
-           lecting, efault();
-2         3 var pos = posFromMouse(e, true4         2 cur);
-        tion       ientW registrns.fi. If disconn;
- isstPol, it'll        ans.readOn(input, " lineun      .hasnew turn;
-   up();
-       && fil(per;,     ,    func
-   s && fil      }
-
-          ofpper;    ly) rL    nis t= "        "  return;
-                       reader;
-            = new History();;
-      var reader width: king when we     e);
-            text[i] = reader.result;ay([]);
-    var pos = posFrrk,
-            sewrapHurn;
- === n) {
-      varturn;
-          window.     v                       s inply) r("onconne[i] ={
-        ;
-                        if (++read == n) {
-         values                            setS                   e_preventDefault(e && filetLin& fil = connect(targetDDelaye"mous      );
-se(e)                            sestory the
-  s, ftabinearTimeou       id)bs(e.cl     set        f, matiop = connec = get;
- drag-and-dropversiofunctragAndDr     king when we have a
- // IE8     on  ellast))defa    op propertinodebut doesn't seem
-        //     ctually suppal s      var tenew      t'sext) {sChato workperty(opt))e cl/MSIE [1-8]\b/.test(navigator.userAg   v(++read ==put(); fastPollfunctiv = docu    .create       ('div'meout(focusIwidth: "  elg    " e_sdive(); up( for           geckspla/ext) \/\d{7}/i                  var curFe(); upcus() wra pos);\d                   var curF           webkier.r/WebKit\/t();
+            }
+            return taken;
+        },
+        append: function(line) {
+            var mylen = this.text.length, mk = line.marked, mymk = this.marked;
+            this.text += line.text;
+            copyStyles(0, line.text.length, line.styles, this.styles);
+            if (mymk) {
+                for (var i = 0; i < mymk.length; ++i)
+                    if (mymk[i].to == null) mymk[i].to = mylen;
+            }
+            if (mk && mk.length) {
+                if (!mymk) this.marked = mymk = [];
+                outer: for (var i = 0; i < mk.length; ++i) {
+                    var mark = mk[i];
+                    if (!mark.from) {
+                        for (var j = 0; j < mymk.length; ++j) {
+                            var mymark = mymk[j];
+                            if (mymark.to == mylen && mymark.sameSet(mark)) {
+                                mymark.to = mark.to == null ? null : mark.to + mylen;
+                                if (mymark.isDead()) {
+                                    mymark.detach(this);
+                                    mk.splice(i--, 1);
+                                }
+                                continue outer;
+                            }
+                        }
                     }
-               Se    "\n    if (// Reane);-d);
-  whfalsexFromrollbin     are    (inponveraxLito \r\nversiois active n we have a
-       wra                      s"t = getSon(start){
- te.v       "foo\nbar    if (optieaderransfer. (var n "\r") > -1left =
-      r   functio}(eft =unction oCr ma      coller defsetr txLine(dow, 
-     tabasOwn {updateDisplay(retusCha    
-
-  find (options.fition loadFile(file scroller.nding(e)endndo history (instance ),
-    art = posreturn;
-       redo:nding(.search(/[^\s      ]/plorer. (innerHTML bl || e.taTr           ifdone.length};},
-            an editor instast theller) nds used to store the edible ra  if", operition(o\t")q(last;
-    his n %";
-      operation(setValue)++" wrap="off" stDoubleClick = {t cur);
-                e"dblut functi(e;
- if (name == nullltextMenu)  matchnDrop(e)ions.keyMap))) ctionUser(pos, endlaceRangetCt-" + name, optieMirror versio     line = Fxt =er ouosiill rof
-         axWifollow
-    h    andlPn wrapchaitions.ke    f screen==ength &&
-     sbound = (ra     than page) coordinat      (line.handleeltO   }{
-    ound =set escapeElementbo         ownerD        bodAt(doc, n); func for0, emende) kipBodemen.from, curTo = s an editoThe eode;    The e.    }
-                  if (scroout, ext;
-  Left, os: fuxt;
-  T   var st        // Rirefoxcoororts weir = k);
-       }s  gutt               bordnction lo              ==    e;
-xalse elseabs(ol); y(instance);
- tgetVoperation(setValue),nd(insol  if    telecting = prevSharker      romIt-" + name, on) shoextraKr.onlixtionine: 0, ch: 0};
-   && (bound                  else.length,              !  }
-    >' + // Tb) setSelectioey(e))) options.k       Ns.keyMon =     if (s();
-    eturn true;
-       .scroll    ed();
-     x
-   IE does str    th escape.ift)   if (e.shiftKey {left: x },p: yay([]);on(functioUompute fa     - offaeadegetBler,ingClientR;
- arTime  guttpos    eperty(o             on a cha        } eftKey);
-          ing.first bound =             ommands[bound];
-        (e2)ak){return   // wbtKey); c      r;
-   n(onelectiinteresaxLie_stoleKeyBin     to edit optne maxe;
-        forsi    hiftwidth:ed nsfer.cannot be.value ||ex obje (te(uteTabTexkepleKeysyncine hiftptions.k;
- lbar
- txtr ourgode;
-      try {        forse bos.
-            if (oleft      { = falbox.topd afnValtrlK& e. }electing = prcatche);
-.metaKey= faled afnVal088)
-         FromMs[bound];
-        e,
-    e      toplevel    oMirraceR  vaoller, brower;tioner
-   ion(){setValue(oe cllaceRanatchYvent && ();
-                else i                 ce to handle th    on a chan    e = e.keyCo(line, ch, user) {
-   t if (ie &&         th                       }
- ch;
-    rlKey)
-    if (ie && eyCode == yBinding(e)
-     {line: doc.size function updateLineHeighandleKeyBilastStoppedKey = neturn;
-      lastStoppedXr ch =  1, if it was clicked inside the editor
-  boxe(); up(;
-        }nKeya     's      n(funeDisplay(e(bound)) boion(nKeyEons.extraKeystor
-     // extC > -1), funon()innerre on(sel.to.l.to      ||e if (opti     line = Ope     i     {ts)
- ch}            (line.handleposEq. blin e_prevenannect      (opti&& a.angens.och  selectWordAt(stposLess
-            if (opti<s.onKeyE   /f (options.onKeyEvent &&     ards selectWordAt(sttterPos(x         i     : xnnect  }nFocch} = n          eect(itions.on           htmlEscape(txt)preon(start)rt};
-    connect(intClick, lastDoubns.readOnly) ) {indentLine     setSelectionUser(stptions.onFoculine, opte(); up();
-  ightecLine(lect(2011) fastP betaar tidth bogus       varacontent    (wrapper./ woress{indentLinratileKeKey)p thoseyEvent opti      if (o"a"rl-" + nareturn true;      if (            tClick, lastDoubleCloptions.onFocus(instance);
-                    focused = true;
-           scroller, "paste", f        retSop);IEs doxt")preserve      through          versiolecting,           if name!" + namAlone) resetInput(true);
+                    mymk.push(mark);
+                    mark.attach(this);
+                    mark.from += mylen;
+                    if (mark.to != null) mark.to += mylen;
+                }
             }
-            slowPoll();
-         lse if (option == "ted = true;
-        Coublion a chan      ion(         d;
-                reted = true;
-                if   if (focusntDefault(eetInput(true)      if (;
-        }s[e.ktoons.extraK   fuursers.r is an     /redokeyMai    vatholling.//sInput.opeed    connect
-               ditEnddateInputvar cur = posFromMTo.+read ==Chil?nes(fdateDisp:, true);
-   FromMof thewidth: 1o           }
-     an editor in, to, newTe,ositi  if (histt = curEvenj= cur;
-  , --(options.tabinde conn to,me = "Ctrl!
-    ", operj)  }),
-           width: jlue( cur);
-                e{
-      ol });
-  KeyEons.extraKeys, oph, old);
-
-                (history.done.lengoptiot = (left + paddingLeft()) + "pxhistory.dont, "mousemove", operation(functiile (history.d;
-         width: : now, p       hist-addChange(fm.line, newTexs    Char(lineSpace, "drawidth: /\w       on o||ffsetoUpperCase(push(f (chLowe) {
-  s || options.readOnSeevent"" mess es.le    r handIE vers;
-  if soe();ovid{
- ;
-       e objectv      toff.left         (li(f)();li     
-   "\n\nbtart + (/\n/)backet has 3rom,
-             et escapeElementtion: getnl, res      osition: rela Invert(nthat ch  if          n"),
- )e.dataTrreturn;
-      placed           if .
-      0, c) name = "CnltaTr-" + r"own(l  lato
-llinker);
-       getStanlry.addChang   lastDoubleClic- 1,
-                    linker);
-   width: updatee(); up(ory nge.start, addee_preven     if        r? to.         ntDefault(e.text); });
-.text); })     }
-     hasS  });
-  CharCode(get}
-       change.startmeout(operatiombo
- width: 1e.   });
-  not ush(ly.undone);}Eame;
-                    m = sel.from, click in ch: getLinedoHelper(history.donypeofork,(modeound = null;
-    });
-     cleRork,(var options =                    }
-   ndo(fr||Undo(fe = e.k       spush(l {
-      .from, curTo = s: 0}, {lgth =
-   reEndPoints(" not ToEnd",ing)
-push(ft = (le (mode.elentDefault(edefineMerva"irro",             try {
-     functi selech: getLine(eneae">', to: {lk  fulFrodFile(functieplaced {
-               IMEt);
- /plaichan if (l      }
-     keyr, "
-   {3: "Eing(", 8: "Bousever"", 9: "Tab", 1erDirty = tr16: "St, cine 7: "Ctr(lin1ue;Alt"on() {
-   1   vP com", 20irstapsLock= gefirsEsc", 32 fro       3erDiPageUpt ad4ust theDowchan35rDirtd(from.line),3- frHomst adfirs    akinue; line    vR his", 4tLine, taki4strucrintScr to.cg soIocuse(from.line),4- frDelet = g5   v;    1: "Mom.li9  //This iserDiThis i18- fr    18firs=ed spue;,(from.line), 8   v-ed s9tLin./ sur // // sur  //`= ge last[= geetLin\\e sup // ]e sup  //'", 6327- fr the linversion 2.r adfirscture, takir adg some ca    ierDihlighti632 strutact.
-      // line    g so(from.cevLine = nulldjust         30  //Text.len    i  // {
-   , pos);
-          th > 1) gutth > 1)        is active.tance, addStop(eNumbength de API objee = true;
-         1lt-"++)ine.fixMa[eNo,48pener).
- (i.done.shift(// Alphabetic = 0, e = newText.length - 165t-" += 9 ++i)
-               added.time/    n. Mpush(Line.inheritFs will r= 0, e = newText.length - 1ast = ind2++i)
-              11acks              ne(fr    "Fdent: now, po)  if (draggwidth: n. Mostly ;
-
-      {
-                    xm(line.text.leconfig,our eveCe(fro change.ocus()optioUn   }ce(froPos({                 Kludkit)=.ch, to.ch, nnull;     ?         e_prutoSelfCgablrs: {"br":length "img          h
-          link           nput        version 2.2
-/"meta          col          frame          bas(lastLine);           s;
-        doNot    nt1]);ocus   var added = [];a);
-Unquotd(e)tPol.done);}
-{newText.length-1])},;
-            } befo= newText.le.fromay([]);rHistlignCDATALine = firstLine], firstLi;
-        }Ridth: oper    sroll(iseleizerde API      /gr, "       = connect(targetDin   seting bottom-torkText: opera
-                s.nextSibling;
-    Displ/ sele     ngth ==;
-                retgth ==cting bottom-to-top.
-        if (oif (scroll)
-tion-reInpu for (var n =d the dr.on<unction() {
-     ible range eat("!"></div></div>';
-                  doc[remove(from.line + 1, n1, nlines, callm     "rstLi);
- ptions.valin(inBlock("atomto.l]]>"linker);
-       r pos = posFrFromMouse(e);
-
-         if (cur.line >= visible.to || cu          var --= [];
-                fircom    to.l--lace(from.ch, null, newewText[newText.length-1DOCTYPE",length tPol></div></div>';
-        i         dWInve(/[\w\._\-yMap = next;
-    tValue(options.valinion     (1ce(from.ch, null, newcur.line >= visible.to |
-                lastLinee: operation(function(h) {       doc?remove(from.line + 1, n           added.push(Line.inheritMarks(newText      firstLine.r      fir     , "?ceSelection("");}));
-os, end)     == null ? e.keyCode : e.chsetValue),
-            getS       .insert(from/"    "ggablTag to"open{
- nverted: false};
-        eat Firson(line, ch, user) {t(from.lse if (option == "themen;}
-adMode();
-               (cext.length, fu options.ke=<>\"\'\/?]/ratir guess     ptions.lineWrapping) {
-              Tagoller.clientWidth / charWidt          if (lineshowingFrom, e);
-    lecting, ine.app&unction() {
-                added.p^;yMap = next;
-    .insert(from;ed;
-                retrstLin    }
-            if    operation(functio         var l = li&<yMap = next;
-    FromMouse(e);
-
-                 line);
-        ag     }
-            } else , to.ch, "");
-                firstLine.app>"  if ine.app/lways.insert(fromlace 1) {
-                firstLine.r      mands[cmd](insta       (recomput? "end{
-     selfine) {
- l.length > maxLineLengt       doc.iter              op function(l=unction() {
-            "equalsction(line) {
-                          recot.length, fun/[\'\"]
-           maxLineLength = 0; maxLine = ""; mAttribut  e_axWidth = null;
-            firstLin
-                lastLine.re           maxLine = l; maxLineLength = l.lengtess != line.height) ul.length > maxLineLengtwor     if (opti   recomputeMaxLength = fal
-         wTextngth == maxLineLengtmputeMaxLength 
-            } else ons. Inverted is used to remember that the ust[newText.l      e.apvar newWork = [], guess);
-                });
-            } else {
-  = 0;
-        // bracketHighlighted is used to remember tineLengt: edit
-           ddChange(from.line, newText    fi      rtermtyIsolick, lastDoublendiff = newText.length - nlines - 1;
-            for (var i = 0, l = work.length; i < l; ++i) {   var = from.lin1; i < e; ++i)
-           ; maxLine = ""; maxWidth = null;
-  ch;
-                doc.iter(0, coords.line, funct"");
-                fiag handler handle this.
- n, dir == null ?f);
-      MaxLength = f
-      dep="CodeMirror-gulendiff = newText.length - nlines - 1;
-      n;}
-ectstart", e_preventDexLengthe display
- push(;
-                else irstLine.append(lastLine);
-   Wrapping) {
-                        v    ether this is a click in              }
+        },
+        fixMarkEnds: function(other) {
+            var mk = this.marked, omk = other.marked;
+            if (!mk) return;
+            for (var i = 0; i < mk.length; ++i) {
+                var mark = mk[i], close = mark.to == null;
+                if (close && omk) {
+                    for (var j = 0; j < omk.length; ++j)
+                        if (omk[j].sameSet(mark)) {close = false; break;}
+                }
+                if (close) mark.to = this.text.length;
             }
+        },
+        fixMarkStarts: function() {
+            var mk = this.marked;
+            if (!mk) return;
+            for (var i = 0; i < mk.length; ++i)
+                if (mk[i].from == null) mk[i].from = 0;
+        },
+        addMark: function(mark) {
+            mark.attach(this);
+            if (this.marked == null) this.marked = [];
+            this.marked.push(mark);
+            this.marked.sort(function(a, b){return (a.from || 0) - (b.from || 0);});
+        },
+        // Run the given mode's parser over a line, update the styles
+        // array, which contains alternating fragments of text and CSS
+        // classes.
+        highlight: function(mode, state, tabSize) {
+            var stream = new StringStream(this.text, tabSize), st = this.styles, pos = 0;
+            var changed = false, curWord = st[0], prevWord;
+            if (this.text == "" && mode.blankLine) mode.blankLine(state);
+            while (!stream.eol()) {
+                var style = mode.token(stream, state);
+                var substr = this.text.slice(stream.start, stream.pos);
+                stream.start = stream.pos;
+                if (pos && st[pos-1] == style)
+                    st[pos-2] += substr;
+                else if (substr) {
+                    if (!changed && (st[pos+1] != style || (pos && st[pos-2] != prevWord))) changed = true;
+                    st[pos++] = substr; st[pos++] = style;
+                    prevWord = curWord; curWord = st[pos];
+                }
+                // Give up when line is ridiculously long
+                if (stream.pos > 5000) {
+                    st[pos++] = this.text.slice(stream.pos); st[pos++] = null;
+                    break;
+                }
+            }
+            if (st.length != pos) {st.length = pos; changed = true;}
+            if (pos && st[pos-2] != prevWord) changed = true;
+            // Short lines with simple highlights return null, and are
+            // counted as changed by the driver because they are likely to
+            // highlight the same way in various contexts.
+            return changed || (st.length < 5 && this.text.length < 10 ? null : false);
+        },
+        // Fetch the parser token for a given character. Useful for hacks
+        // that want to inspect the mode state (say, for completion).
+        getTokenAt: function(mode, state, ch) {
+            var txt = this.text, stream = new StringStream(txt);
+            while (stream.pos < ch && !stream.eol()) {
+                stream.start = stream.pos;
+                var style = mode.token(stream, state);
+            }
+            return {start: stream.start,
+                end: stream.pos,
+                string: stream.current(),
+                className: style || null,
+                state: state};
+        },
+        indentation: function(tabSize) {return countColumn(this.text, null, tabSize);},
+        // Produces an HTML fragment for the line, taking selection,
+        // marking, and highlighting into account.
+        getHTML: function(sfrom, sto, includePre, tabText, endAt) {
+            var html = [], first = true;
+            if (includePre)
+                html.push(this.className ? '<pre class="' + this.className + '">': "<pre>");
+            function span(text, style) {
+                if (!text) return;
+                // Work around a bug where, in some compat modes, IE ignores leading spaces
+                if (first && ie && text.charAt(0) == " ") text = "\u00a0" + text.slice(1);
+                first = false;
+                if (style) html.push('<span class="', style, '">', htmlEscape(text).replace(/\t/g, tabText), "</span>");
+                else html.push(htmlEscape(text).replace(/\t/g, tabText));
+            }
+            var st = this.styles, allText = this.text, marked = this.marked;
+            if (sfrom == sto) sfrom = null;
+            var len = allText.length;
+            if (endAt != null) len = Math.min(endAt, len);
 
-            /(isLine(line))   if (recompuick, lastDoubleClick, draggin      rn setLineHidden(h, false
-            startWorker(100);
-            // Rememb
-                doc.iter(0,       function updateLineHeight(l     cur.next = changeObj;
-       -    } else textChanged = c = changeObj;
-
-            // Update the selection
-        '<textarea style="position: absolute; padding: 0; width: dth() - 3;
-     f);
-                   S// undsedropShift = tent(instanass             f.y;
-         rg     ngth + 1;
-ast = cur;i--) {
-     .cc      rom; else
-         = null;
-        }ngth;return;
-  );
-.offsettic wheom; elsege.start, ch: 0}, {pper; n = n.panKeyEvent(instanushdentLxt(t(from.li     Ofd to pwe have to adjuso       =    last.
-         .hasOwnrue)erty pos)) r    i       code(funct     
-             .r line = // highligh;
-                  node.stylnput, us:(pos.line == to.l0]);
-         t(from.:rt(from.lastLine);
-           ar ch = p.line edto.line == fromurn end;
- nction nd;
- to.line == fromr line =:    }
-  o: to.line + 1, diff: lendiff});
-popess(to,            while (
-                     code= to.linear ch = pos.ch;
-);
- cur);
-                e_      s    r = new FileReader;
-e.app         change.old.lengtnd1) {
- r guess = t(from.xWidth = null;
-      adjusa        st;
- tagend1) {
- urn end;
-   to) {return ength, fun
-        ine) {
-              if (scroer     put(); fastPoll();}on(end1) {
-          div></div>';
-           ar ch = pos.ch;
-r guess sh(l        function replhars && mode.electricChars      tPoll);
-        cobound(instance);
- err)      frolengttly ction(line) {
-        adjusendggabl) {om, neSpace);
-              }
-       eplaced = [              se) {urn end;
-              lendiff = newTex adjustPos(sel.tol.to)};
-        oc.size, funct = true;
-          , sel.fromc.iter(0&&os.line +newText.length-h - (to.line - frn end;
-               var re))eturn true;
-       computeSel) {
-    s(sel.to)};
-        c.iter() {posLess(to, rn end;
-       eturn end;
-  ;to);
-        }ask > to.line) newWork      }
-
-       + 1, diff: lendiff});
- function replac1 ? code[0].length + from.ch : code[code.length-1].leom, to: end};
-            });
-      nction getRange(from, te1(code, from to.line;
-     return {from: seo: end};
-            });
-        }
-       rom; else (vere            // Add t             if (!(code, col: adjustPos(sel.to)};
-        work = tr: end};
-  (code, co" to.line;
-   (code, col         if (nction getRangh > math > option pollinsfer,ction() {
-          firstLngth;
-   ush(ta, sel.to);
-                 var pollingFast = false; // E newText[
-  e(); up();
-           tPoll
-             return getRange(sel.from+ code.lengthush(Line.inh, sel.to);
-   push(tasto.line;
-            if (() {
-            if (t cancel fastPoll
-  0) rge.start, ch: 0}, {, function() {
-                start 0) r: adjustPos(sel.to)};
-                });
-        }
-        function fastP.line + 1, n, function() {
-          if return;
-            orking when we have a
-     neLength) {retion       , cc: "inp 0));
- ectioreturn {line:t.lengtth - (todeMirr = end1st = fay([]);
-       per(history {recomputeMaxLength th - nlines - 1;
-      t[newText.lsowsers fire contextmenu *af        replaceperation to track what
-  evinpu 0));
-           (options.fi, start)) {
-                e_p             dn;
-   osFromMouse(e);sh(getLine(l2).text.slice       r guess =  == input); } catch(e)       // c
-
-            // Update the selection
- ents tht instee + 1,pPos(to || from))roll", fu adjus
-    d};    ne.fixMaom: end, to: end};
- nd1) {
- events adMode();
-               th - option == "readOnly" && valucomb events te = op(    iom), tother this is a click in a wiomb{
-        
-    }),
-            getLinesition: absolute; padding: 0; evinput is a hack to       if (collapse  from.li: end}; text = ;}
-                endOp.line ? lt(e2);
-    undoextor isine.ll;
-              InputAlone to.linefocusedt[same
-        // supported    firstLine!;
-    le enoif (same < prevInpu      = true;
-                    vas.ch;
-         Sel.from, newSel.to);
-     whileundo( whilelEnd);/^(\s*)/)[0], newText, selFrom, se) {
-    , firstLin&& /<!\[rstLi\[       
-       
-        /om, sel.to))
-                v/^<         line, ch: Mm = {line: sel.from.line,          return {fromlineNo = 0, ch;         v! replaceurn end;
-  ngth - same))};
-            replaceSelection(text.slicine).text.l });
-       h;
-.line astL{
-              startOperation();
-= new Error("A Cext, {line:           ineDiv = cur
-      
-        // supporathe textar!ns.ohe textar|| a(same < prevIb firstLin         if (!options.lin              a;
- code[code c|| !bt[same])  ;e = ""caretur  }
-
-cbretur;
-        connect(input, caaggincb });
-    a     bnt)) input.style.width =a (collapse =cb (collapelse if (user) prevInput = in           inde Add these lectric    scts m function(      1)
-                (frotory:cns.fi/firstL firs== 1)
-                (from.lin    ", {n- (to firstL.split(t   var == 1)
-                    javascripMarkine.replace(from.ch, to.ch, newText[0]);
-                else {
-                 jsonit(toine = firstLine| Ma;
-        }ouble    newText.length worktLin();
-         } else if (newTekwh : codeneLength)ypfram[i] =xt = : "nt.offs"     
-          ine)kw(scrollIn a"), B}
-        funcbion C}
-        funccon(start){
- eturnastPoo        lCoords(ion stLilaceSom > rstLine.cursor.sstLinay([]);
-   anged = readInput(     if": A, " Invesor.x, lithsor.x, lect": B, "dorsor.x;tryrsor.x;fi     rsor.]);
-          width:": Ce);if (cursor.firstChicursor.newcursor.d{
-   ursor.ns.onction]);
-          va
-           on()consnewT var pl = palegLeft(), pt = ]);
-          load = fueft(),load = fun pad         y1 pt; x = textHeight();
-o     var   v2 +=swit; x1 += proller.2 += pcurso+= pl;se, scrdfault(op = scrollTop, = textHeight();i    lCoords(iew(;
-  
-            instt(e)y1 < screentop]);
-          tPol":.fromturn    lh); scrolif (lh); scrolun      d       elsNaN       elsInfinitllInstLietLine(l1).text.sli  if (draggingTisfastPoor     }
-[+\-*&%=<>!?|]/ = connect(targetDine));        }
-  d = 0;readInput();   firstLine.r
-          same)};cting bottom-to-top.
-             if (!InpuUntilUned = tdh, screenen    setOption:ptions.rea focused;
-Inpu                var ame] ==       for (var cur = textChanged; cur
-     e are s.li;
- {
-    prevInput.length - same)};put(); fastPoll();}{
-       erw);
- gutt x1 - 10ed t          lastDoubleClick = {{
-    s || options.readOns[e.ka         ne);
-     to = "mun    e multi    nsferlbar
-ou       wraddin  vaup tl();f        functio     [i] =) > -1)m = clipPos(fromret(tp        r, "eHelper(historyt instep     !e = po, "e  var gutterw = opn, dir == nu             if (!jsoubleB{
- 
+            if (!allText && endAt == null)
+                span(" ", sfrom != null && sto == null ? "CodeMirror-selected" : null);
+            else if (!marked && sfrom == null)
+                for (var i = 0, ch = 0; ch < len; i+=2) {
+                    var str = st[i], style = st[i+1], l = str.length;
+                    if (ch + l > len) str = str.slice(0, len - ch);
+                    ch += l;
+                    span(str, style && "cm-" + style);
+                }
+            else {
+                var pos = 0, i = 0, text = "", style, sg = 0;
+                var markpos = -1, mark = null;
+                function nextMark() {
+                    if (marked) {
+                        markpos += 1;
+                        mark = (markpos < marked.length) ? marked[markpos] : null;
                     }
-                });
-                if (reco'"'   if e.app'return true;
-   firstLine));, screenleft =   }
-
-added.paxLi var pos = posFromMo/[\[\]{}\(\),;\:\.ength; maxLiTop - paddingTop();
-               });ngth, function(l0{
-             /x/iLine = l;
-                  added.puda-f]/ush(Line.inheceil((top + scr"nvar ito.linto_heeRange1(code, from, to,or(top / lput();
- axLine = l;
-         sh(hlEnd);/^\d*(?:\.\d*)?(?:[eE]    ]?\d+)?  // highlighted. Adjustt(doc, to_height)};
-        }
-        // Uses a set Length) {.value = getSelection.insert(from*remove(from.line + 1, nop();
-            var from_height Ce.fixM start)) {
-                e_pewText[newText.l, functirs fire contextmenu *after* ourn true;}           if (!scroller.t(docne.fixMarkEto rely o        showLine: operation(function(h) {ret.reAush(     setOption: functio0;
-            if (x1 < scateD       if (line.hidden) retur added.pgimy   /erit'y'es.l"sticky" op        MozilleReaderpute the new visible winregexline        f- 3;
-                doc.iter(from.line, from.line + c, from_height), true;}
-
-     // Compute the new visible winerted ? st + "px"onContextMenu);;
-            var from = Mvar l = line.text;
-       #ne) {
-                              // Compute the visible win      h) :            }
-        // Uses a set  true;}
-
-   hanges plus the current scroll po= Math.min(doc.size, visible.to + 100);          if (showingFrom < from && from - showingFrom < / Add these lines to the work array, so that they\w\$_   // highlighted.         loadContextMenu);
- know   }nt.offse    ne - IsEnumer    (], cble ent.offse[], cath.max(scrollerer holds // Clength)
- kw out if t?le wi // Ce not   // C(n, di     d) :           if (!scrolar pl
-   To);];
-            lines if lines were added/removed.
-height = Math.var newWork = [], lendiff = newText.length - nlines - 1;
-      FromM0;
-            if (x1 < scvar neeturn true;
-       Left;
-           }
-
-    g the change info.
-            ifTo) return;
-         f);
+                }
+                nextMark();
+                while (pos < len) {
+                    var upto = len;
+                    var extraStyle = "";
+                    if (sfrom != null) {
+                        if (sfrom > pos) upto = sfrom;
+                        else if (sto == null || sto > pos) {
+                            extraStyle = " CodeMirror-selected";
+                            if (sto != null) upto = Math.min(upto, sto);
+                        }
+                    }
+                    while (mark && mark.to != null && mark.to <= pos) nextMark();
+                    if (mark) {
+                        if (mark.from > pos) upto = Math.min(upto, mark.from);
+                        else {
+                            extraStyle += " " + mark.style;
+                            if (mark.to != null) upto = Math.min(upto, mark.to);
+                        }
+                    }
+                    for (;;) {
+                        var end = pos + text.length;
+                        var appliedStyle = style;
+                        if (extraStyle) appliedStyle = style ? style + extraStyle : extraStyle;
+                        span(end > upto ? text.slice(0, upto - pos) : text, appliedStyle);
+                        if (end >= upto) {text = text.slice(upto - pos); pos = upto; break;}
+                        pos = end;
+                        text = st[i++]; style = "cm-" + st[i++];
+                    }
+                }
+                if (sfrom != null && sto == null) span(" ", "CodeMirror-selected");
             }
-                 sho    function visibleLines() {
- 0) rEredo:used;
-  if (textCha 0, ch;
-           for (vaalue = getSelectionLength) {
-         i   }
-
-        // Previnpu        i--, 1);
-                els
-                doc.iteecting = prevSh       inta        *           // Create a r visible window
-            var visibl     line = Pth ==   if (optiostLiicTyp) guttvar x          t)};
-          ];
-                   if         showing   var  = connect(targetDJSLexical( 0));
-  functio             e();
-60, fo.
-        fu        textaream || to tX - e2.clientX)unction
-    um
-             varnot widely
-        / charCre
-  Selection(text.       fe)) {f        
-           ptions.onK           
-   ig&& (bound = lookupKey("ShiinSco (optft = var sit           if (!to) to
-  intactlocalVars; v;Heighv{
-  from, to, newText, v. sit.lin lastSize) return pos;
-                if (!pth =JSfferent)r hlEnd  false;
-    from &&               vac       code h(Line.inherit            ounput[same]to    funmbrom.lild be parsed// (, ad wcodeolle(comm   if (x2 >a hundrerwaloe) {);
- every(pos..ght = Math.cxdeMirr "";
-   ith th constr/ only    / +
-      = falsx. "px"              }
-     + th;e visih - (to.line - f"ont s"e.from >= range.ildNodes.lengtor the ftPoll);nction(a, b) {r) {
-            if (ltAlone |rom.li     dateDisp?ingT| hasS:|| Math.ma? ex         teDisplon(input)) return f        rom.lixt[i] =ptions.     return;
-        + JSONngTo - shoromIc[ngTo - sho    des.peration(function(e) {ngFrom) on(line, ch, user) {
-   in the wh });
-    n the whent(instance, addStop(e)        ];
-     scrolif (different)      if (       f];
-    -2        if (line.hid from.line, to: to.line(from.line, i + newTex     line = Ce=" + (shoutils   if (optioctaKey update = falsecliene.heigh      ne.heightcwPoll();}
-   pPos(from);
-            if (!to) to = from; else to = clipPos(to);
-       
-   = splitLines(code);
-            function adjustPos(pos) {
-                if (posLess(pos, from)) return pos;
-            }
-            editstSizeC = scrolle      e
-   th the
-         firstL= text[same])
-            return the wholelledction(line) {
- r.clientHeight + th;
-            showingFrom = from; showshowingTo = to;
-            disp place, but these are;
-      ine) sits            ifteDisplle.width =               };
-   ight / th) || 1;
-              rollTopth = "";
-    "    gFro     e sits if (posLes"
-            if (!posL, "end"om, to, function(e!th the
-               }
- e.width = ""lse {
-           if (p    }
-        ine)           }
-        t) las|| gutterDistyle.width = scr    replaceRange1(c                }
-    gutter.style.displa gutterDirty) up.teGuisplay;
-            if (diffete) options.onUpdeturn {from: ayle.width = "";
-lexxt[i] =t = from != showiypeoflaced});king when we have a
-        /scroller.clientWidth) {
-               throld: fun the visibeset the textae.
- ges);
- oller.)mover.stom < frodNodes.lengct, chage.from;
-        ength - 1,l  fortPoll);
-      : 0}, {line: end - 1,   replaceRange1(cact(               vascroller.clientWidth) {
-            es.lengt          if (!optionchange.diff)
-    howingTo,)return true;
-       set the textarea
-.diff)
-    showingTo || lastSi           var changge.diff)
-        lines if lines were age.old    < l2; ++j) {
-       var endchx);
-(nMou     setOption:lendiff = newTeo)
-   ed.p : code[code.length-1].length;
-         = l2) return getLine(l1)layOffset = 0      e.app;  });
-   , function()  startOperation();
-urn code.join("\n");
+            if (includePre) html.push("</pre>");
+            return html.join("");
+        },
+        cleanUp: function() {
+            this.parent = null;
+            if (this.marked)
+                for (var i = 0, e = this.marked.length; i < e; ++i) this.marked[i].detach(this);
         }
- s;
-                if (!des=" + l: adjustPos(sel.to)};
-         pl =         if (eIntact(.to)dth )t) ladef1,o)
-        ),
-    ion slowPoll() {
-           functio                      formange         "           ge.to + diff, to: range.to + diff,
-     b                          domStamStart + (change.to - range.from)});
-    {                        }angeb   fge.to + diff, to: range.to + diff                 }
-
-      () {
-       load = funclay(from, toif (newTde            }
-            /
-                           domStart:om: c(ange.        )angefor));sh({from: c
-  e.old[change.old                   intact = intact2;
-          ];
-               if (!intact.l    ange 0) rlabeor version 2.() {
-        eight,                         domStart: range.do return int scroller.) lineDiv.i{              fun;
-        }ge.to + diff, to: range.to + diffroller   }
-        t: range.doineDiv.i:ace(from.ch, n() {
-       led = fal; i < intact.len
-                    var cur = inl; x2 +                        domSta";
-        lineDiv.innerHfunarft;se {
-                funmStart + (change.ge.to        ction fastPoll() {
-                    length; ++i) {
-    hange.to + diff, to        var endch        ": adjustPos(sel.to)}; // Positioh - (to.line - fradjuNode = killNod 0) rlCoords(, intact) {
-            // The first pass removes the DOM nodes that aren't intact.         van the lines that allNode(cur             var cur = in(rNode = killNode(curNode
-   length; ++i) {
-    
-   ction kihat actually changed.
-            varerted ? se; i < intact.length; ++             var cur = in[rNode = killNode(curNode]  va    asep.length; ++i)r ch1  var scratch = targetDocument.createElement("d  }
-            return intact= null, cobjpart, intact var scratch = targetDocument.crelay(from, to, intacte = intact[j];
-var sfrom = sel: adjustPos(sel.to)};
-   osition [;\}\)\],) up                intact2.p                doc.iter(from,             if (!hat actually xt[i] =nsferustPos(sel.to)};
-           ed ? ssel.t\+\+|--             in the lines that actually changed.
-            variv"), newElt;
-            doc.iter(from, to, function(lin          from.line, sto = sel.to.line, inSel = sfrom < from && = null, ch2 = null;
-       var scratch = targetDocument.createElement("d.rNode = killNodearts thcratch = targetDocument.createElement("de) {
-                var ch1 length; ++i) {
-                   if (inSel) {
-     om == j) {
-         de.pa: adjustPos(sel.to)};
-        :rNode = killNodetion killNode(nocurNode.nextSibling; domhat actually 
-                while (curNode) curNode = kitBefore(         if (change.to < range.to) node.ne{width = maxWitBefore();
-                endOe = intact[j];
-j) {inS mover.offsetHeight, hEditor = scroller.clentHeight;
-                       }
-            // This pass fills in the lines t        whi         curction() {
-             = null, cwh     xtHeight(), gut      var hTceedh : code[code.length-1].length;
-  ,wElt;
-        (line.      hplorer. (innerHTML bu       hidde        if (change.from > rax(showingTo, showinhiddeRange1(code, from, to, comput              Separat html.push("<pre></pre>");
-        tterMarker;
-                    eration();
-     
-                    var  + 1, diff: lendiff});
-;
-  : adjustPos(sel.to)};
-        }wElt;
-        curNode.nextSibling; dommStart + (c;
-  ction() {
-             ct2.pus
-                if (nextIntact && nexscroller.c{
-             ;
-           ct2.pu2options.pollIntervaleSel) {
-            var endc       
-                if (nextIntansfer.s        i < intact.length; ++i)                    var cur = in       } else {ct2.pusction() {
-                              if (change.to < range.to)
-             ct2.push(       }
-                ++i;
-                           var minwidth = String(dp = node.nextSibling;
-  do0) riter(from, to,ize).length, firstNode = gutter.style.display =), pad br/>&#160;");
-                    htmlifirst pass remov    doc.iter(from, to, the lines that actually             var miter.style.display = "no<br/>&#160;");
-              ion patchDisplay(from, to       3
-              (pad) firstNode.insertBefore(targetDocument.createTextNode(pa        }
-              gutter.offsetWidter.style.display = "no3: adjustPos(sel.to)};
-        )var efore(targetDocument.cter.style.displays the DOM arker.style ? '<pre class="' + marker.style + '"| re: "<pre>"), text);
-       es the DOM no   endOperation();
-    line, inSel = sfrom < from && s++;}
-      = null, c for (vagetHTML(ch1, cmStart + (chanNode = curNode.ocalCoords(head, trar           var wrapOff = eltOffset(wrapper), lineOff = eltOffset(lineDiv);
-    .height = (hif (typeofing(face  var changed = readInput();
-                i
-  nge.dif (!changed && !missed) {                varissed = t  }
-
-    on() {
-           il out ifwText[0]);
-         e cur i = 0;   }
-            else curl.set(6 true;
-           e visi:ge = changes[i](pos.x, linterval.
-    if (!pch: c";
-  f (i= new
-        function s
-      ne.heigm = {line: sel.from.line,.from);
-            else, p);}
-   .display = gutt;}
-                endOperation();
+    };
+    // Utility used by replace and split above
+    function copyStyles(from, to, source, dest) {
+        for (var i = 0, pos = 0, state = 0; pos < to; i+=2) {
+            var part = source[i], end = pos + part.length;
+            if (state == 0) {
+                if (end > from) dest.push(part.slice(from - pos, Math.min(part.length, to - pos)), source[i+1]);
+                if (end >= from) state = 1;
             }
-            poll.set(20, p);
+            else if (state == 1) {
+                if (end > to) dest.push(part.slice(0, to - pos), source[i+1]);
+                else dest.push(part, source[i+1]);
+            }
+            pos = end;
         }
-
-        // Priv.childNodes.length != showingTo - showingFrom)
-       
-                throw new Errtrue;
-            }we reset the textarea
-        // on every change, that breaks IME. So we look for changes
-        // compa     // which point we cents that indicate IME taking place, but thede), sel.from,o rely on        var height = Math.r // Bail out ifntent insnextIntact.tocompatihild, j = from; update.osition t[\[
-   ,;:]$.text;
-            (var i = 0; ntent in!= '.'(from.ch, null, newText[0]);
-            mover.style.top = (displ= 0, l = Math.min(prevInput.length, text.length);
-       Display(changes, suppreif (same < prevI  }
-
-    Math.min(getLine(sel.to.lfuncut", 
-      
-       er, "droor isp", operatd afrt});
-              ;
-            else       h({from: ran+/.tesField: to = from;widely
-        // supporhowingTo, fu   in have to                    ) name = "Cmd-" + naren't intact.
- mto ==dden(from, olh1 = 0;
-                    domStart: ranges(code), sel.from      update.
-     domS.line != oldTo) to = skipHi    if (!posEq(sel.from, sel.t| cur          wheode);
-   );
-   = skiprevInput.length - same)}; oldTo) to = skipHierwr?:roll|rollTop)         , from) && ?
-           : 2 *e if (posEqy) name = "Cmd-" + nainverted = tont sd = false;
-     unction+h = "0  va? 0 :    } else textCha.line + 1, nrk the lines that ac/ Some Eq(fromhanged, rather than thentRect) return;
-            :{}ar rect = cursor.getBoundingClientRect();m.lin         if (          ifurns bogus coordinates when
-          | Maance sits i         if (| Marame and th 1)
-                    cs  liine.replace(froewText[0]);
-                else {
-      line + 1,      }
-        r hlEnd tyleonScroll) o;
-                       if (!             function visibleLines() {
-            var lh = textHeight(), top "@f (poom: showingFrom, to:\ine.in, to, intact)erLine rom && from - showvar l = line.text;
-        {
-              ) {
-            if intact.splice(i--     C    sho               var tex    if (to.li        }
-
-            // Add these linerstLine.appen
-              .remove(from.line + 
-                    iSGML (to.line < oldTo)
-                     chan  changes.push({from: Math.max(oldFrom, from.line), t.push("      isinc               //lecting,         ~el.toler.scr|"ble eno
-         == [];
     }
-            sel.from = from; sel.to =ler.scr\"         sel'ne) {
-             e
-                   Math.max        });
+
+    // Data structure that holds the sequence of lines.
+    function LeafChunk(lines) {
+        this.lines = lines;
+        this.parent = null;
+        for (var i = 0, e = lines.length, height = 0; i < e; ++i) {
+            lines[i].parent = this;
+            height += lines[i].height;
+        }
+        this.height = height;
+    }
+    LeafChunk.prototype = {
+        chunkSize: function() { return this.lines.length; },
+        remove: function(at, n, callbacks) {
+            for (var i = at, e = at + n; i < e; ++i) {
+                var line = this.lines[i];
+                this.height -= line.height;
+                line.cleanUp();
+                if (line.handlers)
+                    for (var j = 0; j < line.handlers.length; ++j) callbacks.push(line.handlers[j]);
+            }
+            this.lines.splice(at, n);
+        },
+        collapse: function(lines) {
+            lines.splice.apply(lines, [lines.length, 0].concat(this.lines));
+        },
+        insertHeight: function(at, lines, height) {
+            this.height += height;
+            this.lines.splice.apply(this.lines, [at, 0].concat(lines));
+            for (var i = 0, e = lines.length; i < e; ++i) lines[i].parent = this;
+        },
+        iterN: function(at, n, op) {
+            for (var e = at + n; at < e; ++at)
+                if (op(this.lines[at])) return true;
+        }
+    };
+    function BranchChunk(children) {
+        this.children = children;
+        var size = 0, height = 0;
+        for (var i = 0, e = children.length; i < e; ++i) {
+            var ch = children[i];
+            size += ch.chunkSize(); height += ch.height;
+            ch.parent = this;
+        }
+        this.size = size;
+        this.height = height;
+        this.parent = null;
+    }
+    BranchChunk.prototype = {
+        chunkSize: function() { return this.size; },
+        remove: function(at, n, callbacks) {
+            this.size -= n;
+            for (var i = 0; i < this.children.length; ++i) {
+                var child = this.children[i], sz = child.chunkSize();
+                if (at < sz) {
+                    var rm = Math.min(n, sz - at), oldHeight = child.height;
+                    child.remove(at, rm, callbacks);
+                    this.height -= oldHeight - child.height;
+                    if (sz == rm) { this.children.splice(i--, 1); child.parent = null; }
+                    if ((n -= rm) == 0) break;
+                    at = 0;
+                } else at -= sz;
+            }
+            if (this.size - n < 25) {
+                var lines = [];
+                this.collapse(lines);
+                this.children = [new LeafChunk(lines)];
+            }
+        },
+        collapse: function(lines) {
+            for (var i = 0, e = this.children.length; i < e; ++i) this.children[i].collapse(lines);
+        },
+        insert: function(at, lines) {
+            var height = 0;
+            for (var i = 0, e = lines.length; i < e; ++i) height += lines[i].height;
+            this.insertHeight(at, lines, height);
+        },
+        insertHeight: function(at, lines, height) {
+            this.size += lines.length;
+            this.height += height;
+            for (var i = 0, e = this.children.length; i < e; ++i) {
+                var child = this.children[i], sz = child.chunkSize();
+                if (at <= sz) {
+                    child.insertHeight(at, lines, height);
+                    if (child.lines && child.lines.length > 50) {
+                        while (child.lines.length > 50) {
+                            var spilled = child.lines.splice(child.lines.length - 25, 25);
+                            var newleaf = new LeafChunk(spilled);
+                            child.height -= newleaf.height;
+                            this.children.splice(i + 1, 0, newleaf);
+                            newleaf.parent = this;
+                        }
+                        this.maybeSpill();
+                    }
+                    break;
+                }
+                at -= sz;
+            }
+        },
+        maybeSpill: function() {
+            if (this.children.length <= 10) return;
+            var me = this;
+            do {
+                var spilled = me.children.splice(me.children.length - 5, 5);
+                var sibling = new BranchChunk(spilled);
+                if (!me.parent) { // Become the parent node
+                    var copy = new BranchChunk(me.children);
+                    copy.parent = me;
+                    me.children = [copy, sibling];
+                    me = copy;
+                } else {
+                    me.size -= sibling.size;
+                    me.height -= sibling.height;
+                    var myIndex = indexOf(me.parent.children, me);
+                    me.parent.children.splice(myIndex + 1, 0, sibling);
+                }
+                sibling.parent = me.parent;
+            } while (me.children.length > 10);
+            me.parent.maybeSpill();
+        },
+        iter: function(from, to, op) { this.iterN(from, to - from, op); },
+        iterN: function(at, n, op) {
+            for (var i = 0, e = this.children.length; i < e; ++i) {
+                var child = this.children[i], sz = child.chunkSize();
+                if (at < sz) {
+                    var used = Math.min(n, sz - at);
+                    if (child.iterN(at, used, op)) return true;
+                    if ((n -= used) == 0) break;
+                    at = 0;
+                } else at -= sz;
+            }
+        }
+    };
+
+    function getLineAt(chunk, n) {
+        while (!chunk.lines) {
+            for (var i = 0;; ++i) {
+                var child = chunk.children[i], sz = child.chunkSize();
+                if (n < sz) { chunk = child; break; }
+                n -= sz;
+            }
+        }
+        return chunk.lines[n];
+    }
+    function lineNo(line) {
+        if (line.parent == null) return null;
+        var cur = line.parent, no = indexOf(cur.lines, line);
+        for (var chunk = cur.parent; chunk; cur = chunk, chunk = chunk.parent) {
+            for (var i = 0, e = chunk.children.length; ; ++i) {
+                if (chunk.children[i] == cur) break;
+                no += chunk.children[i].chunkSize();
+            }
+        }
+        return no;
+    }
+    function lineAtHeight(chunk, h) {
+        var n = 0;
+        outer: do {
+            for (var i = 0, e = chunk.children.length; i < e; ++i) {
+                var child = chunk.children[i], ch = child.height;
+                if (h < ch) { chunk = child; continue outer; }
+                h -= ch;
+                n += child.chunkSize();
+            }
+            return n;
+        } while (!chunk.lines);
+        for (var i = 0, e = chunk.lines.length; i < e; ++i) {
+            var line = chunk.lines[i], lh = line.height;
+            if (h < lh) break;
+            h -= lh;
+        }
+        return n + i;
+    }
+    function heightAtLine(chunk, n) {
+        var h = 0;
+        outer: do {
+            for (var i = 0, e = chunk.children.length; i < e; ++i) {
+                var child = chunk.children[i], sz = child.chunkSize();
+                if (n < sz) { chunk = child; continue outer; }
+                n -= sz;
+                h += child.height;
+            }
+            return h;
+        } while (!chunk.lines);
+        for (var i = 0; i < n; ++i) h += chunk.lines[i].height;
+        return h;
+    }
+
+    // The history object 'chunks' changes that are made close together
+    // and at almost the same time into bigger undoable units.
+    function History() {
+        this.time = 0;
+        this.done = []; this.undone = [];
+    }
+    History.prototype = {
+        addChange: function(start, added, old) {
+            this.undone.length = 0;
+            var time = +new Date, last = this.done[this.done.length - 1];
+            if (time - this.time > 400 || !last ||
+                last.start > start + added || last.start + last.added < start - last.added + last.old.length)
+                this.done.push({start: start, added: added, old: old});
+            else {
+                var oldoff = 0;
+                if (start < last.start) {
+                    for (var i = last.start - start - 1; i >= 0; --i)
+                        last.old.unshift(old[i]);
+                    last.added += last.start - start;
+                    last.start = start;
+                }
+                else if (last.start < start) {
+                    oldoff = start - last.start;
+                    added += oldoff;
+                }
+                for (var i = last.added - oldoff, e = old.length; i < e; ++i)
+                    last.old.push(old[i]);
+                if (last.added < added) last.added = added;
+            }
+            this.time = time;
+        }
+    };
+
+    function stopMethod() {e_stop(this);}
+    // Ensure an event has a stop method.
+    function addStop(event) {
+        if (!event.stop) event.stop = stopMethod;
+        return event;
+    }
+
+    function e_preventDefault(e) {
+        if (e.preventDefault) e.preventDefault();
+        else e.returnValue = false;
+    }
+    function e_stopPropagation(e) {
+        if (e.stopPropagation) e.stopPropagation();
+        else e.cancelBubble = true;
+    }
+    function e_stop(e) {e_preventDefault(e); e_stopPropagation(e);}
+    CodeMirror.e_stop = e_stop;
+    CodeMirror.e_preventDefault = e_preventDefault;
+    CodeMirror.e_stopPropagation = e_stopPropagation;
+
+    function e_target(e) {return e.target || e.srcElement;}
+    function e_button(e) {
+        if (e.which) return e.which;
+        else if (e.button & 1) return 1;
+        else if (e.button & 2) return 3;
+        else if (e.button & 4) return 2;
+    }
+
+    // Event handler registration. If disconnect is true, it'll return a
+    // function that unregisters the handler.
+    function connect(node, type, handler, disconnect) {
+        if (typeof node.addEventListener == "function") {
+            node.addEventListener(type, handler, false);
+            if (disconnect) return function() {node.removeEventListener(type, handler, false);};
+        }
+        else {
+            var wrapHandler = function(event) {handler(event || window.event);};
+            node.attachEvent("on" + type, wrapHandler);
+            if (disconnect) return function() {node.detachEvent("on" + type, wrapHandler);};
+        }
+    }
+    CodeMirror.connect = connect;
+
+    function Delayed() {this.id = null;}
+    Delayed.prototype = {set: function(ms, f) {clearTimeout(this.id); this.id = setTimeout(f, ms);}};
+
+    // Detect drag-and-drop
+    var dragAndDrop = function() {
+        // IE8 has ondragstart and ondrop properties, but doesn't seem to
+        // actually support ondragstart the way it's supposed to work.
+        if (/MSIE [1-8]\b/.test(navigator.userAgent)) return false;
+        var div = document.createElement('div');
+        return "draggable" in div;
+    }();
+
+    var gecko = /gecko\/\d{7}/i.test(navigator.userAgent);
+    var ie = /MSIE \d/.test(navigator.userAgent);
+    var webkit = /WebKit\//.test(navigator.userAgent);
+
+    var lineSep = "\n";
+    // Feature-detect whether newlines in textareas are converted to \r\n
+    (function () {
+        var te = document.createElement("textarea");
+        te.value = "foo\nbar";
+        if (te.value.indexOf("\r") > -1) lineSep = "\r\n";
+    }());
+
+    // Counts the column offset in a string, taking tabs into account.
+    // Used mostly to find indentation.
+    function countColumn(string, end, tabSize) {
+        if (end == null) {
+            end = string.search(/[^\s\u00a0]/);
+            if (end == -1) end = string.length;
+        }
+        for (var i = 0, n = 0; i < end; ++i) {
+            if (string.charAt(i) == "\t") n += tabSize - (n % tabSize);
+            else ++n;
+        }
+        return n;
+    }
+
+    function computedStyle(elt) {
+        if (elt.currentStyle) return elt.currentStyle;
+        return window.getComputedStyle(elt, null);
+    }
+
+    // Find the position of an element by following the offsetParent chain.
+    // If screen==true, it returns screen (rather than page) coordinates.
+    function eltOffset(node, screen) {
+        var bod = node.ownerDocument.body;
+        var x = 0, y = 0, skipBody = false;
+        for (var n = node; n; n = n.offsetParent) {
+            var ol = n.offsetLeft, ot = n.offsetTop;
+            // Firefox reports weird inverted offsets when the body has a border.
+            if (n == bod) { x += Math.abs(ol); y += Math.abs(ot); }
+            else { x += ol, y += ot; }
+            if (screen && computedStyle(n).position == "fixed")
+                skipBody = true;
+        }
+        var e = screen && !skipBody ? null : bod;
+        for (var n = node.parentNode; n != e; n = n.parentNode)
+            if (n.scrollLeft != null) { x -= n.scrollLeft; y -= n.scrollTop;}
+        return {left: x, top: y};
+    }
+    // Use the faster and saner getBoundingClientRect method when possible.
+    if (document.documentElement.getBoundingClientRect != null) eltOffset = function(node, screen) {
+        // Take the parts of bounding client rect that we are interested in so we are able to edit if need be,
+        // since the returned value cannot be changed externally (they are kept in sync as the element moves within the page)
+        try { var box = node.getBoundingClientRect(); box = { top: box.top, left: box.left }; }
+        catch(e) { box = {top: 0, left: 0}; }
+        if (!screen) {
+            // Get the toplevel scroll, working around browser differences.
+            if (window.pageYOffset == null) {
+                var t = document.documentElement || document.body.parentNode;
+                if (t.scrollTop == null) t = document.body;
+                box.top += t.scrollTop; box.left += t.scrollLeft;
+            } else {
+                box.top += window.pageYOffset; box.left += window.pageXOffset;
+            }
+        }
+        return box;
+    };
+
+    // Get a node's text content.
+    function eltText(node) {
+        return node.textContent || node.innerText || node.nodeValue || "";
+    }
+
+    // Operations on {line, ch} objects.
+    function posEq(a, b) {return a.line == b.line && a.ch == b.ch;}
+    function posLess(a, b) {return a.line < b.line || (a.line == b.line && a.ch < b.ch);}
+    function copyPos(x) {return {line: x.line, ch: x.ch};}
+
+    var escapeElement = document.createElement("pre");
+    function htmlEscape(str) {
+        escapeElement.textContent = str;
+        return escapeElement.innerHTML;
+    }
+    // Recent (late 2011) Opera betas insert bogus newlines at the start
+    // of the textContent, so we strip those.
+    if (htmlEscape("a") == "\na")
+        htmlEscape = function(str) {
+            escapeElement.textContent = str;
+            return escapeElement.innerHTML.slice(1);
+        };
+    // Some IEs don't preserve tabs through innerHTML
+    else if (htmlEscape("\t") != "\t")
+        htmlEscape = function(str) {
+            escapeElement.innerHTML = "";
+            escapeElement.appendChild(document.createTextNode(str));
+            return escapeElement.innerHTML;
+        };
+    CodeMirror.htmlEscape = htmlEscape;
+
+    // Used to position the cursor after an undo/redo by finding the
+    // last edited character.
+    function editEnd(from, to) {
+        if (!to) return from ? from.length : 0;
+        if (!from) return to.length;
+        for (var i = from.length, j = to.length; i >= 0 && j >= 0; --i, --j)
+            if (from.charAt(i) != to.charAt(j)) break;
+        return j + 1;
+    }
+
+    function indexOf(collection, elt) {
+        if (collection.indexOf) return collection.indexOf(elt);
+        for (var i = 0, e = collection.length; i < e; ++i)
+            if (collection[i] == elt) return i;
+        return -1;
+    }
+    function isWordChar(ch) {
+        return /\w/.test(ch) || ch.toUpperCase() != ch.toLowerCase();
+    }
+
+    // See if "".split is the broken IE version, if so, provide an
+    // alternative way to split lines.
+    var splitLines = "\n\nb".split(/\n/).length != 3 ? function(string) {
+        var pos = 0, nl, result = [];
+        while ((nl = string.indexOf("\n", pos)) > -1) {
+            result.push(string.slice(pos, string.charAt(nl-1) == "\r" ? nl - 1 : nl));
+            pos = nl + 1;
+        }
+        result.push(string.slice(pos));
+        return result;
+    } : function(string){return string.split(/\r?\n/);};
+    CodeMirror.splitLines = splitLines;
+
+    var hasSelection = window.getSelection ? function(te) {
+        try { return te.selectionStart != te.selectionEnd; }
+        catch(e) { return false; }
+    } : function(te) {
+        try {var range = te.ownerDocument.selection.createRange();}
+        catch(e) {}
+        if (!range || range.parentElement() != te) return false;
+        return range.compareEndPoints("StartToEnd", range) != 0;
+    };
+
+    CodeMirror.defineMode("null", function() {
+        return {token: function(stream) {stream.skipToEnd();}};
+    });
+    CodeMirror.defineMIME("text/plain", "null");
+
+    var keyNames = {3: "Enter", 8: "Backspace", 9: "Tab", 13: "Enter", 16: "Shift", 17: "Ctrl", 18: "Alt",
+        19: "Pause", 20: "CapsLock", 27: "Esc", 32: "Space", 33: "PageUp", 34: "PageDown", 35: "End",
+        36: "Home", 37: "Left", 38: "Up", 39: "Right", 40: "Down", 44: "PrintScrn", 45: "Insert",
+        46: "Delete", 59: ";", 91: "Mod", 92: "Mod", 93: "Mod", 186: ";", 187: "=", 188: ",",
+        189: "-", 190: ".", 191: "/", 192: "`", 219: "[", 220: "\\", 221: "]", 222: "'", 63276: "PageUp",
+        63277: "PageDown", 63275: "End", 63273: "Home", 63234: "Left", 63232: "Up", 63235: "Right",
+        63233: "Down", 63302: "Insert", 63272: "Delete"};
+    CodeMirror.keyNames = keyNames;
+    (function() {
+        // Number keys
+        for (var i = 0; i < 10; i++) keyNames[i + 48] = String(i);
+        // Alphabetic keys
+        for (var i = 65; i <= 90; i++) keyNames[i] = String.fromCharCode(i);
+        // Function keys
+        for (var i = 1; i <= 12; i++) keyNames[i + 111] = keyNames[i + 63235] = "F" + i;
+    })();
+
+    return CodeMirror;
+})();
+CodeMirror.defineMode("xml", function(config, parserConfig) {
+    var indentUnit = config.indentUnit;
+    var Kludges = parserConfig.htmlMode ? {
+        autoSelfClosers: {"br": true, "img": true, "hr": true, "link": true, "input": true,
+            "meta": true, "col": true, "frame": true, "base": true, "area": true},
+        doNotIndent: {"pre": true},
+        allowUnquoted: true
+    } : {autoSelfClosers: {}, doNotIndent: {}, allowUnquoted: false};
+    var alignCDATA = parserConfig.alignCDATA;
+
+    // Return variables for tokenizers
+    var tagName, type;
+
+    function inText(stream, state) {
+        function chain(parser) {
+            state.tokenize = parser;
+            return parser(stream, state);
+        }
+
+        var ch = stream.next();
+        if (ch == "<") {
+            if (stream.eat("!")) {
+                if (stream.eat("[")) {
+                    if (stream.match("CDATA[")) return chain(inBlock("atom", "]]>"));
+                    else return null;
+                }
+                else if (stream.match("--")) return chain(inBlock("comment", "-->"));
+                else if (stream.match("DOCTYPE", true, true)) {
+                    stream.eatWhile(/[\w\._\-]/);
+                    return chain(doctype(1));
+                }
+                else return null;
+            }
+            else if (stream.eat("?")) {
+                stream.eatWhile(/[\w\._\-]/);
+                state.tokenize = inBlock("meta", "?>");
+                return "meta";
+            }
+            else {
+                type = stream.eat("/") ? "closeTag" : "openTag";
+                stream.eatSpace();
+                tagName = "";
+                var c;
+                while ((c = stream.eat(/[^\s\u00a0=<>\"\'\/?]/))) tagName += c;
+                state.tokenize = inTag;
+                return "tag";
+            }
+        }
+        else if (ch == "&") {
+            stream.eatWhile(/[^;]/);
+            stream.eat(";");
+            return "atom";
+        }
+        else {
+            stream.eatWhile(/[^&<]/);
+            return null;
+        }
+    }
+
+    function inTag(stream, state) {
+        var ch = stream.next();
+        if (ch == ">" || (ch == "/" && stream.eat(">"))) {
+            state.tokenize = inText;
+            type = ch == ">" ? "endTag" : "selfcloseTag";
+            return "tag";
+        }
+        else if (ch == "=") {
+            type = "equals";
+            return null;
+        }
+        else if (/[\'\"]/.test(ch)) {
+            state.tokenize = inAttribute(ch);
+            return state.tokenize(stream, state);
+        }
+        else {
+            stream.eatWhile(/[^\s\u00a0=<>\"\'\/?]/);
+            return "word";
+        }
+    }
+
+    function inAttribute(quote) {
+        return function(stream, state) {
+            while (!stream.eol()) {
+                if (stream.next() == quote) {
+                    state.tokenize = inTag;
+                    break;
                 }
             }
+            return "string";
+        };
+    }
 
-            // Add these line      if (showingTo > to && showingToes.push({from: oldFro the change info.
-       stLine.rhash      // updates.
-        function upda!ne) {
-                  sition tos*\w*ine(lNo);
-                  crollInt     vShia var visible =       // Uses a set of changes plus the current scroll po    added.pus.%   // highlighted. Adjustt(doc, to_heigh            }
-        // Uses a set o[,.+>*\/ength; maxLine = l;
-              }
-           });-op         }
+    function inBlock(style, terminator) {
+        return function(stream, state) {
+            while (!stream.eol()) {
+                if (stream.match(terminator)) {
+                    state.tokenize = inText;
+                    break;
+                }
+                stream.next();
             }
-        ;{}:)); line = getLine(pos.line);
-            if (!    var lNo =               computeIntact([{from: showingFrom, to:getLine(lNo);
-                  ];
-                ige.from < from) {range.domStart += (f               changes.push() return;
-            intact.sort(function(a, b) {ret              for (var cur = textChanged; cur(undo)     inromIn updateDisplay(changes,    else
-                 y;
-            lineDiv.style.display = gutter.style.display = "none";
-            patchDisplay(from, to, intact);
-            lineDiv.style.display = clipPos({liom.line, oldTo), to: to.li              vadashstLin/ ranser : setSelection)(pos, pos);
+            return style;
+        };
+    }
+    function doctype(depth) {
+        return function(stream, state) {
+            var ch;
+            while ((ch = stream.next()) != null) {
+                if (ch == "<") {
+                    state.tokenize = doctype(depth + 1);
+                    return state.tokenize(stream, state);
+                } else if (ch == ">") {
+                    if (depth == 1) {
+                        state.tokenize = inText;
+                        break;
+                    } else {
+                        state.tokenize = doctype(depth - 1);
+                        return state.tokenize(stream, state);
+                    }
+                }
+            }
+            return "meta";
+        };
+    }
+
+    var curState, setStyle;
+    function pass() {
+        for (var i = arguments.length - 1; i >= 0; i--) curState.cc.push(arguments[i]);
+    }
+    function cont() {
+        pass.apply(null, arguments);
+        return true;
+    }
+
+    function pushContext(tagName, startOfLine) {
+        var noIndent = Kludges.doNotIndent.hasOwnProperty(tagName) || (curState.context && curState.context.noIndent);
+        curState.context = {
+            prev: curState.context,
+            tagName: tagName,
+            indent: curState.indented,
+            startOfLine: startOfLine,
+            noIndent: noIndent
+        };
+    }
+    function popContext() {
+        if (curState.context) curState.context = curState.context.prev;
+    }
+
+    function element(type) {
+        if (type == "openTag") {
+            curState.tagName = tagName;
+            return cont(attributes, endtag(curState.startOfLine));
+        } else if (type == "closeTag") {
+            var err = false;
+            if (curState.context) {
+                err = curState.context.tagName != tagName;
+            } else {
+                err = true;
+            }
+            if (err) setStyle = "error";
+            return cont(endclosetag(err));
         }
+        return cont();
+    }
+    function endtag(startOfLine) {
+        return function(type) {
+            if (type == "selfcloseTag" ||
+                (type == "endTag" && Kludges.autoSelfClosers.hasOwnProperty(curState.tagName.toLowerCase())))
+                return cont();
+            if (type == "endTag") {pushContext(curState.tagName, startOfLine); return cont();}
+            return cont();
+        };
+    }
+    function endclosetag(err) {
+        return function(type) {
+            if (err) setStyle = "error";
+            if (type == "endTag") { popContext(); return cont(); }
+            setStyle = "error";
+            return cont(arguments.callee);
+        }
+    }
 
-        function clipLs.ch, l>= 2return MathdateLine(n) {return n <.size-1));}
-        function clipPos(pos) {
-            if (pos.line < 0) retus.ch, linLine, ol-tion(s.ch, l+-1], = new Error("if (pos.line >= doc.size) return {line: doc.size-1, ch: getLine(doc.size-nge.from); range.from = from;}
-                if (range.to > to) ranrw) {
-                if (textChanged) {
-                for (var cur = textChanged; cur.next; cur = cwTextgutterw);
-                scro
-                doc.iter(0,
-            else if ine, oldenw + screenlse return {from: sel.frerw);
-  en};
-            else if (ch < 0) return e intactLines += range.to - range.from;
+    function attributes(type) {
+        if (type == "word") {setStyle = "attribute"; return cont(attributes);}
+        if (type == "equals") return cont(attvalue, attributes);
+        if (type == "string") {setStyle = "error"; return cont(attributes);}
+        return pass();
+    }
+    function attvalue(type) {
+        if (type == "word" && Kludges.allowUnquoted) {setStyle = "string"; return cont();}
+        if (type == "string") return cont(attvaluemaybe);
+        return pass();
+    }
+    function attvaluemaybe(type) {
+        if (type == "string") return cont(attvaluemaybe);
+        else return pass();
+    }
+
+    return {
+        startState: function() {
+            return {tokenize: inText, cc: [], indented: 0, startOfLine: true, tagName: null, context: null};
+        },
+
+        token: function(stream, state) {
+            if (stream.sol()) {
+                state.startOfLine = true;
+                state.indented = stream.indentation();
             }
-  eft = (options.lineWrapping ? Math.min(pos.f (!changed && !missed) {missed = t    funct;
+            if (stream.eatSpace()) return null;
+
+            setStyle = type = tagName = null;
+            var style = state.tokenize(stream, state);
+            state.type = type;
+            if ((style || type) && style != "comment") {
+                curState = state;
+                while (true) {
+                    var comb = state.cc.pop() || element;
+                    if (comb(type || style)) break;
+                }
+            }
+            state.startOfLine = false;
+            return setStyle || style;
+        },
+
+        indent: function(state, textAfter, fullLine) {
+            var context = state.context;
+            if ((state.tokenize != inTag && state.tokenize != inText) ||
+                context && context.noIndent)
+                return fullLine ? fullLine.match(/^(\s*)/)[0].length : 0;
+            if (alignCDATA && /<!\[CDATA\[/.test(textAfter)) return 0;
+            if (context && /^<\//.test(textAfter))
+                context = context.prev;
+            while (context && !context.startOfLine)
+                context = context.prev;
+            if (context) return context.indent + indentUnit;
+            else return 0;
+        },
+
+        compareStates: function(a, b) {
+            if (a.indented != b.indented || a.tokenize != b.tokenize) return false;
+            for (var ca = a.context, cb = b.context; ; ca = ca.prev, cb = cb.prev) {
+                if (!ca || !cb) return ca == cb;
+                if (ca.tagName != cb.tagName) return false;
+            }
+        },
+
+        electricChars: "/"
+    };
+});
+
+CodeMirror.defineMIME("application/xml", "xml");
+CodeMirror.defineMIME("text/html", {name: "xml", htmlMode: true});
+CodeMirror.defineMode("javascript", function(config, parserConfig) {
+    var indentUnit = config.indentUnit;
+    var jsonMode = parserConfig.json;
+
+    // Tokenizer
+
+    var keywords = function(){
+        function kw(type) {return {type: type, style: "keyword"};}
+        var A = kw("keyword a"), B = kw("keyword b"), C = kw("keyword c");
+        var operator = kw("operator"), atom = {type: "atom", style: "atom"};
+        return {
+            "if": A, "while": A, "with": A, "else": B, "do": B, "try": B, "finally": B,
+            "return": C, "break": C, "continue": C, "new": C, "delete": C, "throw": C,
+            "var": kw("var"), "const": kw("var"), "let": kw("var"),
+            "function": kw("function"), "catch": kw("catch"),
+            "for": kw("for"), "switch": kw("switch"), "case": kw("case"), "default": kw("default"),
+            "in": operator, "typeof": operator, "instanceof": operator,
+            "true": atom, "false": atom, "null": atom, "undefined": atom, "NaN": atom, "Infinity": atom
+        };
+    }();
+
+    var isOperatorChar = /[+\-*&%=<>!?|]/;
+
+    function chain(stream, state, f) {
+        state.tokenize = f;
+        return f(stream, state);
+    }
+
+    function nextUntilUnescaped(stream, end) {
+        var escaped = false, next;
+        while ((next = stream.next()) != null) {
+            if (next == end && !escaped)
+                return false;
+            escaped = !escaped && next == "\\";
+        }
+        return escaped;
+    }
+
+    // Used as scratch variables to communicate multiple values without
+    // consing up tons of objects.
+    var type, content;
+    function ret(tp, style, cont) {
+        type = tp; content = cont;
+        return style;
+    }
+
+    function jsTokenBase(stream, state) {
+        var ch = stream.next();
+        if (ch == '"' || ch == "'")
+            return chain(stream, state, jsTokenString(ch));
+        else if (/[\[\]{}\(\),;\:\.]/.test(ch))
+            return ret(ch);
+        else if (ch == "0" && stream.eat(/x/i)) {
+            stream.eatWhile(/[\da-f]/i);
+            return ret("number", "number");
+        }
+        else if (/\d/.test(ch)) {
+            stream.match(/^\d*(?:\.\d*)?(?:[eE][+\-]?\d+)?/);
+            return ret("number", "number");
+        }
+        else if (ch == "/") {
+            if (stream.eat("*")) {
+                return chain(stream, state, jsTokenComment);
+            }
+            else if (stream.eat("/")) {
+                stream.skipToEnd();
+                return ret("comment", "comment");
+            }
+            else if (state.reAllowed) {
+                nextUntilUnescaped(stream, "/");
+                stream.eatWhile(/[gimy]/); // 'y' is "sticky" option in Mozilla
+                return ret("regexp", "string");
+            }
+            else {
+                stream.eatWhile(isOperatorChar);
+                return ret("operator", null, stream.current());
+            }
+        }
+        else if (ch == "#") {
+            stream.skipToEnd();
+            return ret("error", "error");
+        }
+        else if (isOperatorChar.test(ch)) {
+            stream.eatWhile(isOperatorChar);
+            return ret("operator", null, stream.current());
+        }
+        else {
+            stream.eatWhile(/[\w\$_]/);
+            var word = stream.current(), known = keywords.propertyIsEnumerable(word) && keywords[word];
+            return (known && state.kwAllowed) ? ret(known.type, known.style, word) :
+                ret("variable", "variable", word);
+        }
+    }
+
+    function jsTokenString(quote) {
+        return function(stream, state) {
+            if (!nextUntilUnescaped(stream, quote))
+                state.tokenize = jsTokenBase;
+            return ret("string", "string");
+        };
+    }
+
+    function jsTokenComment(stream, state) {
+        var maybeEnd = false, ch;
+        while (ch = stream.next()) {
+            if (ch == "/" && maybeEnd) {
+                state.tokenize = jsTokenBase;
+                break;
+            }
+            maybeEnd = (ch == "*");
+        }
+        return ret("comment", "comment");
+    }
+
+    // Parser
+
+    var atomicTypes = {"atom": true, "number": true, "variable": true, "string": true, "regexp": true};
+
+    function JSLexical(indented, column, type, align, prev, info) {
+        this.indented = indented;
+        this.column = column;
+        this.type = type;
+        this.prev = prev;
+        this.info = info;
+        if (align != null) this.align = align;
+    }
+
+    function inScope(state, varname) {
+        for (var v = state.localVars; v; v = v.next)
+            if (v.name == varname) return true;
+    }
+
+    function parseJS(state, style, type, content, stream) {
+        var cc = state.cc;
+        // Communicate our context to the combinators.
+        // (Less wasteful than consing up a hundred closures on every call.)
+        cx.state = state; cx.stream = stream; cx.marked = null, cx.cc = cc;
+
+        if (!state.lexical.hasOwnProperty("align"))
+            state.lexical.align = true;
+
+        while(true) {
+            var combinator = cc.length ? cc.pop() : jsonMode ? expression : statement;
+            if (combinator(type, content)) {
+                while(cc.length && cc[cc.length - 1].lex)
+                    cc.pop()();
+                if (cx.marked) return cx.marked;
+                if (type == "variable" && inScope(state, content)) return "variable-2";
+                return style;
+            }
+        }
+    }
+
+    // Combinator utils
+
+    var cx = {state: null, column: null, marked: null, cc: null};
+    function pass() {
+        for (var i = arguments.length - 1; i >= 0; i--) cx.cc.push(arguments[i]);
+    }
+    function cont() {
+        pass.apply(null, arguments);
+        return true;
+    }
+    function register(varname) {
+        var state = cx.state;
+        if (state.context) {
+            cx.marked = "def";
+            for (var v = state.localVars; v; v = v.next)
+                if (v.name == varname) return;
+            state.localVars = {name: varname, next: state.localVars};
+        }
+    }
+
+    // Combinators
+
+    var defaultVars = {name: "this", next: {name: "arguments"}};
+    function pushcontext() {
+        if (!cx.state.context) cx.state.localVars = defaultVars;
+        cx.state.context = {prev: cx.state.context, vars: cx.state.localVars};
+    }
+    function popcontext() {
+        cx.state.localVars = cx.state.context.vars;
+        cx.state.context = cx.state.context.prev;
+    }
+    function pushlex(type, info) {
+        var result = function() {
+            var state = cx.state;
+            state.lexical = new JSLexical(state.indented, cx.stream.column(), type, null, state.lexical, info)
+        };
+        result.lex = true;
+        return result;
+    }
+    function poplex() {
+        var state = cx.state;
+        if (state.lexical.prev) {
+            if (state.lexical.type == ")")
+                state.indented = state.lexical.indented;
+            state.lexical = state.lexical.prev;
+        }
+    }
+    poplex.lex = true;
+
+    function expect(wanted) {
+        return function expecting(type) {
+            if (type == wanted) return cont();
+            else if (wanted == ";") return pass();
+            else return cont(arguments.callee);
+        };
+    }
+
+    function statement(type) {
+        if (type == "var") return cont(pushlex("vardef"), vardef1, expect(";"), poplex);
+        if (type == "keyword a") return cont(pushlex("form"), expression, statement, poplex);
+        if (type == "keyword b") return cont(pushlex("form"), statement, poplex);
+        if (type == "{") return cont(pushlex("}"), block, poplex);
+        if (type == ";") return cont();
+        if (type == "function") return cont(functiondef);
+        if (type == "for") return cont(pushlex("form"), expect("("), pushlex(")"), forspec1, expect(")"),
+            poplex, statement, poplex);
+        if (type == "variable") return cont(pushlex("stat"), maybelabel);
+        if (type == "switch") return cont(pushlex("form"), expression, pushlex("}", "switch"), expect("{"),
+            block, poplex, poplex);
+        if (type == "case") return cont(expression, expect(":"));
+        if (type == "default") return cont(expect(":"));
+        if (type == "catch") return cont(pushlex("form"), pushcontext, expect("("), funarg, expect(")"),
+            statement, poplex, popcontext);
+        return pass(pushlex("stat"), expression, expect(";"), poplex);
+    }
+    function expression(type) {
+        if (atomicTypes.hasOwnProperty(type)) return cont(maybeoperator);
+        if (type == "function") return cont(functiondef);
+        if (type == "keyword c") return cont(maybeexpression);
+        if (type == "(") return cont(pushlex(")"), expression, expect(")"), poplex, maybeoperator);
+        if (type == "operator") return cont(expression);
+        if (type == "[") return cont(pushlex("]"), commasep(expression, "]"), poplex, maybeoperator);
+        if (type == "{") return cont(pushlex("}"), commasep(objprop, "}"), poplex, maybeoperator);
+        return cont();
+    }
+    function maybeexpression(type) {
+        if (type.match(/[;\}\)\],]/)) return pass();
+        return pass(expression);
+    }
+
+    function maybeoperator(type, value) {
+        if (type == "operator" && /\+\+|--/.test(value)) return cont(maybeoperator);
+        if (type == "operator") return cont(expression);
+        if (type == ";") return;
+        if (type == "(") return cont(pushlex(")"), commasep(expression, ")"), poplex, maybeoperator);
+        if (type == ".") return cont(property, maybeoperator);
+        if (type == "[") return cont(pushlex("]"), expression, expect("]"), poplex, maybeoperator);
+    }
+    function maybelabel(type) {
+        if (type == ":") return cont(poplex, statement);
+        return pass(maybeoperator, expect(";"), poplex);
+    }
+    function property(type) {
+        if (type == "variable") {cx.marked = "property"; return cont();}
+    }
+    function objprop(type) {
+        if (type == "variable") cx.marked = "property";
+        if (atomicTypes.hasOwnProperty(type)) return cont(expect(":"), expression);
+    }
+    function commasep(what, end) {
+        function proceed(type) {
+            if (type == ",") return cont(what, proceed);
+            if (type == end) return cont();
+            return cont(expect(end));
+        }
+        return function commaSeparated(type) {
+            if (type == end) return cont();
+            else return pass(what, proceed);
+        };
+    }
+    function block(type) {
+        if (type == "}") return cont();
+        return pass(statement, block);
+    }
+    function vardef1(type, value) {
+        if (type == "variable"){register(value); return cont(vardef2);}
+        return cont();
+    }
+    function vardef2(type, value) {
+        if (value == "=") return cont(expression, vardef2);
+        if (type == ",") return cont(vardef1);
+    }
+    function forspec1(type) {
+        if (type == "var") return cont(vardef1, forspec2);
+        if (type == ";") return pass(forspec2);
+        if (type == "variable") return cont(formaybein);
+        return pass(forspec2);
+    }
+    function formaybein(type, value) {
+        if (value == "in") return cont(expression);
+        return cont(maybeoperator, forspec2);
+    }
+    function forspec2(type, value) {
+        if (type == ";") return cont(forspec3);
+        if (value == "in") return cont(expression);
+        return cont(expression, expect(";"), forspec3);
+    }
+    function forspec3(type) {
+        if (type != ")") cont(expression);
+    }
+    function functiondef(type, value) {
+        if (type == "variable") {register(value); return cont(functiondef);}
+        if (type == "(") return cont(pushlex(")"), pushcontext, commasep(funarg, ")"), poplex, statement, popcontext);
+    }
+    function funarg(type, value) {
+        if (type == "variable") {register(value); return cont();}
+    }
+
+    // Interface
+
+    return {
+        startState: function(basecolumn) {
+            return {
+                tokenize: jsTokenBase,
+                reAllowed: true,
+                kwAllowed: true,
+                cc: [],
+                lexical: new JSLexical((basecolumn || 0) - indentUnit, 0, "block", false),
+                localVars: null,
+                context: null,
+                indented: 0
+            };
+        },
+
+        token: function(stream, state) {
+            if (stream.sol()) {
+                if (!state.lexical.hasOwnProperty("align"))
+                    state.lexical.align = false;
+                state.indented = stream.indentation();
+            }
+            if (stream.eatSpace()) return null;
+            var style = state.tokenize(stream, state);
+            if (type == "comment") return style;
+            state.reAllowed = type == "operator" || type == "keyword c" || type.match(/^[\[{}\(,;:]$/);
+            state.kwAllowed = type != '.';
+            return parseJS(state, style, type, content, stream);
+        },
+
+        indent: function(state, textAfter) {
+            if (state.tokenize != jsTokenBase) return 0;
+            var firstChar = textAfter && textAfter.charAt(0), lexical = state.lexical,
+                type = lexical.type, closing = firstChar == type;
+            if (type == "vardef") return lexical.indented + 4;
+            else if (type == "form" && firstChar == "{") return lexical.indented;
+            else if (type == "stat" || type == "form") return lexical.indented + indentUnit;
+            else if (lexical.info == "switch" && !closing)
+                return lexical.indented + (/^(?:case|default)\b/.test(textAfter) ? indentUnit : 2 * indentUnit);
+            else if (lexical.align) return lexical.column + (closing ? 0 : 1);
+            else return lexical.indented + (closing ? 0 : indentUnit);
+        },
+
+        electricChars: ":{}"
+    };
+});
+
+CodeMirror.defineMIME("text/javascript", "javascript");
+CodeMirror.defineMIME("application/json", {name: "javascript", json: true});
+
+CodeMirror.defineMode("css", function(config) {
+    var indentUnit = config.indentUnit, type;
+    function ret(style, tp) {type = tp; return style;}
+
+    function tokenBase(stream, state) {
+        var ch = stream.next();
+        if (ch == "@") {stream.eatWhile(/[\w\\\-]/); return ret("meta", stream.current());}
+        else if (ch == "/" && stream.eat("*")) {
+            state.tokenize = tokenCComment;
+            return tokenCComment(stream, state);
+        }
+        else if (ch == "<" && stream.eat("!")) {
+            state.tokenize = tokenSGMLComment;
+            return tokenSGMLComment(stream, state);
+        }
+        else if (ch == "=") ret(null, "compare");
+        else if ((ch == "~" || ch == "|") && stream.eat("=")) return ret(null, "compare");
+        else if (ch == "\"" || ch == "'") {
+            state.tokenize = tokenString(ch);
+            return state.tokenize(stream, state);
+        }
+        else if (ch == "#") {
+            stream.eatWhile(/[\w\\\-]/);
+            return ret("atom", "hash");
+        }
+        else if (ch == "!") {
+            stream.match(/^\s*\w*/);
+            return ret("keyword", "important");
+        }
+        else if (/\d/.test(ch)) {
+            stream.eatWhile(/[\w.%]/);
+            return ret("number", "unit");
+        }
+        else if (/[,.+>*\/]/.test(ch)) {
+            return ret(null, "select-op");
+        }
+        else if (/[;{}:\[\]]/.test(ch)) {
+            return ret(null, ch);
+        }
+        else {
+            stream.eatWhile(/[\w\\\-]/);
+            return ret("variable", "variable");
+        }
+    }
+
+    function tokenCComment(stream, state) {
+        var maybeEnd = false, ch;
+        while ((ch = stream.next()) != null) {
+            if (maybeEnd && ch == "/") {
+                state.tokenize = tokenBase;
+                break;
+            }
+            maybeEnd = (ch == "*");
+        }
+        return ret("comment", "comment");
+    }
+
+    function tokenSGMLComment(stream, state) {
+        var dashes = 0, ch;
+        while ((ch = stream.next()) != null) {
+            if (dashes >= 2 && ch == ">") {
+                state.tokenize = tokenBase;
+                break;
+            }
+            dashes = (ch == "-") ? dashes + 1 : 0;
+        }
+        return ret("comment", "comment");
+    }
+
+    function tokenString(quote) {
+        return function(stream, state) {
+            var escaped = false, ch;
+            while ((ch = stream.next()) != null) {
+                if (ch == quote && !escaped)
+                    break;
+                escaped = !escaped && ch == "\\";
+            }
+            if (!escaped) state.tokenize = tokenBase;
+            return ret("string", "string");
+        };
+    }
+
+    return {
+        startState: function(base) {
+            return {tokenize: tokenBase,
+                baseIndent: base || 0,
+                stack: []};
+        },
+
+        token: function(stream, state) {
+            if (stream.eatSpace()) return null;
+            var style = state.tokenize(stream, state);
+
+            var context = state.stack[state.stack.length-1];
+            if (type == "hash" && context == "rule") style = "atom";
+            else if (style == "variable") {
+                if (context == "rule") style = "number";
+                else if (!context || context == "@media{") style = "tag";
+            }
+
+            if (context == "rule" && /^[\{\};]$/.test(type))
+                state.stack.pop();
+            if (type == "{") {
+                if (context == "@media") state.stack[state.stack.length-1] = "@media{";
+                else state.stack.push("{");
+            }
+            else if (type == "}") state.stack.pop();
+            else if (type == "@media") state.stack.push("@media");
+            else if (context == "{" && type != "comment") state.stack.push("rule");
+            return style;
+        },
+
+        indent: function(state, textAfter) {
+            var n = state.stack.length;
+            if (/^\}/.test(textAfter))
+                n -= state.stack[state.stack.length-1] == "rule" ? 2 : 1;
+            return state.baseIndent + n * indentUnit;
+        },
+
+        electricChars: "}"
+    };
+});
+
+CodeMirror.defineMIME("text/css", "css");
+CodeMirror.defineMode("htmlmixed", function(config, parserConfig) {
+    var htmlMode = CodeMirror.getMode(config, {name: "xml", htmlMode: true});
+    var jsMode = CodeMirror.getMode(config, "javascript");
+    var cssMode = CodeMirror.getMode(config, "css");
+
+    function html(stream, state) {
+        var style = htmlMode.token(stream, state.htmlState);
+        if (style == "tag" && stream.current() == ">" && state.htmlState.context) {
+            if (/^script$/i.test(state.htmlState.context.tagName)) {
+                state.token = javascript;
+                state.localState = jsMode.startState(htmlMode.indent(state.htmlState, ""));
+                state.mode = "javascript";
+            }
+            else if (/^style$/i.test(state.htmlState.context.tagName)) {
+                state.token = css;
+                state.localState = cssMode.startState(htmlMode.indent(state.htmlState, ""));
+                state.mode = "css";
+            }
+        }
+        return style;
+    }
+    function maybeBackup(stream, pat, style) {
+        var cur = stream.current();
+        var close = cur.search(pat);
+        if (close > -1) stream.backUp(cur.length - close);
+        return style;
+    }
+    function javascript(stream, state) {
+        if (stream.match(/^<\/\s*script\s*>/i, false)) {
+            state.token = html;
+            state.curState = null;
+            state.mode = "html";
+            return html(stream, state);
+        }
+        return maybeBackup(stream, /<\/\s*script\s*>/,
+            jsMode.token(stream, state.localState));
+    }
+    function css(stream, state) {
+        if (stream.match(/^<\/\s*style\s*>/i, false)) {
+            state.token = html;
+            state.localState = null;
+            state.mode = "html";
+            return html(stream, state);
+        }
+        return maybeBackup(stream, /<\/\s*style\s*>/,
+            cssMode.token(stream, state.localState));
+    }
+
+    return {
+        startState: function() {
+            var state = htmlMode.startState();
+            return {token: html, localState: null, mode: "html", htmlState: state};
+        },
+
+        copyState: function(state) {
+            if (state.localState)
+                var local = CodeMirror.copyState(state.token == css ? cssMode : jsMode, state.localState);
+            return {token: state.token, localState: local, mode: state.mode,
+                htmlState: CodeMirror.copyState(htmlMode, state.htmlState)};
+        },
+
+        token: function(stream, state) {
+            return state.token(stream, state);
+        },
+
+        indent: function(state, textAfter) {
+            if (state.token == html || /^\s*<\//.test(textAfter))
+                return htmlMode.indent(state.htmlState, textAfter);
+            else if (state.token == javascript)
+                return jsMode.indent(state.localState, textAfter);
             else
-          
-  lace, 0, Math.min(n, doc.sickset(electionUser(from, to) {
-            var sh = shiftSelecting && clipPos(shiftSelecrue;
-        }
-        // Update the selection. Last two args are only used by
-          if (scrolt[same] == textngth [evinput iclosure i-             }), true)te.
-   ine.h ch: sel.fr
+                return cssMode.indent(state.localState, textAfter);
+        },
 
- rude.nee = clipLh) {
-          layOffset = 0;d};
-rapper), lineOfptions.lineNumbers) gut               var sawWord t)};
- stLine);
-                fo           if           @media  }e = clipL       doc.iter(from.ltLine(sel.to.line).text.le        vength,[\{\};]$    // slls i0, Math.min(n, doc.size-nce(tr| hasm, sel.from.ch);
-            }        if (dir < 0) if (!moveOnce(Word =true; "column") moveOnce(true);
-   axWiWord = tstLine);
-              (dir > 0) if  sel.{ar visible = visibleLines();
-           t == null)
- (dir > 0) if (!moveOnce()) break          if (shifurn {line: line, ch:r pos =urn {linher than the whole
-    At(ch))) saw{ movextHeight(ince they );
-            se    va        });
-           me = 0, l = Math.min(prevInput.length, text.length);
-                    if (scrohe f moveOnce(true);
+        compareStates: function(a, b) {
+            return htmlMode.compareStates(a.htmlState, b.htmlState);
+        },
 
-        // suppor/^\}l.to.ch + (text.length - same))};
- Text.c line, ch: ch};
-        }
-      ir = 1; m? 2rom,        });
-               xtLine()) se is changed, ra   changes.push({from: oldFrom, to: oldTo 1});
-            }
-            else if (posE           == 1)
-                        m    r (ie && rect.top == rect.bottom) return;
-  .split(to=});
-       get     ce(from.e sits inside of an iframe and thHeight ||    if (unit == "page") dist = scroel.to)) {
-     ) + " sizsnit == "line") dist = textHeight();from : s) {
-                  function visibleLines() {
-e = clip.split(t/ selecting bottom-tnull;     
-               (;;) {
-     ionChanged xtMenu);recomputength)
- 
-                 lineSpace.style.o);
-      i$ curFromne = getLine(pos.line).View() { pos.line, ch: linelen};
-      i--,        ik with IME. If we reset t.to :put = ""unit =    pr     nce);< linm || t, end = pos.ch;, "ace(from.ch, null, newfindPo   co=;
-                  showLine: operation(function(h)/^, sel= pos.ch, end = pos.ch;
-            while (start > 0 && isWordChar(line.chacsted flags. shiftSele          while (en = coorne.length && isWordChar(line.charAt(end))) ++end;
-            setSelectionUser({l    == null ? e.keyCode : e.charCode);
-                return m.ch;}
-          
+        electricChars: "/{}:"
+    }
+});
 
- up       vap    ocus);
-        co       swiges);
-         );
-
-          test(nageck (next)pwhether this idth = "0pxdataTrhanged t ==Up       // Thistter.sl(instance);
-            return 
-                    i    function visibleLines()t[newText.length-h, se\s*     i\s*>/iting ||                 else
-             xpressed in the linevInput = "" value;
-          lectionUser({linsta;
-                return         }
-
-            // Add thesewidth:         var e = sel./(!mode.indent) ho0 ? lineObj.texd < lingoalColumn = pos.x;    while eNumbers e) {
-           00a0" if (how == "smart") {
-                if (!mode. selt) how = "prev";
-                else var state = getStateBefore(n);    while (en  }
-
-            var line = getLine(n), curSpace = line.indentation(options.tabSize),
-                curSpaceString = line.text.matc         0 ? lineObj.texLine(lin        if (how == "prev") {
-                            if (ch == (dir < 0 ? 0 : line0, l = changes.length || 0; i isWordChe.length &&    if (!posEq(sel.fromh) {reco    ,l.to :       ght) {u ifratLine(e of a       Display([]);
-       ext, {line: 
-//              i}
-            poll.set(20, == "prev") {
- r") {
-                
-  f (unit == "paline != n return;
-       ssowin= coord   c    how == "prev") {
- n);
-            var diff = inonHidden(diation - curSparing;
-
-     lectionUse0 ? lineObj.text.lef (!diff) {           }
-        isWordC pos.x;
-        }electionUser(from, to) {
-            var sh = shiftSelecting && clipPos              }
- 
-                lastLine.ine;}
-            if (posEq(sel.from, from) && posEq(sel.to, to)) return;
-    usinput||       sel.to.ch + (text.length - same))};
-     return ordChar(line.charAt(end))) ++      elseher than the whole
-    , ch: curSpaceS
-        prevInput.length - same)};d < linar(line.charAion - curS.getMode(options, options.mode)           if (!scroller.cine(lineAfter = null; });
-            work = [0];
- 
-
-           = "";
-                input.value = getSelecode() {
-       = "";
-      (aAt(end))) ++b
-        }
-
-       
-
-           n;
-            v{}:ar rect          }
-            else if (posEinstanc     if (gotion
+CodeMirror.defineMIME("text/html", "htmlmixed");

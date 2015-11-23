@@ -2938,499 +2938,368 @@
 			view.cancelCurEditNode(setting);
 			view.selectNode(setting, node, false);
 			$("#" + node.tId + consts.id.SPAN).html("<input type=text class='rename' id='" + node.tId + consts.id.INPUT + "' treeNode" + consts.id.INPUT + " >");
-			var inputObj = $("#" + node.tId 
-/*
- * JQuery zre 3.1http://c.attr("value",.com/[nameKey]Copyrighf (setting.edite as NameSelectAll) { 3.1	tools.http:MIT Li(http://cre 3.1} elsee
- * http://www.opFocusce.org/licenses/m
-pyright (c) 20bind('blur', function(eventse
- * hticen!viewjqueryodeBlurse
- * ht	= {},cancelCurEroots =nsed samre 3.1et
-core)-02-14keydown
-(function($){
-	var settings$){
-.keyCode=="13" caches = {}, z roots = {}, = true of cor {}, zId = 0,
-	//default const, null,ND: "s of coreit-licree_nodeCreated",
-	27CLICK: "ztree_cl,
-			COLLAPSE: "ztree_collaby666.cn)
- *
- * Lre
-	_consts = {click
-(function($){
-	var settreturn fals"ztree_onsts = {dblico",
-			SPAN: "_span",
-			SWITCH: "_switch",
-		;
- * Da.google.com/p/jquerytree/
- *A).addClass(/*
- * com/pCURSELECTED_EDI Copyrigroot.c
-	//dIttp: = http://cE: "line"
-noMIT Liion ="_switch",
-ne"
-		},
-	ts = =},
-	e 3.1},
-	_movets =:(function(tree_colltargeu"
-		},
-	, 	CURType, animateFlag, isSil{
-	var set
- * ne" = data.getRootlt consts{
-			childKey = sed same"",
-key.ew: {ren
- * Licende"
-		}
- =},
-		) ITCH: 
- * Licensed same: null,ep.leaf &&ode"
-		}
-t",!de"
-		}
-.isParentt",default 
-		/*
- * 	CUR.TYPE_INNERClickExpand: t
- * oldTML: f"
-		},(com/ppML: fTId ?.com/pgetLine: true():treeI,
-		vide"
-		}
-IsreeO,
-	ted: true,
-	=lapse ||
-			fontCss==	key: ancelSelected: true, "child",
-			fontCsse: "name)le: false,
-	treeI,
-			simpleData: {
-				e)e,
-			seletedMulti: true,
-			shoe 3.1
- * de"
-	Line: true,
-	,
-			nameIwTitle: true,
-			nameI,
-		data: {
-	 		key: ts",
-		icen,
-			sel!			keep: {
-				parPREValse,
-			selurlencoded",
-			typNEXTse
- * ht
-			},
-			keep: {
-				parent: false,t
- * Da//	CUR},
-	 Domalse,
-				leafObjNode"
-	_ul		OPEN: "d",
-				rootPId: null
- * httk: {
-				addDiyDomtree		OPEN: "oreRighsync:nPANDk: {
-		enses/mit-licings 
-	_setting = {on/x-www-form-ectedMulti: true,
-			showICK: "ztree_clixpandCollapsRSELESelectedNode"
-		}
-	}D: ","_swit	ASYNC_SUCCESS:or:null,
-			onAsyncSuccess:null,
-			onNodeCreatedse,
-			contentT:null,
-			onClick:nuleMouseDown:n//code.google.
-			onMoustId		A: "_aDown:null,
-				},
-	//default root ouerytree/
- *UL@263.net
-,
-			s,
-	Domode.google.com/p/jq).re	CUR(},
-			simpleDataull,
-	lse,
-			selectedMulti: true,
-			showI			beforeRighsync:n.append			shDomcenses/mit-licelected: t= {};
-			data.setRoot(setting, r);e: "
-			beforeRightCl.beforeandTriggerFlag = false;
-		r.curSelectedList = [];
-		r.noSelection url: "",
-			createdNodafterandTriggerFlag =ataFilterrepair the "", he(see,
-	 3.1
- * h,l{
-				mpSrcIndex = -1
-		}
-		Te"
-	odes = [0
-		violdNeighboXPANapse"settinew bindEvent of core
-	oldLevel	},
-		.lg) {ull,
-			bcom/pisFirs true
-		r.child		c.nodes = [0reMouseicenhowLine: true[ew: {
-	].length > 1 rror:null,ult bindEvent D);
-		o.bind(c.NODECRE[1]ztree_exult bindEve,
-		c = conPAND: "ztree_ee
-	_co false;
-	eObj,
-La = consts.event;
-		o.unbind(D);
-		o.bind(c.NODECREATED, fu-1reMouse treeId, node) {
-			tools.apply(setti;
-		o.unbin- ng.callbak.onNodeCreate(c.CLICKPAND: "ztree_mit-license.phfor (i,
-	/ {
-	D);
-		o.bind(c.NODECREATED, f; i < l; i++rror:null,EATED);
-		o.bind(c.NODECRE[i]p/jqu
-			dblot of		onRightt;
-		o.unbind(iztree_ex	breakztree_exollapsee
-	_coll,
-			be		c.nodes =>= 0node]);
-D);
-		o.bind(c.NODECREAspliceon (event, t, 1nction (settin/x-www-form-urlencoded",
-			typ
-		}
-		r.chil;
-		o.bind(c.EX		leaf: false
-	n (event, treeId, node) {
-			tools.apply(sASYNC_SUCCESS, function (ed, [event, default root of doms = [];
-	},
-ind(c.COOLLAPSE, functio			data.setRoot(setting, r);
-		}
-		r.chil			beforeClick:null,
-			befo	//wTitle: troftreeIdl
-		is of code, XM		showTitle: trt of click:null,
-			onRight,
-			nameIsHTML: faAND: "ztree_ex
-			onMousopeE: "close",
-		) {
-			tools.applydefault root o	A: "_a",r settings de"
-		}
-(c.NODECREy: "id",
-		(c.NODECREply(ew Array;
-		if nction (event, (c.NODECREATED, funcd, node) {	_bindEvent = ftting = settings[eve[tting = settings[event.data.t, treeId, 	_bindEvent Flag]);
-		});us, errorThrollapse:nulls.apply(setting.callbacting = settings[event.data,ind(	dblCrget,
-.unbind(c.CLICKd, node, XMLHteObj,
-		c = con		}
-		},
-		a(c.NODECREATED, fu==e, [event, false;
-		r.curnameIsH (tools.eqctedList = [];
-		r.noSelection = true;
-		r.create		tools.apply(setting.callback.s = [];
-	}wn")) {
-			treeEvd = "", node = null,
-	ype, "click")) {
- if (tools.eqs(us, errorThrwn]);
-		});
-	},
-	//defaulwTitle: t;
-		} else if (tools.eqs(own";
-		} else ifull, treeEventCallbventType = "mouseup";
-		} ele = "mous_initCache = function(setting) {
-		var c = data.geype = "contextmenu";
-		} else if (tools.e + 1qs(event.type, "click")) {
-			if (tools.eqs(target.tagName, "ull, treeEventCallback blur();
-			}
-			if (tools.eqs(target.tagName, "button") && tap) {
-					tId = lag]);
-		});
-
-		o	o.unbind(c.EXPAND)nd(c.ASYNC_ERROR);
-		o.bind(c.AS= true;
-		r.eEventType = "contextmenu";
-		} else if (tools.eqs(event.type, "cmit-license.phchNode";
+			var inputObj = $("#" + node.tId + consts.id.INPUT);
+			inputObj.attr("value", node[nameKey]);
+			if (setting.edit.editNameSelectAll) {
+				tools.inputSelect(inputObj);
 			} else {
-				tmp = tools.getMDom(setting, target, [{tagNollapseId = tmp.parentNode.id;
-					nodeEventType = "clickNode";
+				tools.inputFocus(inputObj);
+			}
+
+			inputObj.bind('blur', function(event) {
+				if (!view.editNodeBlur) {
+					view.cancelCurEditNode(setting);
+				}
+			}).bind('keydown', function(event) {
+				if (event.keyCode=="13") {
+					view.editNodeBlur = true;
+					view.cancelCurEditNode(setting, null, true);
+				} else if (event.keyCode=="27") {
+					view.cancelCurEditNode(setting, node[nameKey]);
+				}
+			}).bind('click', function(event) {
+				return false;
+			}).bind('dblclick', function(event) {
+				return false;
+			});
+
+			$("#" + node.tId + consts.id.A).addClass(consts.node.CURSELECTED_EDIT);
+			root.curEditInput = inputObj;
+			root.noSelection = false;
+			root.curEditNode = node;
+		},
+		moveNode: function(setting, targetNode, node, moveType, animateFlag, isSilent) {
+			var root = data.getRoot(setting),
+			childKey = setting.data.key.children;
+			if (targetNode == node) return;
+			if (setting.data.keep.leaf && targetNode && !targetNode.isParent && moveType == consts.move.TYPE_INNER) return;
+			var oldParentNode = (node.parentTId ? node.getParentNode(): root),
+			targetNodeIsRoot = (targetNode === null || targetNode == root);
+			if (targetNodeIsRoot && targetNode === null) targetNode = root;
+			if (targetNodeIsRoot) moveType = consts.move.TYPE_INNER;
+			var targetParentNode = (targetNode.parentTId ? targetNode.getParentNode() : root);
+
+			if (moveType != consts.move.TYPE_PREV && moveType != consts.move.TYPE_NEXT) {
+				moveType = consts.move.TYPE_INNER;
+			}
+
+			//move node Dom
+			var targetObj, target_ulObj;
+			if (targetNodeIsRoot) {
+				targetObj = setting.treeObj;
+				target_ulObj = targetObj;
+			} else if (!isSilent) {
+				if (moveType == consts.move.TYPE_INNER) {
+					view.expandCollapseNode(setting, targetNode, true, false);
+				} else {
+					view.expandCollapseNode(setting, targetNode.getParentNode(), true, false);
+				}
+				targetObj = $("#" + targetNode.tId);
+				target_ulObj = $("#" + targetNode.tId + consts.id.UL);
+			}
+			var nodeDom = $("#" + node.tId).remove();
+			if (target_ulObj && moveType == consts.move.TYPE_INNER) {
+				target_ulObj.append(nodeDom);
+			} else if (targetObj && moveType == consts.move.TYPE_PREV) {
+				targetObj.before(nodeDom);
+			} else if (targetObj && moveType == consts.move.TYPE_NEXT) {
+				targetObj.after(nodeDom);
+			}
+
+			//repair the data after move
+			var i,l,
+			tmpSrcIndex = -1,
+			tmpTargetIndex = 0,
+			oldNeighbor = null,
+			newNeighbor = null,
+			oldLevel = node.level;
+			if (node.isFirstNode) {
+				tmpSrcIndex = 0;
+				if (oldParentNode[childKey].length > 1 ) {
+					oldNeighbor = oldParentNode[childKey][1];
+					oldNeighbor.isFirstNode = true;
+				}
+			} else if (node.isLastNode) {
+				tmpSrcIndex = oldParentNode[childKey].length -1;
+				oldNeighbor = oldParentNode[childKey][tmpSrcIndex - 1];
+				oldNeighbor.isLastNode = true;
+			} else {
+				for (i = 0, l = oldParentNode[childKey].length; i < l; i++) {
+					if (oldParentNode[childKey][i].tId == node.tId) {
+						tmpSrcIndex = i;
+						break;
+					}
 				}
 			}
-		} else if (tools.e_switch",
-	setti"",
-fixPI{
-	Ver.zrror"
-		},
-				tree"",
-setSonts =ng) {rror"
-		},
-	seUp:null,
-			onEeNode"+c {
-			c = {};l
-		what beene,
-	dsettin {},s;
-		}LineIcosrName:"treeNode"+cons
-			c = {}
-			if (tom",ror"
-		},
-	,XPANng) {)		// event to node
-'sXPAN wTitlels.eqd,
-		caings 
-			expandSpeed: wTitleget.D);
-		o.bind(c.NODECREATED, fu< 1node]);
-//.isParent) {
-	has no ew: {ode
-sode) {
-			tools.apnt, treeId, us, errorThrls.apply(settiextStatus, errorThr
-			mpee use root to sals.apply(settia
-	_initRoot = funore
-	t;
-_switchickExpand))) {
-						nodeEventCallback = haSWITCHler.onSwitchicoickExpand))) {
-						nodeEventCallback = haICON			treeEd);
-			laceSode;tom",howLine: true,w.dblNode;
-		,tedMultifolder.DOCUhandler.onClickNode;Ico	break;
+			if (tmpSrcIndex >= 0) {
+				oldParentNode[childKey].splice(tmpSrcIndex, 1);
 			}
-		}
-		// 
-				zTree
-		switch (treeEventTy.dblClick.css("display", "noneore 3ventType = "mousult bindEve						|| (toolsneigEven,
-	ndler.onClinode = data.getNodeCache(ntCallback =,
-			dataFilter = eeeMouseup;
-				b
-		o.bindEvent node]);
+			if (moveType != consts.move.TYPE_INNER) {
+				for (i = 0, l = targetParentNode[childKey].length; i < l; i++) {
+					if (targetParentNode[childKey][i].tId == targetNode.tId) tmpTargetIndex = i;
+				}
+			}
+			if (moveType == consts.move.TYPE_INNER) {
+				if (targetNodeIsRoot) {
+					//parentTId of root node is null
+					node.parentTId = null;
+				} else {
+					targetNode.isParent = true;
+					targetNode.open = false;
+					node.parentTId = targetNode.tId;
+				}
 
-			node = data.getNodeCache(seak;
-			ca		if (!c) {
-			c = {};checkbox / radio
- * Licensed same				b.enablrget.d);
-			swiChktom",ase "contextme,
-			node: noick" :
-				tLine: truehandler.onClickNairTML: fnode: noWithSelfventType,
-			nodeEventCallbackEATED);
-		o.bindataT		showTitle)tree_expand"eEventCallback,
-			treeEventType: treeNode"+cons!c) {
-			onAsynParent)sa.setCache(setti		beforeExpand:null,
+				if (!targetNode[childKey]) targetNode[childKey] = new Array();
+				if (targetNode[childKey].length > 0) {
+					newNeighbor = targetNode[childKey][targetNode[childKey].length - 1];
+					newNeighbor.isLastNode = false;
+				}
+				targetNode[childKey].splice(targetNode[childKey].length, 0, node);
+				node.isLastNode = true;
+				node.isFirstNode = (targetNode[childKey].length == 1);
+			} else if (targetNode.isFirstNode && moveType == consts.move.TYPE_PREV) {
+				targetParentNode[childKey].splice(tmpTargetIndex, 0, node);
+				newNeighbor = targetNode;
+				newNeighbor.isFirstNode = false;
+				node.parentTId = targetNode.parentTId;
+				node.isFirstNode = true;
+				node.isLastNode = false;
 
-			onAsyncSuccess		data: {
-mp) {tId = tmp.parentNode.id;}ull,
-tting of conction (sett {
-		tting)Cw: {ts =sCTED: "curSelectedNo	dblCl
- * hings 	dblClickExpand: t
- * ew: {
-			addDiyDom: null,
-			autoCore
-	_evel	},
-		(c.NODECREull,
-			b(++zIsClickExpand: t.google.com/p/jquerytree/
- *ULsetting);
-		if ;
-		
- * h.bind(c.EXif (ntreeId, node) {
-			tools.ap"",
-tting)ts =Cach{
-		if (!n) res[i *
- * Larget, [{tatting)MIT Lie levelt consts of codeletull
-	ey] && n[chil		nodeEventType = "";
-					} elsenode]);
-} else .view.dblClickExpand,com/pId, node], setting.view.dblNode;
-					} else {com/p/jquerytree/
- *				}
+			} else if (targetNode.isLastNode && moveType == consts.move.TYPE_NEXT) {
+				targetParentNode[childKey].splice(tmpTargetIndex + 1, 0, node);
+				newNeighbor = targetNode;
+				newNeighbor.isLastNode = false;
+				node.parentTId = targetNode.parentTId;
+				node.isFirstNode = false;
+				node.isLastNode = true;
+
+			} else {
+				if (moveType == consts.move.TYPE_PREV) {
+					targetParentNode[childKey].splice(tmpTargetIndex, 0, node);
+				} else {
+					targetParentNode[childKey].splice(tmpTargetIndex + 1, 0, node);
+				}
+				node.parentTId = targetNode.parentTId;
+				node.isFirstNode = false;
+				node.isLastNode = false;
+			}
+			data.fixPIdKeyValue(setting, node);
+			data.setSonNodeLevel(setting, node.getParentNode(), node);
+
+			//repair node what been moved
+			view.setNodeLineIcos(setting, node);
+			view.repairNodeLevelClass(setting, node, oldLevel)
+
+			//repair node's old parentNode dom
+			if (!setting.data.keep.parent && oldParentNode[childKey].length < 1) {
+				//old parentNode has no child nodes
+				oldParentNode.isParent = false;
+				oldParentNode.open = false;
+				var tmp_ulObj = $("#" + oldParentNode.tId + consts.id.UL),
+				tmp_switchObj = $("#" + oldParentNode.tId + consts.id.SWITCH),
+				tmp_icoObj = $("#" + oldParentNode.tId + consts.id.ICON);
+				view.replaceSwitchClass(oldParentNode, tmp_switchObj, consts.folder.DOCU);
+				view.replaceIcoClass(oldParentNode, tmp_icoObj, consts.folder.DOCU);
+				tmp_ulObj.css("display", "none");
+
+			} else if (oldNeighbor) {
+				//old neigbor node
+				view.setNodeLineIcos(setting, oldNeighbor);
+			}
+
+			//new neigbor node
+			if (newNeighbor) {
+				view.setNodeLineIcos(setting, newNeighbor);
+			}
+
+			//repair checkbox / radio
+			if (setting.check.enable && view.repairChkClass) {
+				view.repairChkClass(setting, oldParentNode);
+				view.repairParentChkClassWithSelf(setting, oldParentNode);
+				if (oldParentNode != node.parent)
+					view.repairParentChkClassWithSelf(setting, node);
+			}
+
+			//expand parents after move
+			if (!isSilent) {
+				view.expandCollapseParentNode(setting, node.getParentNode(), true, animateFlag);
+			}
+		},
+		removeChildNodes: function(setting, node) {
+			if (!node) return;
+			var childKey = setting.data.key.children,
+			nodes = node[childKey];
+			if (!nodes) return;
+			$("#" + node.tId + consts.id.UL).remove();
+			for (var i = 0, l = nodes.length; i < l; i++) {
+				data.removeNodeCache(setting, nodes[i]);
+			}
+			data.removeSelectedNode(setting);
+			delete node[childKey];
+
+			if (!setting.data.keep.parent) {
+				node.isParent = false;
+				node.open = false;
+				var tmp_switchObj = $("#" + node.tId + consts.id.SWITCH),
+				tmp_icoObj = $("#" + node.tId + consts.id.ICON);
+				view.replaceSwitchClass(node, tmp_switchObj, consts.folder.DOCU);
+				view.replaceIcoClass(node, tmp_icoObj, consts.folder.DOCU);
+			}
+		},
+		removeEditBtn: function(node) {
+			$("#" + node.tId + consts.id.EDIT).unbind().remove();
+		},
+		removeNode: function(setting, node) {
+			var root = data.getRoot(setting),
+			childKey = setting.data.key.children,
+			parentNode = (node.parentTId) ? node.getParentNode() : root;
+			if (root.curEditNode === node) root.curEditNode = null;
+
+			node.isFirstNode = false;
+			node.isLastNode = false;
+			node.getPreNode = function() {return null;};
+			node.getNextNode = function() {return null;};
+			
+			$("#" + node.tId).remove();
+			data.removeNodeCache(setting, node);
+			data.removeSelectedNode(setting, node);
+
+			for (var i = 0, l = parentNode[childKey].length; i < l; i++) {
+				if (parentNode[childKey][i].tId == node.tId) {
+					parentNode[childKey].splice(i, 1);
 					break;
-				case "clickcom/p/jquerytree/
- * = handler.onClickNode;
-					break			cas	// event to zTree
-		switch (treeEventType) {
-			case "moused);};
-		nentCallback = handler.onZTreeMoushildren;
-		n.lev	//dBtnCTED: "curS.treeId + "_.google.com/p/jquerytree/
- *		LIN.un02-14setting);
-		ifen;
-		n.levSELECTED: "curSelectedNo.treeId + "_
-		treeId: "",
-		treeObj: null,
-		view: {
-			addDiyDom: null,
-			autoCore
-	arent) {
-	
-			showTitle: t)rue
-		},
-		data: {
-	ype: "aull,
-			b	DOCU: "docu"
-		}
-			dblCliDOCU: "docu"
-		},settin;
-		if (lickNode";
 				}
 			}
-	mp = tools.getMDom(setting, t= tmp.parrnd: [dblCunction() {ITCH: "data}ta.getCache(seNex.getMDom(s[node.tId] = node;
-		},
-		aaxing = false;
-		datsetting);
-		if t = true;
-			n.zAsync = true;
-		 function(beforeA)
-			if (typeof n.is}
-		}
-		// evn.open, "true");
-		arent) {
-n (event, treeId, node) {
-			tools.apicennnerAfterA.push(inned, [event, treeId, node]);
-	nnerAfterA.push(inner.callbaise, [eventLLAPSE);
-		o.OLLAPSE, funview.dblClick,	// event to z
-		n.getNe
-		// event to node
-de.isParent)		nodeEventType = "";
-					} else if nnerAfterA.push(innerAfterA) 
-						|| (tools.eqs(event.type, "dblclick") && tooarent) {
- = !!n.isParent;
-			n.z	},
-		addIextStatus, errorThr.dblClickExpand))) {	},
-		addIa
-	_initRoot = function witchNode;
-					} else {		addInitRoot: function(ini				}
-ot) {
-			_
-				case "click		addInitRoot: function(iniata.getNodeCache(setting, n.parentTIarent) {
-;
-		n.getPreNode = function() {return data.getPreNode(setting, arentNode[childKentCallback = handler.onZTreeMousedown;
-				break;
-			case "mouseup" :
-				treeEvesed same
-			nhowdataCache);
-		},
-		addInitNode: futreeId],
-		(tools.eqs(event.typedblclick") && toong) {ew(c.Ct.innerAfterA.push(inne[e);
-		},
-		addInitNode: fut, treeId, isParenFlag]);
-		});
+			var tmp_ulObj,tmp_switchObj,tmp_icoObj;
 
-		o.unat(nodes); (tools.eqs(ee);
-		},
-		addInitNode: fu	treeEventTh(initProxy);
-		},
-t(nodes)ot: function(initRoot) {
-			_init.roots.push(initsSelectedNode(setting, na: function(setting, parentNode, nosSelectedNode(setting, nata.getNodeCeforeA: functi ""
-			}tools.apply(sode) {
-			var root = data.getRooode]);
-		//de
-		as//met= sed z			b.typeonly onetreeId.setCache(up;
-				breCache(setting, n.parentTIdsParen;
-		n.getPreNode = funcline.ROO Copyrig"+consts.id.A}]); {
-			_if	c =_init.roots.push(initRoot);
-			parentNode0 [even
+			//repair nodes old parent
+			if (!setting.data.keep.parent && parentNode[childKey].length < 1) {
+				//old parentNode has no child nodes
+				parentNode.isParent = false;
+				parentNode.open = false;
+				tmp_ulObj = $("#" + parentNode.tId + consts.id.UL);
+				tmp_switchObj = $("#" + parentNode.tId + consts.id.SWITCH);
+				tmp_icoObj = $("#" + parentNode.tId + consts.id.ICON);
+				view.replaceSwitchClass(parentNode, tmp_switchObj, consts.folder.DOCU);
+				view.replaceIcoClass(parentNode, tmp_icoObj, consts.folder.DOCU);
+				tmp_ulObj.css("display", "none");
+
+			} else if (setting.view.showLine && parentNode[childKey].length > 0) {
+				//old parentNode has child nodes
+				var newLast = parentNode[childKey][parentNode[childKey].length - 1];
+				newLast.isLastNode = true;
+				newLast.isFirstNode = (parentNode[childKey].length == 1);
+				tmp_ulObj = $("#" + newLast.tId + consts.id.UL);
+				tmp_switchObj = $("#" + newLast.tId + consts.id.SWITCH);
+				tmp_icoObj = $("#" + newLast.tId + consts.id.ICON);
+				if (parentNode == root) {
+					if (parentNode[childKey].length == 1) {
+						//node was root, and ztree has only one root after move node
+						view.replaceSwitchClass(newLast, tmp_switchObj, consts.line.ROOT);
+					} else {
+						var tmp_first_switchObj = $("#" + parentNode[childKey][0].tId + consts.id.SWITCH);
+						view.replaceSwitchClass(parentNode[childKey][0], tmp_first_switchObj, consts.line.ROOTS);
+						view.replaceSwitchClass(newLast, tmp_switchObj, consts.line.BOTTOM);
+					}
+				} else {
+					view.replaceSwitchClass(newLast, tmp_switchObj, consts.line.BOTTOM);
+				}
+				tmp_ulObj.removeClass(consts.line.LINE);
 			}
 		},
-		addCreatedNa.key.children;
-			if (!parentNode[		},
-		fixPI;
-		n{
-			$.extend(.push(zTreeTools);Sting, node) {
-			if (setting.data{
-			_init.zTreeTools.push(zTreeTooBOTTOM
+		removeRemoveBtn: function(node) {
+			$("#" + node.tId + consts.id.REMOVE).unbind().remove();
 		},
-		Node"+consts.id.A}]);rentTId ? node.getParentNode()[setting.data.simpleData.idKey] : setting.daollapse:own;
-				n.leveom",
-			NOLeeTooLINEa.key.children;
-		n.levRting)ting, n);};
-		n.isAjaxing = false;
-		data.fixPIdKeyVaREMOVEsetting, n);
-	},
-	_init = {
-		binTrerigg_bindEvent],
-		caches: [_initCa= {
-		HoveXPAN_switch",
-	returnNode(settin		n.isarguments);
-			}, argumen
-		getInnerAtp://wapply	view.setNodeL
-			}.applDom, [:null,
-			bIdches:  *
- * en;
-		n	switch (nodeEvent_bindEvent],
-		caches: ase "switchId + "_" + tting) {
-t, treeIo = sd);
-		n.parentTIdli//code.google.com/p/jqler.onSa//code.google.com/p/jquerytree/
- *Aler.onS
-			if (!data.isdeEventCallback = handler.onSolttom", = "o = s)) {
-	ng) {ore
-	_bigetCache: function	var o = setting			foA.length; i<j
-		getCatInnerA,
-		gbottom",		returntInnerAeforgetNextNode: function(settinrn nue) {
-			if (!node) retuafterA.length; i<jfunction(settin[];
-		) {
-			if (!node) reta.si {
-
-	_z =Id + "tp://: _tp://ore
-
-		: _
-		ore
-$){
-: $){
-ore
-"",: _"",;
-	e 3.$.extexpaull,
-$.fn.zoreA./*
- *, _/*
- *tInneurn p[childKey][1];
-			} _z, _zpplicat
- * znt =[1];
-			}oretp:// = zt._z.
-				ret/*
- *=== noelse {++) iew=== node);
-			} 	data== node)"",][i+$){
-
-			retur$){
-
-	dat"",
-exSed sam(_t consts of "",
-addInitB2-14_02-1E){
-	 key, value) {
-.zAsyn_i null;
-| !key) return nu(type		varventCallb, value) {
-Proxy(_$){
- = 0,| !key) return nureeOb		var: nul;
-			for (vZoreATp://(_
-			}lue) l; i++) {
-_Id = 0Pr,
-		addInner = false
-				}
-				var tmp e 3.ata.getNodeByParam(settingon(afterA) 		view.seches: [_initC {
-		ent ="",
-		treeObj: null,
+		removeTreeDom: function(setting, node) {
+			node.isHover = false;
+			view.removeEditBtn(node);
+			view.removeRemoveBtn(node);
+			tools.apply(setting.view.removeHoverDom, [setting.treeId, node]);
+		},
+		repairNodeLevelClass: function(setting, node, oldLevel) {
+			if (oldLevel === node.level) return;
+			var liObj = $("#" + node.tId),
+			aObj = $("#" + node.tId + consts.id.A),
+			ulObj = $("#" + node.tId + consts.id.UL),
+			oldClass = "level" + oldLevel,
+			newClass = "level" + node.level;
+			liObj.removeClass(oldClass);
+			liObj.addClass(newClass);
+			aObj.removeClass(oldClass);
+			aObj.addClass(newClass);
+			ulObj.removeClass(oldClass);
+			ulObj.addClass(newClass);
 		}
-			if LisAfterAn.open, "t=0, j=
-			treeId, no<j{
-			tools.ay].length",
- n = ncti
-			 else,
-			nodeEven.beforeA.le
-		if (!nng.treeIrget,
-		se	dblClAPSE);
-		ohildresetticen;
-				}
-				var tmp )];
-				}
-				var tmp  {
-			;
-		 argumion(},
-	oxy ofs[i];reatnd: [rn pata.geion(settin, nodes[i]ion(setting, ED: "curSelectedNoo = se;
-		},odes) {
-		Id].nod	returion(settinId].nodechildren,
-	ldren];
-		},
-		getNodesBy {
-			retength > 0) {
-			ificen	return proxyResult
 	},
-	//defa[_initCacreturn proxyResult
-	},
-	//default init ny = settingtting);
-	aram:  {},maknd: [Ur{
-	indEvent],
-		caches: [_initCITCH: "o.unbiurls: {}sed same as jq			st
-		innerlt;: data
-	yParam: funcsIT Litmp = data.gey, value), nodes[iey, value) {(this, arguments);
-			}add.datamp;
-			}reeId: "",
-		treeObj: null,	if (node"",
-is
-		addInnerAfterA: functioget.
-		zTreeTools: []ches[s&&ing.trquery - ta.key.chilWITCH: "_switch",{
-			retuey, value)) key, value)or (var i = 0, l = nodes.lenting,addit.innernit.beforeA.push(befITCH: "D: "ztreParam: funcuCanDo tarp://w, key,ttinlue));
+
+	_z = {
+		tools: _tools,
+		view: _view,
+		event: event,
+		data: _data
+	};
+	$.extend(true, $.fn.zTree.consts, _consts);
+	$.extend(true, $.fn.zTree._z, _z);
+
+	var zt = $.fn.zTree,
+	tools = zt._z.tools,
+	consts = zt.consts,
+	view = zt._z.view,
+	data = zt._z.data,
+	event = zt._z.event;
+
+	data.exSetting(_setting);
+	data.addInitBind(_bindEvent);
+	data.addInitCache(_initCache);
+	data.addInitNode(_initNode);
+	data.addInitProxy(_eventProxy);
+	data.addInitRoot(_initRoot);
+	data.addZTreeTools(_zTreeTools);
+
+	var _cancelPreSelectedNode = view.cancelPreSelectedNode;
+	view.cancelPreSelectedNode = function (setting, node) {
+		var list = data.getRoot(setting).curSelectedList;
+		for (var i=0, j=list.length; i<j; i++) {
+			if (!node || node === list[i]) {
+				view.removeTreeDom(setting, list[i]);
+				if (node) break;
 			}
-			var childKey = s tmp;
-			},
-			result = [];
-			for (var i = 0y] ==(lue));eqs(e.tlt se"mouseappl")",
-	;
-			var childKey = setutg.data.key.children,
-			p = n	eveg.data.key.children,
-			p = nup"))s[i][key].indexD: "ztree{
-				return!/method of opera
-			(], key, ?y], key,ldren];
-		},
-		getNod :,
-			ASYN}
-})(jQuerlengt
+		}
+		if (_cancelPreSelectedNode) _cancelPreSelectedNode.apply(view, arguments);
+	}
+
+	var _createNodes = view.createNodes;
+	view.createNodes = function(setting, level, nodes, parentNode) {
+		if (_createNodes) {
+			_createNodes.apply(view, arguments);
+		}
+		if (!nodes) return;
+		if (view.repairParentChkClassWithSelf) {
+			view.repairParentChkClassWithSelf(setting, parentNode);
+		}
+	}
+
+	view.makeNodeUrl = function(setting, node) {
+		return (node.url && !setting.edit.enable) ? node.url : null;
+	}
+
+	var _selectNode = view.selectNode;
+	view.selectNode = function(setting, node, addFlag) {
+		var root = data.getRoot(setting);
+		if (data.isSelectedNode(setting, node) && root.curEditNode == node && node.editNameFlag) {
+			return false;
+		}
+		if (_selectNode) _selectNode.apply(view, arguments);
+		view.addHoverDom(setting, node);
+		return true;
+	}
+
+	var _uCanDo = tools.uCanDo;
+	tools.uCanDo = function(setting, e) {
+		var root = data.getRoot(setting);
+		if (e && (tools.eqs(e.type, "mouseover") || tools.eqs(e.type, "mouseout") || tools.eqs(e.type, "mousedown") || tools.eqs(e.type, "mouseup"))) {
+			return true;
+		}
+		return (!root.curEditNode) && (_uCanDo ? _uCanDo.apply(view, arguments) : true);
+	}
+})(jQuery);
