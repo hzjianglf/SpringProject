@@ -164,13 +164,17 @@ public class MenuController {
 			throws Exception {
 		int start = ServletRequestUtils.getIntParameter(request, "page", 1) - 1;
 		int size = ServletRequestUtils.getIntParameter(request, "rows", 0);
-		String name = ServletRequestUtils.getStringParameter(request, "name",
-				"");
+	    String name = ServletRequestUtils.getStringParameter(request, "name", "");
+	    int treeClickId = ServletRequestUtils.getIntParameter(request, "treeClickId",-1);//树形菜单点击刷新
 		String order = StringUtil.getOrderString(request); // 取得排序参数
 
 		String result = null;
 		try {
-			result = menuService.list(name, start, size, order);
+			if(treeClickId!=-1){
+				result = menuService.list(name, start, size, order,treeClickId);
+			}else{
+				result = menuService.list(name, start, size, order);
+			}
 		} catch (Exception e) {
 			if (log.isErrorEnabled()) {
 				log.error("查询列表失败", e);

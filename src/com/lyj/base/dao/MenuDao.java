@@ -172,6 +172,24 @@ public class MenuDao extends BaseDao {
 		}
 		return super.listByNative(sql, param.toArray(), start, size, order);
 	}
+	public List<Map<String, Object>> list(String name,int start, int size,
+			String order,int treeClickId) {
+		List<Object> param = new ArrayList<Object>();
+		String sql = "select m.* from menu_info m where 1=1 ";
+		if(null != name && name.trim().length() > 0){
+			sql += " and m.menu_desc like ? ";
+			param.add("%"+name+"%");
+		}
+		if(-1 != treeClickId ){
+			sql += " and m.parent_id = ?  or m.id= ?";
+			param.add(treeClickId);
+			param.add(treeClickId);
+		}
+		if(null == order || order.length() == 0){
+			order = " menu_order asc";
+		}
+		return super.listByNative(sql, param.toArray(), start, size, order);
+	}
 
 	public int count(String name,int start, int size,
 			String order) {
@@ -180,6 +198,21 @@ public class MenuDao extends BaseDao {
 		if(null != name && name.trim().length() > 0){
 			sql += " and m.menu_desc like ? ";
 			param.add("%"+name+"%");
+		}
+		return super.countByNative(sql, param.toArray());
+	}
+	public int count(String name,int start, int size,
+			String order,int treeClickId) {
+		List<Object> param = new ArrayList<Object>();
+		String sql = "select count(*) from menu_info m where 1=1 ";
+		if(null != name && name.trim().length() > 0){
+			sql += " and m.menu_desc like ? ";
+			param.add("%"+name+"%");
+		}
+		if(-1 != treeClickId ){
+			sql += " and m.parent_id = ?  or m.id= ?";
+			param.add(treeClickId);
+			param.add(treeClickId);
 		}
 		return super.countByNative(sql, param.toArray());
 	}

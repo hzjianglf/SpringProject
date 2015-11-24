@@ -181,8 +181,23 @@ public class MenuService extends BaseService {
 		String s = gson.toJson(map);
 		return s;
 	}
+	public String list(String name,int start, int size, String order,int treeClickId){
+		List<Map<String,Object>> list =menuDao.list(name,start, size, order,treeClickId); 
+		int count = count(name,start, size, order);
+		
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("total", count);
+		map.put("rows", list);
+		
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+		String s = gson.toJson(map);
+		return s;
+	}
 	public int count(String name,int start, int size, String order){
 		return menuDao.count(name,start, size, order);
+	}
+	public int count(String name,int start, int size, String order,int treeClickId){
+		return menuDao.count(name,start, size, order,treeClickId);
 	}
 	public MenuDao getMenuDao() {
 		return menuDao;
