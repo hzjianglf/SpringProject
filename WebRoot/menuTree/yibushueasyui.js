@@ -16,8 +16,8 @@ $(function() {
 
 		},
 		onClick:function(node){
-			console.log(node);
-			alert('点击'+node.id);
+			treeClickSearch(node.id);
+			//alert('点击'+node.id);
 		},
 		onContextMenu : function(e, node) {
 			e.preventDefault();

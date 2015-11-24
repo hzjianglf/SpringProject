@@ -207,6 +207,12 @@ box-sizing: content-box !important;
 	        name:name
 	    }); //重新载入 
 	}
+	//树形菜单点击搜索datagrid方法
+	function  treeClickSearch(id){
+		$("#dg").datagrid('load',{  
+			treeClickId:id
+	    }); //重新载入 
+	}
 	function resizeDg(){
 		$('#dg').datagrid("resize", { width: $(window).width() * 0.4});
 	}
@@ -346,7 +352,7 @@ box-sizing: content-box !important;
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">修改</h4>
+        <h4 class="modal-title">增加</h4>
       </div>
      <!--  <form action="menu/treeEdite" id="form1" method="post"> --> <!-- 待提交的From 表单 -->
       <div class="modal-body">
