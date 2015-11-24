@@ -81,7 +81,7 @@ box-sizing: content-box !important;
 		initDate();*/
 		var name=$("#name").val();
 		$('#dg').datagrid({
-		    url:"user/list",
+		    url:"menu/list",
 			pagination:true,
 			singleSelect:true,
 		    pageSize:pageSize,
@@ -93,15 +93,16 @@ box-sizing: content-box !important;
 		    },
 		   // width:800,
 		   	columns:[[
-		   		{field:'name',title:'名称', width:100, align:"center",sortable:true},
-		   		{field:'age',title:'年龄', width:50, align:"center",sortable:true},
-		   		{field:'address',title:'地址', width:50, align:"center",sortable:true},
+		   		{field:'menu_desc',title:'名称', width:100, align:"center",sortable:true},
+		   		{field:'menu_url',title:'url', width:50, align:"center",sortable:true},
+		   		{field:'parent_id',title:'父菜单', width:50, align:"center",sortable:true},
+		   		{field:'menu_order',title:'排序', width:50, align:"center",sortable:true},
 		   		{field:'operation',title:'操作', width:340, align:"center", sortable:false,
 		   			formatter:function(value,row,index){
 		   				var s ="";
-		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"');\">修改</span></a> ";
+		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"','"+row.menu_desc+"','"+row.menu_url+"','"+row.menu_order+"','"+row.parent_id+"');\">修改</span></a> ";
                			s += "|";
-		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoDel('"+row.id+"');\">删除</span>&nbsp;&nbsp;</a>";
+		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoDel('"+row.id+"','"+row.menu_desc+"');\">删除</span>&nbsp;&nbsp;</a>";
 			            return s;
 		   			}
 		   		}
@@ -119,18 +120,71 @@ box-sizing: content-box !important;
 	
 	
 	function gotoAdd(){
-		var url = 'user/gotoAdd';
-		window.location.href=url;
+		$("#zengjia").modal()  ;
 	}
-	function gotoModify(id){
-		var url = 'user/gotoModify?id='+id;
-		window.location.href=url;
+	/* 修改菜单方法 */
+	function add(){
+		var text=$("#formText1").val();
+		var url=$("#formUrl1").val();
+		var order=$("#formOrder1").val();
+		var parentId=$("#formParentId1").val();
+		$.ajax({
+			type : 'post',
+			url : 'menu/treeAdd',
+			data:"menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId,
+			dataType: "json",
+    		success:function(data){
+    			$("#zengjia").modal("hide")  ;
+					if(data.success == true){
+						doSearch();
+						reloadTree();
+					}else{
+						alert(data.msg);
+					}
+				}
+			});
+		
 	}
-	function gotoDel(id){
+	function gotoModify(id,text,url,order,parentId){
+		/* var url = 'user/gotoModify?id='+id;
+		window.location.href=url; */
+		$("#formId").val(id);
+		$("#formText").val(text);
+		$("#formUrl").val(url);
+		$("#formOrder").val(order);
+		$("#formParentId").val(parentId);
+		$("#xiugai").modal()  ;
+	}
+	
+	/* 修改菜单方法 */
+	function modify(){
+		var id=$("#formId").val();
+		var text=$("#formText").val();
+		var url=$("#formUrl").val();
+		var order=$("#formOrder").val();
+		var parentId=$("#formParentId").val();
+		$.ajax({
+			type : 'post',
+			url : 'menu/treeEdite',
+			data:"id="+id+"&menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId,
+			dataType: "json",
+    		success:function(data){
+    			$("#xiugai").modal("hide")  ;
+					if(data.success == true){
+						doSearch();
+						reloadTree();
+					}else{
+						alert(data.msg);
+					}
+				}
+			});
+		
+	}
+	function gotoDel(id,text){
 		if(!confirm('确定删除所选记录？')){
 			return;
 		}
-		var url = 'user/delete?id='+id;
+		var url = 'menu/treeDelete?id='+id+'&text='+text;
 		$.ajax({
 			type : 'post',
 			url : url,
@@ -138,6 +192,7 @@ box-sizing: content-box !important;
     			success:function(data){
 					if(data.success == true){
 						doSearch();
+						reloadTree();
 					}else{
 						alert(data.msg);
 					}
@@ -155,13 +210,20 @@ box-sizing: content-box !important;
 	function resizeDg(){
 		$('#dg').datagrid("resize", { width: $(window).width() * 0.4});
 	}
+	
 </script>
 </head>
 </head>
 
 <body onload="resizeDg();" onresize="resizeDg();" >
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">
+      &times;
+   </a>
+   <strong>警告！</strong>您的网络连接有问题。
+</div>
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-4  ">
 			<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">树形菜单视图</h3>
@@ -188,7 +250,7 @@ box-sizing: content-box !important;
 		  </div>
 		</div>
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-8 ">
 	<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">菜单列表</h3>
@@ -211,27 +273,134 @@ box-sizing: content-box !important;
 		</div>
 	</div>
 </div>
-
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
 </div>
 
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
-
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
+<!-- <div class="row">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiugai">修改</button>
+</div> -->
+<!-- 修改 模态框 -->
+<div class="modal fade" id="xiugai">
+  <div class="modal-dialog">
     <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改</h4>
+      </div>
+     <!--  <form action="menu/treeEdite" id="form1" method="post"> --> <!-- 待提交的From 表单 -->
+      <div class="modal-body">
+						<%-- <form action="${ctx }/user/modify" id="form1" method="post"> --%>
+							<input type="hidden" id="formId" name="formId" value="${menuInfo.id }"></input>
+							<div class="dengji_table">
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name">名称</p>
+										<p>
+											<input name="formText" id="formText" type="text"
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.menuDesc}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">URL</p>
+										<p>
+											<input name="formUrl" id="formUrl"  
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.menuUrl}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">父菜单ID</p>
+										<p>
+											<input name="formParentId" id="formParentId"  
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.parentId}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">排序</p>
+										<p>
+											<input name="formOrder" id="formOrder" type="text"
+												class="easyui-validatebox" data-options="required:false"
+												value="${menuInfo.menuOrder}" />
+										</p>
+									</div>
+								</div>
+							</div>
+	</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+        <button  class="btn btn-primary" onclick="modify();" id="doSubmit" >保存</button>
+      </div>
+     <!-- </form> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="zengjia">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改</h4>
+      </div>
+     <!--  <form action="menu/treeEdite" id="form1" method="post"> --> <!-- 待提交的From 表单 -->
+      <div class="modal-body">
+						<%-- <form action="${ctx }/user/modify" id="form1" method="post"> --%>
+							<div class="dengji_table">
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name">名称</p>
+										<p>
+											<input name="formText1" id="formText1" type="text"
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.menuDesc}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">URL</p>
+										<p>
+											<input name="formUrl1" id="formUrl1"  
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.menuUrl}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">父菜单ID</p>
+										<p>
+											<input name="formParentId1" id="formParentId1"  
+												class="easyui-validatebox" data-options="required:true"
+												value="${menuInfo.parentId}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">排序</p>
+										<p>
+											<input name="formOrder1" id="formOrder1" type="text"
+												class="easyui-validatebox" data-options="required:false"
+												value="${menuInfo.menuOrder}" />
+										</p>
+									</div>
+								</div>
+							</div>
+	</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+        <button  class="btn btn-primary" onclick="add();" id="doSubmit" >保存</button>
+      </div>
+     <!-- </form> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>

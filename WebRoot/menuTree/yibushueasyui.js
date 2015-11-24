@@ -5,11 +5,11 @@ $(function() {
 	});
 	$('#tt').tree({
 		checkbox : false,
-		url : 'menu/tree?id=0',
+		url : 'menu/treeQuery?id=0',
 		onBeforeExpand : function(node, param) {
 			console.log(node.id);
 			// url"EasyTreeQuery.action?id=" + node.id;  默认会传递一个id参数
-			$('#tt').tree('options').url = "menu/findById";// change the url                     
+			$('#tt').tree('options').url = "menu/treeFindByPid";// change the url                     
 		},
 		onLoadSuccess : function(node, data) {
 			$.messager.progress('close');
@@ -17,6 +17,7 @@ $(function() {
 		},
 		onClick:function(node){
 			console.log(node);
+			alert('点击'+node.id);
 		},
 		onContextMenu : function(e, node) {
 			e.preventDefault();
@@ -45,7 +46,7 @@ function append() {
 		function insert(text) {
 			$.ajax({
 				type : "POST",
-				url : "menu/add.action?text=" + text + "&pid=" + pid,
+				url : "menu/treeAddBrother.action?text=" +  encodeURI(encodeURI(text)) + "&pid=" + pid,
 				cache : false,
 				async : false,
 				dataType : "json",
@@ -116,7 +117,7 @@ function edite() {
 		function update(text) {
 			$.ajax({
 				type : "POST",
-				url : "menu/edite.action?text=" + encodeURI(encodeURI((text))) + "&id=" + node.id,
+				url : "menu/treeEdite.action?text=" + encodeURI(encodeURI(text)) + "&id=" + node.id,
 				cache : false,
 				async : false,
 				dataType : "json",
@@ -157,7 +158,7 @@ function shanchu() {
 		function del() {
 			$.ajax({
 				type : "POST",
-				url : "EasyTreeDel.action?id=" + node.id,
+				url : "menu/treeDelete.action?id=" + node.id,
 				cache : false,
 				async : false,
 				dataType : "json",
@@ -184,7 +185,7 @@ function search(value, name) {
 	if (value.trim() != "") {
 		$.ajax({
 			type : "POST",
-			url : "menu/findByText?text=" + encodeURI(encodeURI((value))),//中文乱码问题  encodeURI需要使用两次！
+			url : "menu/treeFindByText?text=" + encodeURI(encodeURI(value)),//中文乱码问题  encodeURI需要使用两次！
 			 contentType:"application/x-www-form-urlencoded; charset=UTF-8", 
 			cache : false,
 			async : false,
@@ -203,4 +204,26 @@ function search(value, name) {
 	} else {
 		alert('请输入搜索值');
 	}
+}
+//reload
+function reloadTree() {
+	//alert('搜索' + value);
+		$.ajax({
+			type : "POST",
+			url : 'menu/treeQuery?id=0', 
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8", 
+			cache : false,
+			async : false,
+			dataType : "json",
+			success : function(data) {
+				if (data.length == 0) {//搜索结果是否为空
+					alert('搜索结果为空');
+				} else {
+					$('#tt').children().remove();
+					$('#tt').tree('append', {
+						data : data
+					});
+				}
+			}
+		});
 }
