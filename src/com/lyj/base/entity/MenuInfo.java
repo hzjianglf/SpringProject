@@ -15,6 +15,21 @@ import javax.persistence.Table;
  @Table(name="menu_info", catalog="oschina")
  public class MenuInfo  implements Serializable
  {
+
+	public MenuInfo(Integer id, String menuUrl, String menuDesc, int type,
+			int parentId, int menuOrder, List<RoleMenu> roleMenu) {
+		this.id = id;
+		this.menuUrl = menuUrl;
+		this.menuDesc = menuDesc;
+		this.type = type;
+		this.parentId = parentId;
+		this.menuOrder = menuOrder;
+		this.roleMenu = roleMenu;
+	}
+
+	public MenuInfo() {
+	}
+
 	private static final long serialVersionUID = 1L;
 	private Integer id;
    private String menuUrl;
