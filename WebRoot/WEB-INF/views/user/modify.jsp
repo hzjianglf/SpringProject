@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <%@ include file="/common/meta.jsp"%>
@@ -66,6 +69,19 @@
             	<p class="basic_name" style=" border-right:none;">地址</p>
             	<p>
             	<input name="address"  id="address" type="text"  class="easyui-validatebox"  data-options="required:true" value="${userinfo.address}"/>
+            	</p>
+        </div>
+        </div>
+        <div class="basic_table">
+          <div class="clospan">
+            	<p class="basic_name" style=" border-right:none;">角色</p>
+            	<p>
+            	<input value="${userinfo.roleName}" ></input>
+            	<select name="roleId" id="roleId" >
+            	<c:forEach var="role" items="${roles}" >
+            	 		<option value="${role.id}" >${role.roleName}</option>
+            	</c:forEach>
+            	</select>
             	</p>
         </div>
         </div>
