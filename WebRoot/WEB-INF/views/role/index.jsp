@@ -5,6 +5,8 @@
 <%@ include file="/common/meta.jsp"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>SpringMVC+Hibernate +MySql+ EasyUI ---CRUD调试bug</title>
+ <link href="${ctx }/plugins/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+ <script src="${ctx }/plugins/bootstrap/3.0.3/js/bootstrap.min.js"></script>  
 <script type="text/javascript">
 	var searchString;
 
@@ -74,6 +76,9 @@
 		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"');\">修改</span></a> ";
                			s += "|";
 		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoDel('"+row.id+"');\">删除</span>&nbsp;&nbsp;</a>";
+               			s += "|";
+		               // s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoGrantMenu('"+row.id+"');\">授权</span>&nbsp;&nbsp;</a>";
+		                s+="<a href=\"${ctx }/role/gotoGrantMenus?roleId="+row.id+"\" class=\"iframe\"> 授权</a>";
 			            return s;
 		   			}
 		   		}
@@ -124,7 +129,28 @@
 	        name:name
 	    }); //重新载入 
 	}
-		
+	function gotoGrantMenu(id){
+		$('#menuTree').tree({
+			checkbox : true,
+			url : '${ctx }/menu/treeQuery?id=0',
+			onBeforeExpand : function(node, param) {
+				console.log(node.id);
+				// url"EasyTreeQuery.action?id=" + node.id;  默认会传递一个id参数
+				$('#menuTree').tree('options').url = "${ctx }/menu/treeFindByPid";// change the url                     
+			},
+			onLoadSuccess : function() {
+				$("#shouquan").modal();
+
+			}
+		});
+	}	
+	function  grantMenus(){
+		//得到 选中的选项
+		var nodes= $('#menuTree').tree('getChecked');
+		for(var i=0;i<nodes.length;i++){
+			console.log(nodes[i].id);
+		}
+	}
 </script>
 </head>
 <body onload="resizeDg();" onresize="resizeDg();" >
@@ -150,5 +176,25 @@
 	</div>
   </div>
 </div>
+<div class="modal fade" id="shouquan">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">增加</h4>
+      </div>
+     <!--  <form action="menu/treeEdite" id="form1" method="post"> --> <!-- 待提交的From 表单 -->
+      <div class="modal-body">
+					<div id="menuTree">
+					</div>
+	</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+        <button  class="btn btn-primary" onclick="grantMenus();" id="doSubmit" >保存</button>
+      </div>
+     <!-- </form> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>
