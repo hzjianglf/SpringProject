@@ -4,7 +4,7 @@ $(function() {
 		msg : '页面加载中...'
 	});
 	$('#tt').tree({
-		checkbox : false,
+		checkbox : true,
 		url : 'menu/treeQuery?id=0',
 		onBeforeExpand : function(node, param) {
 			console.log(node.id);
@@ -226,4 +226,9 @@ function reloadTree() {
 				}
 			}
 		});
+}
+//得到 选中的选项
+function getChecked(){
+	var nodes= $('#tt').tree('getChecked');
+	console.log(nodes);
 }
