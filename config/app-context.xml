@@ -88,6 +88,8 @@
             <tx:method name="count*" propagation="REQUIRED" read-only="true" />
             <tx:method name="find*" propagation="REQUIRED" read-only="true" />
             <tx:method name="list*" propagation="REQUIRED" read-only="true" />
+            <!--  角色权限设置  -->
+            <tx:method name="grant*" propagation="REQUIRED" />
             <tx:method name="*" read-only="true" />
         </tx:attributes>
     </tx:advice>
