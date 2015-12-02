@@ -9,7 +9,8 @@
  import javax.persistence.GenerationType;
  import javax.persistence.Id;
  import javax.persistence.OneToMany;
- import javax.persistence.Table;
+import javax.persistence.Table;
+import javax.persistence.Transient;
  
  @Entity
  @Table(name="user_Info", catalog="oschina")
@@ -23,6 +24,7 @@
    private String address;
    private String password;
    private List<UserRole> userRole;
+   private  String roleName;
    
    public UserInfo() {}
    
@@ -115,5 +117,16 @@
    {
      this.userRole = userRole;
    }
+   /**
+	 * 所属角色
+	 */
+   @Transient
+	public String getRoleName() {
+		return roleName;
+	}
+	
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
  }
  

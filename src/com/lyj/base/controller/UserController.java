@@ -2,6 +2,7 @@ package com.lyj.base.controller;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.lyj.base.entity.RoleInfo;
 import com.lyj.base.entity.UserInfo;
+import com.lyj.base.service.RoleService;
 import com.lyj.base.service.UserService;
 import com.lyj.base.util.StringUtil;
 /**
@@ -30,7 +33,7 @@ import com.lyj.base.util.StringUtil;
 public class UserController {
 	
 	UserService userService;
-	
+	RoleService roleService;
 	private static Log log = LogFactory.getLog(UserController.class);
 	
 	/**
@@ -145,7 +148,10 @@ public class UserController {
 			HttpServletResponse response)throws Exception {
 		Integer id = ServletRequestUtils.getIntParameter(request,"id");
 		UserInfo userinfo = userService.get(UserInfo.class,id);
+		userinfo.setRoleName("这是个测试");
+		List<RoleInfo> roles=roleService.list(RoleInfo.class);
 		request.setAttribute("userinfo", userinfo);
+		request.setAttribute("roles", roles);
 			return "views/user/modify";
 	}
 	/**
@@ -159,6 +165,7 @@ public class UserController {
 	public String modify(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		Integer id = ServletRequestUtils.getIntParameter(request, "id");
+		int roleId = ServletRequestUtils.getIntParameter(request, "roleId");//角色ID
 		UserInfo dbUserinfo = userService.get(UserInfo.class, id);
 		UserInfo userinfo = (UserInfo) StringUtil.requestToObject(request, UserInfo.class);
 		String result;
@@ -171,7 +178,7 @@ public class UserController {
 			}
 		}
 		try{
-			result = userService.update(request,userinfo, id);
+			result = userService.update(request,userinfo, id,roleId);
 		}catch (Exception e ){
 			if(log.isErrorEnabled()){
 				log.error("修改失败", e);
@@ -215,6 +222,12 @@ public class UserController {
 
 	public void setUserService(UserService userService) {
 		this.userService = userService;
+	}
+	public RoleService getRoleService() {
+		return roleService;
+	}
+	public void setRoleService(RoleService roleService) {
+		this.roleService = roleService;
 	}
 	
 }

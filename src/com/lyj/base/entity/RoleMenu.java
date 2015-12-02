@@ -8,7 +8,7 @@
   import javax.persistence.Id;
   import javax.persistence.JoinColumn;
   import javax.persistence.ManyToOne;
-  import javax.persistence.Table;
+import javax.persistence.Table;
   
   @Entity
   @Table(name="role_menu", catalog="oschina")
@@ -61,4 +61,17 @@
     {
       this.menuInfo = menuInfo;
     }
+
+	@Override
+	public boolean equals(Object object) {
+		boolean sameSame = false;
+	    if (object != null && object instanceof RoleMenu)
+	    {
+	    	 
+	        sameSame =( (this.getMenuInfo().getId()==((RoleMenu) object).getMenuInfo().getId()) && ( this.getRoleInfo().getId()==((RoleMenu) object).getRoleInfo().getId()));
+	    }
+
+	    return sameSame;
+	}
+
   }

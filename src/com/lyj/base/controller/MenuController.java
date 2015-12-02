@@ -40,6 +40,15 @@ public class MenuController {
 		// response.getWriter().write("[{id:'1',text:'yiyi'}]");//easyui对数据有严格的格式要求
 		// response.getWriter().print("[{\"id\":\"a\",\"text\":\"江苏省\"},{\"id\":\"b\",\"text\":\"浙江省\"},{\"id\":\"c\",\"text\":\"安徽省\"}]");
 	}
+	@RequestMapping(value = "/grantTree")
+	public void grantTree(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		int roleId = ServletRequestUtils.getIntParameter(request, "roleId");
+		JSONArray json = menuService.grantTree(roleId);
+		StringUtil.writeToWeb(json.toString(), "json", response);
+		// response.getWriter().write("[{id:'1',text:'yiyi'}]");//easyui对数据有严格的格式要求
+		// response.getWriter().print("[{\"id\":\"a\",\"text\":\"江苏省\"},{\"id\":\"b\",\"text\":\"浙江省\"},{\"id\":\"c\",\"text\":\"安徽省\"}]");
+	}
 
 	@RequestMapping(value = "/treeFindByPid")
 	public void treeFindByPid(HttpServletRequest request,

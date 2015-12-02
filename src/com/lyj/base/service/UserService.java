@@ -8,6 +8,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 
 
 
@@ -15,7 +18,11 @@ import javax.servlet.http.HttpServletRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.lyj.base.dao.UserDao;
+import com.lyj.base.entity.MenuInfo;
+import com.lyj.base.entity.RoleInfo;
+import com.lyj.base.entity.RoleMenu;
 import com.lyj.base.entity.UserInfo;
+import com.lyj.base.entity.UserRole;
 import com.lyj.base.util.StringUtil;
 /**
  *  SpringMVC+Hibernate +MySql+ EasyUI ---CRUD
@@ -87,12 +94,26 @@ public class UserService extends BaseService {
 	 * @return
 	 */
 	public String update(HttpServletRequest request, UserInfo userinfo,
-			Integer id) {
-		UserInfo userinfoOld = super.get(UserInfo.class, id);
+			Integer id,int roleId) {
+		//开启事物
+		Session  session= this.baseDao.getSession().getSessionFactory().openSession();
+		Transaction tx= session.beginTransaction();
+		
+		RoleInfo roleInfo=(RoleInfo) session.get(RoleInfo.class, roleId);
+		
+		UserInfo userinfoOld = (UserInfo) session.get(UserInfo.class, id);
 		if(null != userinfo){
 			StringUtil.requestToObject(request, userinfoOld);
 		}
-		super.update(userinfoOld);
+		UserRole userRole=new UserRole();
+		userRole.setRoleInfo(roleInfo);
+		userRole.setUserInfo(userinfoOld);
+		
+		session.update(userinfoOld);
+		session.save(userRole);
+		tx.commit();
+		session.close();
+		//结束事物
 		String result = "{\"success\":true,\"msg\":\"更新成功！\"}";
 		return result;
 	}

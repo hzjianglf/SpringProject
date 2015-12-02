@@ -1,7 +1,6 @@
 package com.lyj.base.service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,8 +13,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.lyj.base.dao.MenuDao;
 import com.lyj.base.entity.MenuInfo;
-import com.lyj.base.entity.UserInfo;
-import com.lyj.base.util.StringUtil;
+import com.lyj.base.entity.RoleInfo;
+import com.lyj.base.entity.RoleMenu;
 
 /**
  * SpringMVC+Hibernate +MySql+ EasyUI ---CRUD
@@ -63,6 +62,52 @@ public class MenuService extends BaseService {
 		}
 		JSONArray json = JSONArray.fromObject(retList);
 		return json;
+	}
+	public JSONArray grantTree(int roleId) {
+		List<Map<String, Object>> retList = new ArrayList<Map<String, Object>>();
+		List<MenuInfo> sonList = new ArrayList<MenuInfo>();// 子集合
+		List<MenuInfo> rootList = new ArrayList<MenuInfo>();// 根集合
+		rootList = menuDao.getParentList("0");
+		RoleInfo roleInfo = (RoleInfo) this.baseDao.get(RoleInfo.class, roleId);
+		List<RoleMenu> hasRoleMenus= roleInfo.getRoleMenu();//拥有的角色菜单信息
+		for (int i = 0; i < rootList.size(); i++) {
+			Map<String, Object> tree = new HashMap<String, Object>();
+			sonList = menuDao.querySonList(rootList.get(i).getId());
+			tree.put("id", rootList.get(i).getId());
+			tree.put("text", rootList.get(i).getMenuDesc());
+			tree.put("checked", hasChecked(hasRoleMenus,rootList.get(i)));
+			tree.put("attributes", rootList.get(i).getParentId());
+			if (!sonList.isEmpty()) {// 判断是否是叶子节点
+				tree.put("state", "closed");
+				tree.put("children", this.getChildren(hasRoleMenus,sonList));
+			}
+			retList.add(tree);
+		}
+		JSONArray json = JSONArray.fromObject(retList);
+		return json;
+	}
+	 /**
+	  * 
+	 * @Title: hasChecked
+	 * @Description: 判断是否已选择
+	 * @param @param roleMenus
+	 * @param @param menuInfo
+	 * @param @return    设定文件
+	 * @return boolean    返回类型
+	 * @author liuyijiao
+	 * @date 2015-11-26 下午05:35:20
+	 * @version V1.0
+	 * @throws
+	  */
+	private boolean hasChecked(List<RoleMenu> roleMenus ,MenuInfo menuInfo){
+		boolean  result=false;
+		for(RoleMenu roleMenu:roleMenus){
+			if(roleMenu.getMenuInfo().equals(menuInfo)){
+				result=true;
+				break;
+			}
+		}
+		return result;
 	}
 	public void addBrother(MenuInfo fun) throws Exception {
 		menuDao.addBrother(fun);
@@ -117,7 +162,7 @@ public class MenuService extends BaseService {
 				tree.put("text", rootList.get(i).getMenuDesc());
 				if (!sonList.isEmpty()) {// 判断是否是叶子节点
 					// tree.put("state", "closed");
-					tree.put("children", this.getChildren(list, sonList));
+					tree.put("children", this.getChildren(new ArrayList<RoleMenu>(), sonList));
 				}
 				retList.add(tree);
 			}
@@ -128,24 +173,25 @@ public class MenuService extends BaseService {
 		return result;
 	}
 
-	private List<Map<String, Object>> getChildren(List<MenuInfo> allList,
+	private List<Map<String, Object>> getChildren( List<RoleMenu> hasRoleMenus,
 			List<MenuInfo> list) {
 		List<Map<String, Object>> retList = new ArrayList<Map<String, Object>>();
-		List<MenuInfo> sonList = new ArrayList<MenuInfo>();// 子集合
 		for (int i = 0; i < list.size(); i++) {
 			Map<String, Object> tree = new HashMap<String, Object>();// 重复树 问题！！！
+			List<MenuInfo> sonList = new ArrayList<MenuInfo>();// 子集合
 			tree.put("id", list.get(i).getId());
 			tree.put("text", list.get(i).getMenuDesc());
-			sonList = this.getSonList(allList, list.get(i).getId());
+			tree.put("checked", hasChecked(hasRoleMenus,list.get(i)));
+			sonList = querySonList(list.get(i).getId()) ;
 			if (!sonList.isEmpty()) {
 				// tree.put("state", "closed");
-				tree.put("children", this.getChildren(allList, sonList));
+				tree.put("children", this.getChildren( hasRoleMenus,sonList));
 			}
 			retList.add(tree);
 		}
 		return retList;
 	}
-	private List<MenuInfo> getSonList(List<MenuInfo> list, int id) {
+	/*private List<MenuInfo> getSonList(List<MenuInfo> list, int id) {
 		List<MenuInfo> sonList = new ArrayList<MenuInfo>();// 子集合
 		for (MenuInfo obj : list) {
 			if (obj.getParentId() == id) {
@@ -153,7 +199,7 @@ public class MenuService extends BaseService {
 			}
 		}
 		return sonList;
-	}
+	}*/
 	private void getParentList(List<MenuInfo> list, List<MenuInfo> rootList,
 			MenuInfo menuInfo) {
 		MenuInfo pMenuInfo = menuDao.get(MenuInfo.class, menuInfo.getParentId());

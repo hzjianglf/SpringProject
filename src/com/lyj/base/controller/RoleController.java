@@ -199,6 +199,22 @@ public class RoleController {
 			return null;
 		}
 	}
+	
+	@RequestMapping(value = "/grantMenus")
+	public void grantMenus(HttpServletRequest request,HttpServletResponse response) throws Exception{
+		String menuIds = ServletRequestUtils.getStringParameter(request, "menuIds");
+		int roleId = ServletRequestUtils.getIntParameter(request, "roleId");
+		System.out.println(menuIds);
+		roleService.grantMenus(menuIds,roleId);
+		String result = "{\"success\":true,\"msg\":\"授权成功！\"}";
+		StringUtil.writeToWeb(result, "html", response);
+	}
+	@RequestMapping(value = "/gotoGrantMenus")
+	public String gotoGrantMenus(HttpServletRequest request,HttpServletResponse response) throws Exception{
+		int roleId = ServletRequestUtils.getIntParameter(request,"roleId");
+		request.setAttribute("roleId", roleId);
+		 return "/views/role/grantMenus";
+	}
 	public RoleService getRoleService() {
 		return roleService;
 	}
