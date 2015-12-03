@@ -39,7 +39,6 @@
 			$('#form1').submit();
 			return false;
 		});
-
 	});
 </script>
 </head>
@@ -76,10 +75,15 @@
           <div class="clospan">
             	<p class="basic_name" style=" border-right:none;">角色</p>
             	<p>
-            	<input value="${userinfo.roleName}" ></input>
             	<select name="roleId" id="roleId" >
+            	<option >请选择</option>
             	<c:forEach var="role" items="${roles}" >
-            	 		<option value="${role.id}" >${role.roleName}</option>
+            		<c:if test="${userinfo.roleName==role.roleName}">
+            			<option  value="${role.id}" selected="selected" >${role.roleName}</option>
+            		</c:if>
+            	 	<c:if test="${userinfo.roleName!=role.roleName}">
+            	 		<option  value="${role.id}" >${role.roleName}</option>
+            	 	</c:if>	
             	</c:forEach>
             	</select>
             	</p>
