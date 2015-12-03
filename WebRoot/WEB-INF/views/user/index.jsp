@@ -69,10 +69,11 @@
 		   		{field:'name',title:'名称', width:100, align:"center",sortable:true},
 		   		{field:'age',title:'年龄', width:50, align:"center",sortable:true},
 		   		{field:'address',title:'地址', width:50, align:"center",sortable:true},
+		   		{field:'role_name',title:'所属角色', width:50, align:"center",sortable:true},
 		   		{field:'operation',title:'操作', width:340, align:"center", sortable:false,
 		   			formatter:function(value,row,index){
 		   				var s ="";
-		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"');\">修改</span></a> ";
+		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoModify('"+row.id+"','"+row.role_name+"');\">修改</span></a> ";
                			s += "|";
 		                s+="<a href=\"javascript:void(0)\"><span onclick=\"javaScript:gotoDel('"+row.id+"');\">删除</span>&nbsp;&nbsp;</a>";
 			            return s;
@@ -95,8 +96,8 @@
 		var url = '${ctx }/user/gotoAdd';
 		window.location.href=url;
 	}
-	function gotoModify(id){
-		var url = '${ctx}/user/gotoModify?id='+id;
+	function gotoModify(id,roleName){
+		var url = '${ctx}/user/gotoModify?id='+id+"&roleName="+encodeURI(encodeURI(roleName));
 		window.location.href=url;
 	}
 	function gotoDel(id){
