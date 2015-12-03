@@ -105,12 +105,19 @@ public class UserService extends BaseService {
 		if(null != userinfo){
 			StringUtil.requestToObject(request, userinfoOld);
 		}
-		UserRole userRole=new UserRole();
-		userRole.setRoleInfo(roleInfo);
-		userRole.setUserInfo(userinfoOld);
-		
+		//删除该用户的角色关联
+		String hqlDelete = "delete UserRole ur where ur.userInfo = :userId";
+		int deletedEntities = session.createQuery( hqlDelete )
+		.setInteger( "userId", userinfoOld.getId() )
+		.executeUpdate();
+		System.out.println("删除个数:"+deletedEntities);
+		if(roleInfo!=null){
+			UserRole userRole=new UserRole();
+			userRole.setRoleInfo(roleInfo);
+			userRole.setUserInfo(userinfoOld);
+			session.saveOrUpdate(userRole);
+		}
 		session.update(userinfoOld);
-		session.save(userRole);
 		tx.commit();
 		session.close();
 		//结束事物

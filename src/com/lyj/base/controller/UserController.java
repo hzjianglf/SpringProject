@@ -1,5 +1,6 @@
 package com.lyj.base.controller;
 
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
@@ -147,8 +148,9 @@ public class UserController {
 	public String gotoModify(HttpServletRequest request,
 			HttpServletResponse response)throws Exception {
 		Integer id = ServletRequestUtils.getIntParameter(request,"id");
+		String roleName =URLDecoder.decode(ServletRequestUtils.getStringParameter(request, "roleName"),"UTF-8");  
 		UserInfo userinfo = userService.get(UserInfo.class,id);
-		userinfo.setRoleName("这是个测试");
+		userinfo.setRoleName(roleName);
 		List<RoleInfo> roles=roleService.list(RoleInfo.class);
 		request.setAttribute("userinfo", userinfo);
 		request.setAttribute("roles", roles);

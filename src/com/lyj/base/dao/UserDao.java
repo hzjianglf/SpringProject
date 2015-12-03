@@ -17,12 +17,14 @@ public class UserDao extends BaseDao{
 
 	public List<Map<String, Object>> list(String name,int start, int size,
 			String order) {
+		//SELECT u.*,rur.name AS role_name FROM user_info u  LEFT JOIN  (SELECT role.name,ur.role_id,ur.user_id FROM role_info role ,user_role ur WHERE role.id=ur.role_id ) rur ON rur.user_id=u.id WHERE 1=1 GROUP BY u.id ORDER BY birthday ASC  ;
 		List<Object> param = new ArrayList<Object>();
-		String sql = "select u.* from user_info u where 1=1 ";
+		String sql = " SELECT u.*,rur.name AS role_name FROM user_info u  LEFT JOIN  (SELECT role.name,ur.role_id,ur.user_id FROM role_info role ,user_role ur WHERE role.id=ur.role_id ) rur ON rur.user_id=u.id ";
 		if(null != name && name.trim().length() > 0){
 			sql += " and u.name like ? ";
 			param.add("%"+name+"%");
 		}
+		sql+=" GROUP BY u.id ";
 		if(null == order || order.length() == 0){
 			order = " birthday asc";
 		}
