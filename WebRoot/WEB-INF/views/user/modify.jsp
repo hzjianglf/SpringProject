@@ -76,7 +76,7 @@
             	<p class="basic_name" style=" border-right:none;">角色</p>
             	<p>
             	<select name="roleId" id="roleId" >
-            	<option >请选择</option>
+            	<option value="-1">请选择</option>
             	<c:forEach var="role" items="${roles}" >
             		<c:if test="${userinfo.roleName==role.roleName}">
             			<option  value="${role.id}" selected="selected" >${role.roleName}</option>
