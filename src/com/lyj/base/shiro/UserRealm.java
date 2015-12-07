@@ -40,26 +40,26 @@ public class UserRealm extends AuthorizingRealm {
 		permissions.add("user:create");
 		permissions.add("user:delete");
 		permissions.add("user:update");
-		System.out.println("验证用户权限角色开始---------------");
+		//System.out.println("验证用户权限角色开始---------------");
 		if ((session != null)
 				&& (!StringUtil.isEmpty(session.getAttribute("role")))) {
 			info.addRoles((Set) session.getAttribute("role"));
-			System.out.println("读取sesson角色");
+		//	System.out.println("读取sesson角色");
 		} else {
-			System.out.println("读取数据库角色");
+	//		System.out.println("读取数据库角色");
 			session.setAttribute("role", roles);
 			info.addRoles(roles);
 		}
 		if ((session != null)
 				&& (!StringUtil.isEmpty(session.getAttribute("permission")))) {
-			System.out.println("读取session数据权限");
+	//		System.out.println("读取session数据权限");
 			info.addStringPermissions((Set) session.getAttribute("permission"));
 		} else {
-			System.out.println("读取数据库权限");
+	//		System.out.println("读取数据库权限");
 			session.setAttribute("permission", permissions);
 			info.addStringPermissions(permissions);
 		}
-		System.out.println("验证用户权限角色结束---------------");
+	//	System.out.println("验证用户权限角色结束---------------");
 		return info;
 	}
 
