@@ -36,8 +36,8 @@
             <li role="separator" class="divider"></li>
           </ul>
         </li>  -->
-        <li class=""><a href="menuTree/yibushueasyui.jsp" class="iframe">菜单管理<span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="role/index" class="iframe">角色管理<span class="sr-only">(current)</span></a></li>
+        <!-- <li class=""><a href="menuTree/yibushueasyui.jsp" class="iframe">菜单管理<span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="role/index" class="iframe">角色管理<span class="sr-only">(current)</span></a></li> -->
       </ul>
        <ul class="nav navbar-nav navbar-right ">
          <li class="dropdown">
