@@ -1,8 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
- 
 <div class="news_content" >
 <!--alert-success  alert-info alert-warning alert-danger  -->
 <div class="row">
