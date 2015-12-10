@@ -4,13 +4,23 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
  <div class="header">
-   <!-- <nav class="navbar navbar-default  navbar-fixed-top"> -->
-   <nav class="navbar navbar-default ">
+   <!-- <nav class="navbar navbar-default  navbar-fixed-top">  navbar-static-top -->
+   <nav class="navbar navbar-static-top ">
   <div class="container">
+ 	 <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
     	<ul class="nav navbar-nav">
     	 <c:forEach var="menu" items="${parentMenu}">
     	 	<c:if test="${menu['type']==1}">
-    	 		<li class=""><a href="${menu['menuUrl']}" class="iframe">${menu["menuDesc"]} <span class="sr-only">(current)</span></a></li>
+    	 		<li class=""><a href="${menu['menuUrl']}" class="${menu['className']}">${menu["menuDesc"]} <span class="sr-only">(current)</span></a></li>
     	 	</c:if>
     	 	<c:if test="${menu['type']==0}">
     	 		<li class="dropdown">
@@ -18,7 +28,7 @@
          			 <ul class="dropdown-menu">
          			 	<c:forEach var="childOne" items="${childMenu}">
          			 		<c:if test="${childOne['parentId']== menu['id']}">
-         			 			<li><a href="${childOne['menuUrl']}" class="iframe">${childOne['menuDesc']}</a></li>
+         			 			<li><a href="${childOne['menuUrl']}" class="${menu['className']}">${childOne['menuDesc']}</a></li>
          			 		</c:if>
          			 	</c:forEach>
 		         	 </ul>
@@ -52,6 +62,7 @@
 	          </ul>
 		  </li>
 		  </ul>
+		 </div><!--/.nav-collapse -->
   </div>
 </nav>
 </div>

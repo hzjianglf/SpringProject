@@ -128,10 +128,11 @@ box-sizing: content-box !important;
 		var url=$("#formUrl1").val();
 		var order=$("#formOrder1").val();
 		var parentId=$("#formParentId1").val();
+		var type=$("#formType1").val();
 		$.ajax({
 			type : 'post',
 			url : 'menu/treeAdd',
-			data:"menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId,
+			data:"menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId+"&type="+type,
 			dataType: "json",
     		success:function(data){
     			$("#zengjia").modal("hide")  ;
@@ -163,10 +164,11 @@ box-sizing: content-box !important;
 		var url=$("#formUrl").val();
 		var order=$("#formOrder").val();
 		var parentId=$("#formParentId").val();
+		var type=$("#formType").val();
 		$.ajax({
 			type : 'post',
 			url : 'menu/treeEdite',
-			data:"id="+id+"&menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId,
+			data:"id="+id+"&menuDesc="+text+"&menuUrl="+url+"&menuOrder="+order+"&parentId="+parentId+"&type="+type,
 			dataType: "json",
     		success:function(data){
     			$("#xiugai").modal("hide")  ;
@@ -337,6 +339,11 @@ box-sizing: content-box !important;
 										</p>
 									</div>
 								</div>
+								<select name="formType"  id="formType" >
+													<option value="0">非菜单</option>
+													<option value="1">一级菜单</option>
+													<option value="2">二级菜单</option>
+												</select>
 							</div>
 	</div>
       <div class="modal-footer">
@@ -395,6 +402,18 @@ box-sizing: content-box !important;
 											<input name="formOrder1" id="formOrder1" type="text"
 												class="easyui-validatebox" data-options="required:false"
 												value="${menuInfo.menuOrder}" />
+										</p>
+									</div>
+								</div>
+								<div class="basic_table">
+									<div class="clospan">
+										<p class="basic_name" style="border-right: none;">类别</p>
+										<p>
+												<select name="formType1"  id="formType1" >
+													<option value="0">非菜单</option>
+													<option value="1">一级菜单</option>
+													<option value="2">二级菜单</option>
+												</select>
 										</p>
 									</div>
 								</div>
