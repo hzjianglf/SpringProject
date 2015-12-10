@@ -17,7 +17,7 @@ import javax.persistence.Table;
  {
 
 	public MenuInfo(Integer id, String menuUrl, String menuDesc, int type,
-			int parentId, int menuOrder, List<RoleMenu> roleMenu) {
+			int parentId, int menuOrder,String className, List<RoleMenu> roleMenu) {
 		this.id = id;
 		this.menuUrl = menuUrl;
 		this.menuDesc = menuDesc;
@@ -25,6 +25,7 @@ import javax.persistence.Table;
 		this.parentId = parentId;
 		this.menuOrder = menuOrder;
 		this.roleMenu = roleMenu;
+		this.className = className;
 	}
 
 	public MenuInfo() {
@@ -37,6 +38,7 @@ import javax.persistence.Table;
    private int type;
    private int parentId;
    private int menuOrder;
+   private String className;
    private List<RoleMenu> roleMenu;
    
    @Id
@@ -117,7 +119,14 @@ import javax.persistence.Table;
    {
      this.roleMenu = roleMenu;
    }
+   @Column(name="class_name")
+   public String getClassName() {
+		return className;
+	}
 
+	public void setClassName(String className) {
+		this.className = className;
+	}
 @Override
 public String toString() {
 	return "MenuInfo [id=" + id + ", menuUrl=" + menuUrl + ", menuDesc="
@@ -138,6 +147,8 @@ public boolean equals(Object object) {
 
     return sameSame;
 }
+
+
  }
 
 
