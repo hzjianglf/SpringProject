@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lyj.base.entity.NewsInfo;
 import com.lyj.base.service.CalendarService;
-import com.lyj.base.service.NewsService;
 @Controller
 @RequestMapping(value="/calendar")
 public class CalendarController {
