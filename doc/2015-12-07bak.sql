@@ -2,7 +2,8 @@
 SQLyog v10.2 
 MySQL - 5.0.13-rc-nt : Database - oschina
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -26,6 +27,7 @@ CREATE TABLE `menu_info` (
   `menu_url` varchar(255) default NULL COMMENT '菜单url',
   `parent_id` int(11) default NULL COMMENT '父菜单ID',
   `type` int(11) default NULL COMMENT '0:非菜单1:一级菜单2:二级菜单',
+  `class_name` varchar(11) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
